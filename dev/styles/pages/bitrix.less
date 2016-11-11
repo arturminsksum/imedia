@@ -1,0 +1,822 @@
+.bitrix {
+	&-why {
+		background-image: url(../images/certificate-bg.png);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		padding-bottom: 2.5rem;
+
+		.text__block {
+			text-align: center;
+			max-width: 840px;
+			margin: 0 auto;
+
+			p {
+				text-align: center;
+			}
+
+		}
+
+		&--img {
+			margin-bottom: 5rem;
+
+			img {
+				.img;
+			}
+
+		}
+
+		&--btn {
+			margin-bottom: 3rem;
+		}
+
+	}
+
+	&-feature {
+		padding-bottom: 5rem;
+
+		&__block {
+			background: #fff;
+			padding: 0 4rem;
+			display: flex;
+			align-items: center;
+			margin-bottom: 1rem;
+			min-height: 222px;
+		}
+
+		.number {
+
+			margin-right: 4rem;
+		}
+
+		.section__img {
+			background-image: @star;
+		}
+
+		.text__block {
+			padding-top: 3rem;
+			text-align: left;
+			-ms-flex: 0 1 auto;
+		}
+
+	}
+
+	&-approach {
+		padding-bottom: 0;
+		.section__img {
+			background-image: @approach;
+		}
+
+		.section__pre {
+			padding-top: 0;
+		}
+
+		.section__title {
+			margin-bottom: 2.5rem;
+		}
+
+	}
+
+	&__edition {
+		text-align: center;
+	}
+
+	&__order {
+		padding: 10rem 0;
+		text-align: center;
+
+		.edition__title {
+			margin-bottom: 2rem;
+
+			span {
+				font-weight: 300;
+			}
+
+		}
+
+	}
+
+	&-frame {
+
+	}
+
+	&-offer {
+		padding: 0;
+	}
+
+}
+
+
+
+.clouds {
+	text-align: center;
+
+	&__title {
+		font-size: 3rem;
+		color: #b3c9de;
+		text-transform: uppercase;
+		font-weight: bold;
+		margin-top: 5rem;
+		text-align: center;
+	}
+
+	&__wrap {
+		position: relative;
+		display: inline-block;
+	}
+
+	&__left {
+		position: absolute;
+		left: -170px;
+		z-index: 1;
+		.img;
+	}
+
+	&__right {
+		position: absolute;
+		right: -150px;
+		z-index: 1;
+		.img;
+	}
+
+	&__center {
+		position: relative;
+		z-index: 2;
+		.img;
+	}
+
+	&__info {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 90px;
+		z-index: 2;
+	}
+
+	&__img {
+		margin-bottom: 1rem;
+
+		img {
+			.img;
+		}
+
+	}
+
+	&__text {
+		max-width: 450px;
+		margin: 0 auto;
+	}
+
+}
+
+.edition {
+	display: inline-block;
+	max-width: 550px;
+
+	&__title {
+		font-size: 1.8rem;
+		font-weight: bold;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	&__text {
+		margin-bottom: 3rem;
+	}
+
+	&__btn {
+		.btn {
+			margin: 0 0.5rem 3rem;
+		}
+
+	}
+
+	&__subtitle {
+		font-size: 1.6rem;
+		font-weight: bold;
+		margin-bottom: 3rem;
+	}
+
+	&__group {
+		.item {
+			background: #fff;
+			display: flex;
+			text-align: left;
+			padding: 5rem 5rem 5rem 0;
+
+			&__img {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 0 3rem;
+				flex-shrink: 0;
+
+				img {
+				}
+
+			}
+
+			&__info {
+				-ms-flex: 0 1 auto;
+			}
+
+			&__title {
+				font-size: 1.4rem;
+				margin-bottom: 1rem;
+
+				strong {
+					text-transform: uppercase;
+				}
+
+			}
+
+			&__text {
+				font-size: 1.4rem;
+				margin-bottom: 1rem;
+			}
+
+			&__price {
+				font-size: 2.4rem;
+				font-family: "Museo Sans Cyrl 900";
+			}
+
+		}
+
+		.six.columns {
+			margin-bottom: 2%;
+		}
+
+	}
+
+}
+
+.approach {
+	&__group {
+		// display: flex;
+
+		.item {
+			padding: 5rem 2.5rem;
+			background: @light-yellow;
+			-ms-flex: 0 1 auto;
+
+			&__img {
+				margin: 0 auto;
+				width: 135px;
+				height: 135px;
+				background-color: @yellow;
+				border-radius: 50%;
+				margin-bottom: 3rem;
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+			}
+
+			&__info {
+				text-align: center;
+			}
+
+			&__title {
+				font-size: 1.6rem;
+				font-weight: bold;
+				margin-bottom: 2rem;
+			}
+
+			&__text {
+				font-size: 1.4rem;
+			}
+
+		}
+
+		.row {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.three.columns {
+			display: flex;
+			margin-bottom: 2%;
+
+			&:nth-child(1) {
+				.item__img {
+					background-image: @key;
+				}
+
+			}
+
+			&:nth-child(2) {
+				.item__img {
+					background-image: @speed;
+				}
+
+			}
+
+			&:nth-child(3) {
+				.item__img {
+					background-image: @manager;
+				}
+
+			}
+
+			&:nth-child(4) {
+				.item__img {
+					background-image: @code;
+					background-position: 70% 50%;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+.frame {
+	position: relative;
+	max-width: 1100px;
+	padding: 7rem 3rem;
+	margin: 0 auto;
+	margin-top: 2rem;
+	border: 12px solid @yellow;
+
+	.section__title {
+		padding: 5rem 3rem 0;
+		background-color: #fff;
+		position: absolute;
+		top: -85px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__wrap {
+		max-width: 890px;
+		margin: 0 auto;
+	}
+
+	&__inner {
+	}
+
+	&__pre {
+		max-width: 670px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	&__img {
+		margin: 3rem 0;
+		text-align: center;
+	}
+
+	&__text {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	&__competence {
+		text-align: center;
+
+		.item {
+			.dibt;
+			max-width: 160px;
+			margin: 0 2rem;
+
+			&__img {
+			}
+
+			&__info {
+				text-align: center;
+			}
+
+			&__title {
+				font-size: 1.2rem;
+				font-weight: bold;
+				margin-bottom: 2rem;
+			}
+
+		}
+
+	}
+
+	&__rating {
+		background-color: @yellow;
+		text-align: center;
+	}
+
+	&__num {
+		font-family: 'BebasNeueBold';
+		font-size: 110px;
+		font-weight: bold;
+	}
+
+	&__place {
+		font-size: 2.4rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+	}
+
+	&__top {
+		max-width: 440px;
+		margin: 0 auto;
+		padding-bottom: 3rem;
+		margin-bottom: 5rem;
+	}
+
+	&__certif {
+		padding-bottom: 5rem;
+		margin-bottom: 5rem;
+		border-bottom: 1px solid #f0f0f0;
+
+		.certif__count {
+			float: left;
+			font-size: 1.4rem;
+			font-weight: bold;
+			text-transform: uppercase;
+
+			span {
+				font-family: 'BebasNeueBold';
+				font-size: 80px;
+				line-height: 1;
+			}
+
+		}
+
+		.certif__img {
+			margin-left: 140px;
+			height: 100px;
+			overflow: hidden;
+
+			img {
+				margin-left: 0.5rem;
+			}
+
+		}
+
+	}
+
+	&__partner {
+		display: flex;
+		align-items: center;
+
+		&--img {
+			margin-right: 3rem;
+			flex-shrink: 0;
+		}
+
+		&--block {
+			-ms-flex: 0 1 auto;
+			h6 {
+				text-align: left;
+			}
+
+		}
+
+	}
+
+}
+
+.develope {
+	&__wrap {
+	}
+
+	&__block {
+		position: relative;
+		background-color: rgb(255, 255, 255);
+		box-shadow: 0px 0px 40.85px 2.15px rgba(0, 0, 0, 0.03);
+		padding: 5rem 3rem;
+		text-align: center;
+
+		.text__block {
+			margin-bottom: 3rem;
+
+			p {
+				text-align: center;
+			}
+
+		}
+
+	}
+
+	&__inner {
+		max-width: 890px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		font-size: 2.4rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 3rem;
+	}
+
+	&__group {
+		.item {
+			margin: 0 4rem;
+			.dibt;
+			width: 220px;
+			background-color: rgb(255, 255, 255);
+			box-shadow: 0px 0px 40.85px 2.15px rgba(0, 0, 0, 0.03);
+
+			&__head {
+				position: relative;
+				margin: 0 -15px;
+				background-color: #ca0c30;
+				font-size: 1.2rem;
+				font-weight: bold;
+				line-height: 1;
+				color: #fff;
+				text-align: center;
+
+				span {
+					max-width: 140px;
+					display: inline-block;
+					margin: 1rem;
+				}
+
+				&:before {
+					content: '';
+					position: absolute;
+					bottom: -15px;
+					left: 0;
+					width: 15px;
+					height: 15px;
+					background-color: #9d102b;
+				}
+
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: -15px;
+					right: 0;
+					width: 15px;
+					height: 15px;
+					background-color: #9d102b;
+				}
+
+			}
+
+			&__img {
+				width: 150px;
+				margin: 3rem auto 1rem;
+
+				img {
+					.img;
+				}
+
+			}
+
+			&__info {
+			}
+
+			&__title {
+				margin-bottom: 5rem;
+			}
+
+			&__price {
+				font-size: 1.6rem;
+				font-family: "Museo Sans Cyrl 900";
+				margin-bottom: 3rem;
+			}
+
+		}
+
+	}
+
+}
+
+
+
+
+
+@media (max-width:1199px) {
+	.bitrix-feature__block {
+		.text__block img[align="left"] {
+			margin: 0 15px 30px 0;
+
+			&:last-child {
+				margin: 0 0 30px 0;
+			}
+
+		}
+
+	}
+
+}
+
+@media (max-width:899px) {
+
+
+}
+
+@media (max-width:767px) {
+	.bitrix {
+		&-why {
+			background-position: 50% 83%;
+			background-size: 280px 245px;
+
+			.text__block {
+				text-align: center;
+				max-width: 840px;
+				margin: 0 auto;
+
+				p {
+					text-align: center;
+				}
+
+			}
+
+			&--img {
+				text-align: center;
+
+				img {
+					width: 175px;
+				}
+
+			}
+
+			&--btn {
+				span {
+					display: none;
+				}
+
+			}
+
+		}
+
+		&-feature {
+			&__block {
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+
+			.number {
+				margin-right: 0;
+				margin-top: 3rem;
+
+				span {
+				}
+
+			}
+
+			.section__img {
+			}
+
+			.text__block {
+				text-align: center;
+
+				p {
+					text-align: center;
+				}
+
+				img[align="left"] {
+					float: none;
+					.dibm;
+					margin: 0 10px 10px 10px;
+
+					&:last-child {
+						margin: 0 10px;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.edition {
+		&__group {
+			.item {
+				flex-wrap: wrap;
+				justify-content: center;
+				padding: 3rem;
+
+				&__img {
+					padding-bottom: 2rem;
+				}
+
+				&__info {
+					text-align: center;
+				}
+
+				&__title {
+					span {
+						white-space: nowrap;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.bitrix__order {
+		padding: 5rem 0;
+		text-align: center;
+	}
+
+	.frame {
+		padding-bottom: 2rem;
+		&__top {
+			padding: 1rem;
+		}
+
+		&__certif {
+			padding-bottom: 5rem;
+			margin-bottom: 5rem;
+			border-bottom: 1px solid #f0f0f0;
+
+			.certif__count {
+				float: none;
+				text-align: center;
+				margin-bottom: 1rem;
+			}
+
+			.certif__img {
+				margin: 0 -15px 0 -10px;
+				height: auto;
+				text-align: center;
+
+				img {
+					margin-left: 0.5rem;
+				}
+
+			}
+
+		}
+
+		&__partner {
+			flex-wrap: wrap;
+			justify-content: center;
+
+			&--img {
+				margin-right: 0;
+			}
+
+			&--block {
+				h6 {
+					text-align: center;
+				}
+
+			}
+
+		}
+
+		.section__title {
+			font-size: 2.6rem;
+			width: 200px;
+			padding: 2rem 1rem 0;
+			top: -50px;
+		}
+
+	}
+
+
+
+	.develope {
+
+		&__group {
+			margin: 0 -2rem;
+			.item {
+				margin: 0 2rem 2rem;
+			}
+
+		}
+
+	}
+	.offer_order {
+	    padding-top: 0;
+	}
+}
+
+@media (max-width:519px) {
+	.clouds {
+		&__wrap {
+			background-image: url(../images/bitrix-clouds.png);
+			background-size: 280px 106px;
+			background-repeat: no-repeat;
+			background-position: center top;
+		}
+
+		&__left {
+			display: none;
+		}
+
+		&__right {
+			display: none;
+		}
+
+		&__center {
+			display: none;
+		}
+
+		&__info {
+			position: static;
+			padding: 2rem 0;
+		}
+
+	}
+
+}

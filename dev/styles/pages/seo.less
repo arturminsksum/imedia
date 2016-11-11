@@ -1,0 +1,463 @@
+.seo {
+	&-why {
+		position: relative;
+
+		.section__text {
+			max-width: 800px;
+		}
+
+		&__image {
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			margin-left: 400px;
+			line-height: 0;
+		}
+
+	}
+
+	&-stage {
+		.section__img {
+			background-image: @seo-choose;
+		}
+
+		.section-choose__group {
+			margin-top: 7rem;
+		}
+
+	}
+
+	&-profit {
+		.section-choose__group .item {
+			background: #fff;
+		}
+
+		.offer {
+			padding-top: 0;
+			padding-bottom: 5rem;
+
+			span {
+				font-weight: 300;
+			}
+
+		}
+
+	}
+
+	&-result {
+		.section__img {
+			background-image: @seo-result;
+		}
+
+		.tabs {
+			&__pagin {
+				position: relative;
+			}
+
+			&__btn {
+				position: relative;
+				display: inline-block;
+				padding: 17px 20px 17px 50px;
+				border-top-right-radius: 7px;
+				background-color: rgb(241, 230, 191);
+				cursor: pointer;
+				margin-left: -7px;
+				background-image: url(../images/seo-tab-bg.png);
+				background-repeat: no-repeat;
+				background-position: -140px -30px;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 20px;
+					left: 20px;
+					width: 21px;
+					height: 20px;
+					background-image: @seo-tab;
+				}
+
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					right: -10px;
+					width: 0;
+					height: 0;
+					border-bottom: 50px solid rgb(241, 230, 191);
+					border-right: 10px solid transparent;
+				}
+
+				&:nth-child(1) {
+					margin-left: 0;
+					z-index: 4;
+				}
+
+				&:nth-child(2) {
+					z-index: 3;
+				}
+
+				&:nth-child(3) {
+					z-index: 2;
+				}
+
+				&:nth-child(4) {
+					z-index: 1;
+				}
+
+				span {
+					font-size: 14px;
+					font-weight: bold;
+					border-bottom: 1px dotted @font-color;
+				}
+
+				&:hover,
+				&.active {
+					background-color: rgb(254, 245, 213);
+					background-image: inherit;
+					z-index: 10;
+
+					&:after {
+						border-bottom-color: rgb(254, 245, 213);
+					}
+
+				}
+
+			}
+
+			&__nav {
+				display: none;
+				position: absolute;
+				top: 10px;
+				right: -5px;
+			}
+
+			&__arrow {
+				.dibt;
+				border-radius: 50%;
+				background-color: rgb(247, 195, 5);
+				width: 32px;
+				height: 32px;
+				margin: 0 5px;
+				background-position-y: 50%;
+				background-repeat: no-repeat;
+
+				&.prev {
+					background-image: @seo-prev;
+					background-position-x: 10px;
+				}
+
+				&.next {
+					background-image: @seo-next;
+					background-position-x: 12px;
+				}
+
+			}
+
+			&__content {
+				padding: 3rem;
+				background-color: rgb(254, 245, 213);
+			}
+
+			&__item {
+				&.active {
+					display: block;
+				}
+
+				.text__block {
+					p {
+						margin-bottom: 10px;
+					}
+
+					ul {
+						li {
+							margin-bottom: 0;
+						}
+
+					}
+
+				}
+
+			}
+
+			&__block {
+				padding: 3rem;
+				background-color: rgb(255, 255, 255);
+				box-shadow: 0px 0px 12.35px 0.65px rgba(166, 156, 122, 0.33);
+			}
+
+			&__info {
+			}
+
+			&__row {
+				margin: 0 -15px;
+			}
+
+			&__col {
+				padding: 0 15px;
+				margin-bottom: 3rem;
+				.dibt;
+
+				.item {
+					width: 280px;
+
+					&__info {
+						width: 100%;
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+					}
+
+					&__img {
+					}
+
+					&__name {
+						font-size: 1.4rem;
+						color: rgb(118, 118, 118);
+					}
+
+					&__string {
+						display: flex;
+					}
+
+					&__text {
+						font-size: 1.4rem;
+						color: rgb(38, 38, 38);
+						margin-right: 5px;
+					}
+
+					&__place {
+						font-weight: bold;
+					}
+
+				}
+
+			}
+
+			&__more {
+				font-size: 1.6rem;
+				font-weight: bold;
+				cursor: pointer;
+
+				span {
+					border-bottom: 1px dotted @font-color;
+				}
+
+			}
+
+			&__hidden {
+				display: none;
+			}
+
+		}
+
+	}
+
+	&-cash {
+		.section__img {
+			background-image: @money;
+		}
+
+		&__factors {
+		}
+
+		.factors {
+			position: relative;
+			max-width: 1050px;
+			padding: 0 3rem 3rem 3rem;
+			margin: 0 auto;
+			margin-top: 20rem;
+			border: 14px solid rgb(243, 243, 243);
+
+			&__title {
+				position: relative;
+				padding: 5rem;
+				background-color: rgb(255, 255, 255);
+				box-shadow: 0px 0px 40.85px 2.15px rgba(249, 249, 249, 1);
+				font-size: 54px;
+				line-height: 1.25;
+				text-align: center;
+				margin: -150px 3rem 0 3rem;
+				margin-bottom: 5rem;
+			}
+
+			&__wrap {
+			}
+
+			&__list {
+				text-align: left;
+				margin-bottom: 0;
+
+				li {
+					padding-right: 10px;
+					list-style-image: @approach-list;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+@media (max-width:1199px) {
+	.seo {
+		&-why {
+			padding-bottom: 0;
+
+			&__image {
+				position: static;
+				margin-left: 0;
+				text-align: center;
+
+				img {
+					.img;
+					width: 200px;
+				}
+
+			}
+
+		}
+
+		&-cash {
+			.factors {
+				margin-top: 15rem;
+
+				&__title {
+					position: relative;
+					padding: 3rem;
+					font-size: 36px;
+					margin: -100px 3rem 0 3rem;
+					margin-bottom: 3rem;
+				}
+
+				&__wrap {
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+@media (max-width:767px) {
+	.seo {
+		&-result {
+			.tabs {
+				&__pagin {
+				}
+
+				&__btn {
+					margin-left: 0;
+					display: none;
+
+					&.active {
+						display: inline-block;
+					}
+
+				}
+
+				&__nav {
+					display: block;
+				}
+
+				&__content {
+					padding: 20px 15px;
+					background-color: rgb(254, 245, 213);
+				}
+
+				&__item {
+					&.active {
+						display: block;
+					}
+
+					.text__block {
+						p {
+							margin-bottom: 10px;
+						}
+
+						ul {
+							li {
+								margin-bottom: 0;
+							}
+
+						}
+
+					}
+
+				}
+
+				&__block {
+					padding: 15px;
+				}
+
+				&__info {
+				}
+
+				&__row {
+					margin: 0;
+				}
+
+				&__col {
+					padding: 0;
+					margin-bottom: 2rem;
+					display: block;
+
+					.item {
+						width: 100%;
+
+						&__info {
+							width: 100%;
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+						}
+
+						&__img {
+						}
+
+						&__name {
+						}
+
+						&__string {
+							display: flex;
+						}
+
+						&__text {
+						}
+
+						&__place {
+							font-weight: bold;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+		&-cash {
+			.factors {
+				margin-top: 10rem;
+				padding: 0 2rem 2rem 2rem;
+				&__title {
+				  padding: 2rem;
+				  font-size: 24px;
+				  margin: -70px 0 0 0;
+				  margin-bottom: 2rem;
+				}
+
+				&__wrap {
+				}
+
+			}
+
+		}
+
+	}
+
+}

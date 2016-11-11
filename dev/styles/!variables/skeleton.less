@@ -1,0 +1,595 @@
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+* Less Version by Seth Coelen https://github.com/whatsnewsaes
+*/
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Grid
+- Base Styles
+- Typography
+- Links
+- Buttons
+- Forms
+- Lists
+- Code
+- Tables
+- Spacing
+- Utilities
+- Clearing
+- Media Queries
+*/
+
+
+// Variables
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Breakpoints
+@bp-larger-than-mobile: 320px;
+@bp-larger-than-phablet: 480px;
+@bp-larger-than-tablet: 768px;
+@bp-larger-than-desktop: 1200px;
+@bp-larger-than-desktophd: 1366px;
+// Colors
+@light-grey: #e1e1e1;
+@dark-grey: #333;
+@primary-color: #f7c305;
+@secondary-color: lighten(@dark-grey, 13.5%);
+@border-color: #bbb;
+@link-color: #1eaedb;
+@font-color: #222;
+@yellow: #f7c305;
+@grey: #6d6d6d;
+@red: #ff5151;
+@light-yellow: #fdf3cd;
+// Typography
+@font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// Grid Variables
+@container-width: 1270px;
+@container-width-larger-than-mobile: 90%;
+@container-width-larger-than-tablet: 100%;
+@total-columns: 12;
+@column-width: 100 / @total-columns;
+// calculates individual column width based off of # of columns
+@column-margin: 2%;
+// space between columns
+
+// Misc
+@global-radius: 2px;
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.5;
+  font-weight: 300;
+  font-family: @font-family;
+  color: @font-color;
+}
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 4.0rem;
+  line-height: 1.2;
+  letter-spacing: -.1rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+  line-height: 1.25;
+  letter-spacing: -.1rem;
+}
+
+h3 {
+  font-size: 3.0rem;
+  line-height: 1.3;
+  letter-spacing: -.1rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 1.35;
+  letter-spacing: -.08rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: -.05rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: @font-color;
+
+  &:hover {
+    // color: darken(@link-color, 5%);
+  }
+
+}
+
+// Functions
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+.grid-column-width(@n) {
+  width: @column-width * @n - (@column-margin*(@total-columns - @n)/@total-columns);
+}
+
+.grid-offset-length(@n) {
+  margin-left: @column-width * @n - (@column-margin*(@total-columns - @n)/@total-columns) + @column-margin;
+}
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  // position: relative;
+  width: 100%;
+  max-width: @container-width;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+}
+
+/* For devices larger than 400px */
+@media (min-width:@bp-larger-than-mobile) {
+  .container {
+    // width: @container-width-larger-than-mobile;
+    // padding: 0;
+  }
+
+}
+
+/* For devices larger than 550px */
+@media (min-width:@bp-larger-than-tablet) {
+  .container {
+    width: @container-width-larger-than-tablet;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .column,
+  .columns {
+    margin-left: @column-margin;
+    display: flex;
+  }
+
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0;
+  }
+
+  .one.column,
+  .one.columns {
+    .grid-column-width(1);
+  }
+
+  .two.columns {
+    .grid-column-width(2);
+  }
+
+  .three.columns {
+    .grid-column-width(3);
+  }
+
+  .three.columns:nth-child(4n-3) {
+    margin-left: 0;
+  }
+
+  .four.columns {
+    .grid-column-width(4);
+  }
+
+  .four.columns:nth-child(3n-2) {
+    margin-left: 0;
+  }
+
+  .five.columns {
+    .grid-column-width(5);
+  }
+
+  .six.columns {
+    .grid-column-width(6);
+  }
+
+  .six.columns:nth-child(2n-1) {
+    margin-left: 0;
+  }
+
+  .seven.columns {
+    .grid-column-width(7);
+  }
+
+  .eight.columns {
+    .grid-column-width(8);
+  }
+
+  .nine.columns {
+    .grid-column-width(9);
+  }
+
+  .ten.columns {
+    .grid-column-width(10);
+  }
+
+  .eleven.columns {
+    .grid-column-width(11);
+  }
+
+  .twelve.columns {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .one-third.column {
+    .grid-column-width(4);
+  }
+
+  .two-thirds.column {
+    .grid-column-width(8);
+  }
+
+  .one-half.column {
+    .grid-column-width(6);
+  }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns {
+    .grid-offset-length(1);
+  }
+
+  .offset-by-two.column,
+  .offset-by-two.columns {
+    .grid-offset-length(2);
+  }
+
+  .offset-by-three.column,
+  .offset-by-three.columns {
+    .grid-offset-length(3);
+  }
+
+  .offset-by-four.column,
+  .offset-by-four.columns {
+    .grid-offset-length(4);
+  }
+
+  .offset-by-five.column,
+  .offset-by-five.columns {
+    .grid-offset-length(5);
+  }
+
+  .offset-by-six.column,
+  .offset-by-six.columns {
+    .grid-offset-length(6);
+  }
+
+  .offset-by-seven.column,
+  .offset-by-seven.columns {
+    .grid-offset-length(7);
+  }
+
+  .offset-by-eight.column,
+  .offset-by-eight.columns {
+    .grid-offset-length(8);
+  }
+
+  .offset-by-nine.column,
+  .offset-by-nine.columns {
+    .grid-offset-length(9);
+  }
+
+  .offset-by-ten.column,
+  .offset-by-ten.columns {
+    .grid-offset-length(10);
+  }
+
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns {
+    .grid-offset-length(11);
+  }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns {
+    .grid-offset-length(4);
+  }
+
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns {
+    .grid-offset-length(8);
+  }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.column {
+    .grid-offset-length(6);
+  }
+
+}
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.btn,
+button {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  color: @font-color;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  // line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  // background-color: transparent;
+  border-radius: @global-radius;
+  // border: 1px solid @border-color;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.3s;
+
+  &:hover {
+  }
+
+  &:focus {
+  }
+
+  &-primary {
+    background-color: @primary-color;
+
+    &:hover {
+      background: #e0b415;
+    }
+
+    &:focus {
+      background: #c7a31f;
+    }
+
+  }
+
+  &-grey {
+    background: #e2e2e2;
+
+    &:hover {
+      background: #f7c305;
+    }
+
+    &:focus {
+      background: #c7a31f;
+    }
+
+  }
+
+  &-green {
+    color: #fff;
+    background: #6dac12;
+
+    &:hover {
+      background: #528509;
+    }
+
+    &:focus {
+      
+      background: #87c133;
+    }
+
+  }
+
+}
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: circle inside;
+}
+
+ol {
+  list-style: decimal inside;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+ul {
+  padding-left: 0;
+  margin-top: 0;
+
+  ul,
+  ol {
+    margin: 1.5rem 0 1.5rem 3rem;
+    font-size: 90%;
+  }
+
+}
+
+ol {
+  ol,
+  ul {
+    margin: 1.5rem 0 1.5rem 3rem;
+    font-size: 90%;
+  }
+
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+/* Code
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: lighten(@light-grey, 6.4%);
+  border: 1px solid @light-grey;
+  border-radius: @global-radius;
+}
+
+pre > code {
+  display: block;
+  padding: 1rem 1.5rem;
+  white-space: pre;
+}
+
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid @light-grey;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.btn {
+  // margin-bottom: 1rem;
+}
+
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem;
+}
+
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem;
+}
+
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.u-pull-right {
+  float: right;
+}
+
+.u-pull-left {
+  float: left;
+}
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid @light-grey;
+}
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Self Clearing Goodness */
+
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+/* Larger than mobile */
+@media (min-width:@bp-larger-than-mobile) {
+}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width:@bp-larger-than-phablet) {
+}
+
+/* Larger than tablet */
+@media (min-width:@bp-larger-than-tablet) {
+}
+
+/* Larger than desktop */
+@media (min-width:@bp-larger-than-desktop) {
+}
+
+/* Larger than Desktop HD */
+@media (min-width:@bp-larger-than-desktophd) {
+}

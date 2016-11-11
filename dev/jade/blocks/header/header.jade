@@ -1,0 +1,62 @@
+mixin header(o)
+  
+    .overlay.overlay_phone
+    .overlay.overlay_advice
+    .overlay.overlay_menu  
+    header.header
+      .container
+        .header__wrap
+          .header__block._burger
+            .toggle
+              //- input#toggle.toggle__ticker(type='checkbox')
+              .toggle__btn
+                span.toggle__first
+                span.toggle__second
+                span.toggle__third  
+              .toggle__title Меню
+          .header__block._contact    
+            .h-phone
+              .h-phone__icon
+              .h-phone__list
+                .h-phone__title.section__title Звоните!
+                .h-phone__item
+                  .h-phone__operator MTC:
+                  a.h-phone__link(href="tel:+375296994435")
+                    span +375 (29) 699-44-35
+                .h-phone__item
+                  .h-phone__operator VELCOME:               
+                  a.h-phone__link(href="tel:+375296544435") 
+                    span +375 (33) 654-44-35
+            .h-mail 
+              .h-mail__icon
+              a.h-mail__link(href="mailto:info@imedia.by") 
+                span info@imedia.by
+          .header__block._logo
+            .h-logo
+              a(href="/").h-logo__link
+                //- img(src="images/logo-tablet.png", alt="logo")              
+          .header__block._advice
+            a.h-advice(href="#advice")
+              .h-advice__icon
+              .h-advice__link
+                span Получить консультацию
+
+    .popup._advice#advice
+      .popup__form
+        .section__title Напишите нам
+        .section__pre Оставьте свои контактные данные  и мы позвоним Вам в течении 1 часа и прокунсультируем Вас по вашему вопросу        
+        form(action="").form          
+          .form__block
+            input.input#name_advice(type='text', name='form[]', placeholder='')
+            label.label(for="name_advice") Имя
+          .form__block
+            input.input.email#email_advice(type='email', name='form[]', placeholder='')
+            label.label(for="email_advice") E-mail
+          .form__block
+            input.input.req#phone_advice(type='text', name='form[]', placeholder='')
+            label.label(for="phone_advice") Телефон
+          .form__block
+            textarea.input#message_advice(name='form[]', rows='1', placeholder='')
+            label.label(for="message_advice") Сообщение
+          .form__btn
+            button.btn.btn-green(type='submit') Отправить            

@@ -1,0 +1,151 @@
+extends template
+block content
+  -var work6="data:img/png;base64,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";
+
+  main.logotype
+    section.banner.banner_default
+      .banner__img.animated.fadeIn(style='background-image: url(images/logotype.jpg)')
+      .banner__info
+        h1.banner__title создание и разработка логотипа
+
+        .banner__text Заказать логотип вашей компании означает получение имиджевого продукта, который будет лицом вашего бизнеса, подчеркнет его преимущества и высокий уровень.
+      .breadcrumb
+        ol
+          li
+            a(href='#') Главная
+          li.active Разработка фирменного стиля
+
+    section.logotype-make
+      .container
+        .section__title создание логотипа <br> фирмы
+        .logotype-make__wrap
+          .section__text
+            p Имидж компании создается с помощью разных составляющих, одним из которых является оригинальный, неповторимый, уникальный логотип, который необходим для того, чтобы компанию и ее продукцию можно было проще идентифицировать на рынке. 
+              strong Заказать логотип вашей компании означает получение имиджевого продукта, который будет лицом вашего бизнеса, подчеркнет его преимущества и высокий уровень.
+
+            p Разработка логотипов обычно не имеет строгих ограничений и правил. Логотип может представлять собой уникальный знак, рисунок или шрифтовое начертание, а иногда все это вместе. 
+              strong Но все же есть несколько требований, которым должны соответствовать эти фирменные знаки: логотип должен быть узнаваемым, легко запоминающимся, уникальным. Кроме того, он должен быть понятным, лаконичным и читабельным. И самое основное – логотип должен ассоциироваться у потребителя с вашей компанией. 
+              | При соблюдении всех этих требований можно говорить о правильно выполненной работе.
+
+            p 
+              strong Создание логотипа фирмы
+              |  – это ответственное задание, настоящее искусство, которое требует не только умения рисовать, наличия художественного вкуса и умения пользоваться графическими компьютерными программами, но также знаний психологических особенностей потребителей, ситуации на рынке того или иного вида продукции. Именно поэтому такое ответственное задание лучше доверять профессионалам, которые обладают необходимыми знаниями и умениями. 
+
+            p
+              strong В нашем штате находятся опытные специалисты по дизайну, поэтому Вы останетесь довольны разработанным логотипом для вашей компании.
+          .logotype-make__image-left.wow.rollIn
+            img(src="images/logotype-make-left.png", alt="")
+          .logotype-make__image-right.wow.slideInRight
+            img(src="images/logotype-make-right.png", alt="")
+
+    section.logotype-stage
+      .container
+        .logotype-stage__img-title.wow.slideInDown
+          img(src="images/logotype-stage-title.png", alt="")
+        .logotype-stage__img-paper.wow.rollIn
+          img(src="images/logotype-stage-paper.png", alt="")
+        .section__title Этапы работы <br> по созданию логотипа
+        .logotype-stage__group
+          .item
+            .item__img
+              span 1
+            .item__info
+              .item__text уточнение требований и заполнение брифа
+          .item
+            .item__img
+              span 2
+            .item__info
+              .item__text оценка логотипов конкурирующих компаний
+          .item
+            .item__img
+              span 3
+            .item__info
+              .item__text корректировка брифа
+          .item
+            .item__img
+              span 4
+            .item__info
+              .item__text разработка нескольких концепций логотипа
+          .item
+            .item__img
+              span 5
+            .item__info
+              .item__text доработка утвержденной концепции
+        .logotype-stage__img-pens.wow.flipInY
+          img(src="images/logotype-stage-pens.png", alt="")                  
+        .logotype-stage__img-dividers.wow.flipInY
+          img(src="images/logotype-stage-dividers.png", alt="")
+
+        .offer
+          p 
+            span ЧЕМ РАНЬШЕ МЫ УЗНАЕМ О ЗАДАЧАХ ВАШЕГО БИЗНЕСА,
+            br
+            strong ТЕМ БЫСТРЕЕ ВЫ ПОЛУЧИТЕ НУЖНЫЙ ПРОДУКТ!
+          .offer__btn
+            .btn.btn-green ЗАКАЗАТЬ звонок специалиста             
+
+
+    section.section-working.logotype-working
+      .section-working__title Возможно Вас также заинтересует
+      .container
+        .logotype-working__img.wow.hinge
+          img(src="images/logotype-glasses.png", alt="")
+        .working__item          
+          .working__img.wow.fadeIn
+            span(style='background-image: url("'+work6+'");')
+
+          .working__title Разработка  фирменного стиля. Брендинг.  
+          .working__text Разработка логотипа и фирменного стиля может также идти в комплексе. В этом случае стоимость этой услуги составит от 9 млн бел руб. Сюда входит непосредственно разработка логотипа, подбор фирменных цветов, разработка "макетов" визиток, фирменных конвертов, дисков, папок, бланков.
+          .working__btn
+            a.btn.btn-primary(href="") ПОДРОБНЕЕ
+     
+
+
+    section.portfolio.logotype-portfolio
+      .container
+        .section__img
+        .section__pre Примеры наших работ
+        .section__title логотипы, КОТОРЫЕ сделали мы!
+      .portfolio__wrap.clearfix
+        figure.portfolio__item._main
+          img(src="images/portf-logo-01.jpg", alt="MINSK GUIDE")
+          figcaption.portfolio__info
+            .portfolio__name “MINSK GUIDE”
+            .portfolio__text Путеводитель по городу Минску
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ
+        figure.portfolio__item  
+          img(src="images/portf-logo-02.jpg", alt="stilville")
+          figcaption.portfolio__info
+            .portfolio__name stilville
+            .portfolio__text сайт 
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ
+        figure.portfolio__item  
+          img(src="images/portf-logo-03.jpg", alt="")
+          figcaption.portfolio__info
+            .portfolio__name study
+            .portfolio__text сайт 
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ 
+        figure.portfolio__item  
+          img(src="images/portf-logo-04.jpg", alt="")
+          figcaption.portfolio__info
+            .portfolio__name foxstyle
+            .portfolio__text сайт 
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ
+        figure.portfolio__item  
+          img(src="images/portf-logo-05.jpg", alt="krasa-volos")
+          figcaption.portfolio__info
+            .portfolio__name krasa-volos
+            .portfolio__text сайт 
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ
+      .container
+        .offer
+          .offer__title Хотите узнать сколько стоит заказать разработку логотипа в Минске?
+          h6 Закажите звонок эксперта и ПОЛУЧИТЕ выгодное предложение!
+          .offer__btn.wow.lightSpeedIn
+            .btn.btn-primary Получить Выгоду
+         

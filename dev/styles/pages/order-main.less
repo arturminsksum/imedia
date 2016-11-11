@@ -1,0 +1,410 @@
+.order {
+	&-main {
+		&__form {
+			max-width: 1060px;
+			background-color: rgb(255, 255, 255);
+			margin: -100px auto 0;
+			padding: 5rem;
+
+			.form {
+				margin: 0 auto;
+				max-width: 630px;
+
+				&__block {
+					&_site,
+					&_country,
+					&_hear {
+						display: none;
+					}
+				}
+
+				&__services {
+					.services {
+						font-size: 0;
+						text-align: left;
+						margin-bottom: 2rem;
+						&.err {
+							.services__title {
+								strong {
+									border-bottom: 1px solid @red;
+									box-shadow: 0 1px 0 0 @red;
+								}
+							}
+						}
+
+						&__title {
+							margin-bottom: 2rem;
+							font-size: 1.5rem;
+						}
+
+						&__item {
+							position: relative;
+							.dibt;
+							margin-bottom: 2rem;
+							width: 50%;
+							text-align: left;
+
+							.checkbox {
+								&__hidden {
+									display: none;
+
+									&:checked + .checkbox__showed {
+										border-color: @yellow;
+										background-color: @yellow;
+
+										&:before {
+											opacity: 1;
+										}
+
+									}
+
+								}
+
+								&__showed {
+									position: relative;
+									.dibm;
+									margin-right: 10px;
+									border-style: solid;
+									border-width: 2px;
+									border-color: rgb(232, 232, 232);
+									border-radius: 2px;
+									background-color: rgb(255, 255, 255);
+									width: 18px;
+									height: 18px;
+									.trans;
+									cursor: pointer;
+
+									&:hover {
+										border-color: @yellow;
+									}
+
+									&:before {
+										content: '';
+										position: absolute;
+										top: 2px;
+										left: 2px;
+										bottom: 0;
+										right: 0;
+										background-image: @check-mark;
+										background-repeat: no-repeat;
+										background-position: 50% 50%;
+										width: 10px;
+										height: 10px;
+										opacity: 0;
+									}
+
+								}
+
+								&__title {
+									.dibm;
+									font-size: 1.5rem;
+									margin-right: 10px;
+									cursor: pointer;
+								}
+
+								&__tool {
+									position: relative;
+									.dibm;
+									border-style: solid;
+									border-width: 1px;
+									border-color: rgb(194, 194, 194);
+									border-radius: 50%;
+									background-color: rgb(255, 255, 255);
+									position: absolute;
+									width: 20px;
+									height: 20px;
+									line-height: 20px;
+									text-align: center;
+									font-size: 15px;
+									color: rgb(194, 194, 194);
+									cursor: pointer;
+									.trans;
+
+									&:before {
+										display: none;
+		
+										position: absolute;
+										bottom: 20px;
+										left: 5px;
+										content: "";
+										height: 0;
+										width: 0;
+										border-left: 5px solid transparent;
+										border-top: 5px solid rgba(0, 0, 0, 0.859);
+										border-right: 5px solid transparent;
+									}
+
+									&:hover {
+										border-color: @yellow;
+										background-color: @yellow;
+										color: #000;
+
+										&:before {
+											display: block;
+
+
+										}
+
+										& + .checkbox__tips {
+											display: block;
+										}
+
+									}
+
+								}
+
+								&__tips {
+									position: absolute;
+									margin-bottom: 6px;
+									display: none;
+									bottom: 100%;
+									right: 10px;
+									width: 220px;
+									background-color: rgba(0, 0, 0, 0.859);
+									color: #fff;
+									font-size: 10px;
+									line-height: 1.2;
+									text-align: justify;
+									padding: 1rem;
+
+									&:hover {
+										background-color: rgba(0, 0, 0, 0.859);
+										color: #fff;
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+				}
+
+				&__doubt {
+					padding: 3rem;
+					margin-bottom: 3rem;
+
+					.doubt {
+						text-align: left;
+
+						&__title {
+							font-weight: bold;
+							text-transform: uppercase;
+						}
+
+						&__text {
+							margin-bottom: 2rem;
+						}
+
+						&__download {
+							.download {
+								position: relative;
+								padding-left: 35px;
+
+								&__icon {
+									position: absolute;
+									top: 0;
+									left: 0;
+									width: 24px;
+									height: 29px;
+									background-image: @doc;
+									margin-right: 2rem;
+								}
+
+								&__name {
+									.dibm;
+									font-weight: bold;
+									margin-right: 2rem;
+
+									span {
+										border-bottom: 1px solid rgb(222, 222, 222);
+									}
+
+								}
+
+								&__size {
+									.dibm;
+								}
+
+							}
+
+						}
+
+					}
+
+				}
+
+				&__progress {
+					text-align: left;
+
+					.progress {
+						&__item {
+							position: relative;
+							margin-bottom: 2rem;
+							padding: 0 35px;
+						}
+
+						&__icon {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 24px;
+							height: 29px;
+							background-image: @doc;
+							margin-right: 1rem;
+						}
+
+						&__name {
+							.dibm;
+							margin-right: 2rem;
+							width: 200px;
+						}
+
+						&__size {
+							.dibm;
+							margin-right: 2rem;
+							color: rgb(146, 146, 146);
+							width: 70px;
+						}
+
+						&__indicator {
+							.dibm;
+							position: relative;
+							background-color: rgb(232, 232, 232);
+							width: 240px;
+							height: 7px;
+						}
+
+						&__bar {
+							position: absolute;
+							width: 0;
+							height: 100%;
+							background-color: @yellow;
+						}
+
+						&__cancel {
+							position: absolute;
+							top: 8px;
+							right: 8px;
+							width: 10px;
+							height: 10px;
+							background-image: @close-red;
+						}
+
+						&__attach {
+							text-align: center;
+						}
+
+						&__limit {
+							font-size: 14px;
+							margin-bottom: 1rem;
+						}
+
+						&__btn {
+							input {
+								display: none;
+							}
+
+							.btn {
+								margin-bottom: 3rem;
+							}
+
+						}
+
+					}
+
+				}
+
+				&__btn {
+					.btn {
+						padding: 2.5rem 4.5rem;
+						font-size: 1.4rem;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+@media (max-width:1199px) {
+}
+
+@media (max-width:767px) {
+	.order {
+		&-main {
+			&__form {
+				margin: -70px auto 0;
+				padding: 5rem 2rem;
+
+				.form {
+					&__services {
+						.services {
+							&__title {
+								text-align: center;
+							}
+
+							&__item {
+								width: 100%;
+
+								.checkbox {
+
+								}
+
+							}
+
+						}
+
+					}
+
+					&__doubt {
+						padding: 2rem;
+					}
+
+					&__progress {
+						text-align: left;
+
+						.progress {
+							&__name {
+								width: auto;
+							}
+
+							&__size {
+								margin-right: 0;
+								width: auto;
+							}
+
+							&__indicator {
+								width: 100%;
+							}
+
+						}
+
+					}
+
+					&__btn {
+						.btn {
+							padding: 2.5rem 4.5rem;
+							font-size: 1.4rem;
+							&-seo {
+								padding: 2.5rem 1.5rem;
+							}
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}

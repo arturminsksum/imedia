@@ -1,0 +1,43 @@
+mixin footer(o)
+    footer.footer
+      .f-back-top#back-top
+      .f-form.bg-grey
+        form(action="").form._feed
+          .section__pre._left Вы готовы начать работу или получить консультацию?
+          .section__title._left Напишите нам
+          .form__block
+            input.input#name_feed(type='text', name='form[]', placeholder='',autocomplete='name')
+            label.label(for="name_feed") Имя
+          .form__block
+            input.input#company_feed(type='text', name='form[]', placeholder='',autocomplete='organization')
+            label.label(for="company_feed") Компания
+          .form__block
+            input.input.req.email#email_feed(type='email', name='form[]', placeholder='',autocomplete='email')
+            label.label(for="email_feed") E-mail
+          .form__block
+            input.input.req#phone_feed(type='text', name='form[]', placeholder='',autocomplete='tel')
+            label.label(for="phone_feed") Телефон
+          .form__block
+            textarea.input#message_feed(name='form[]', rows='1', placeholder='')
+            label.label(for="message_feed") Сообщение
+          .form__btn
+            button.btn.btn-green(type='submit') Отправить     
+      .f-map
+        .map#map
+          figure.map__item 
+            .map__img
+              img(src="images/marker-img.png", alt="")
+            figcaption.map__info
+              .map__title Адрес:
+              .map__text г. Минск, ул. Сурганова 43, офис 804 
+              .map__metro
+                i
+                | Академия наук 
+              .map__title Контакты:
+              .map__number +375 (17) 292-14-94
+              a.map__callback(href="#advice") Заказать обратный звонок
+       
+mixin footer2(o)
+    footer.footer
+      .f-back-top#back-top
+      .footer__copyright © 2009-2016 iMedia.by

@@ -1,0 +1,188 @@
+extends template
+block content
+  main.main
+
+    section.slider.slider_top
+      //- .slider__btn._prev
+      //- .slider__btn._next
+      .slider__img.animated.fadeIn
+            //- img(src="images/slide01.jpg", alt="")       
+      .slider__wrap
+       
+        .slider__item
+          //- .slider__img
+            img(src="images/slide01.jpg", alt="")
+          .slider__info
+            .slider__title.wow.pulse ЭФФЕКТИВНО УПАКУЕМ <br> ЛЮБОЙ БИЗНЕС
+            .slider__text САЙТЫ. МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ. РЕКЛАМА В ИНТЕРНЕТЕ
+            .slider__link
+              a.btn.btn-primary(href="") ЗАКАЗАТЬ УСЛУГУ 
+        .slider__item
+          //- .slider__img
+            img(src="images/slide02.jpg", alt="")
+          .slider__info
+            .slider__title.wow.pulse ЭФФЕКТИВНО УПАКУЕМ <br> ЛЮБОЙ БИЗНЕС
+            .slider__text САЙТЫ. МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ. РЕКЛАМА В ИНТЕРНЕТЕ
+            .slider__link
+              a.btn.btn-primary(href="") ЗАКАЗАТЬ УСЛУГУ 
+    section.working
+      .container
+        .section__pre Наши главные направления оказываемых услуг
+        .section__title Наши услуги
+        +working()
+
+    section.about.bg-grey
+      .container
+        .section__pre Проффесиональность. Ответсвенность. Многолетний опыт.
+        .section__title почему мы лучшие
+        .tabs__block
+          .tabs__pagin
+            .tabs__btn.wow.bounceIn(data-wow-delay="0s") 
+              span Кто мы
+            .tabs__btn.wow.bounceIn(data-wow-delay="0.25s")  
+              span Что мы делаем
+            .tabs__btn.wow.bounceIn(data-wow-delay="0.5s")  
+              span Как мы работаем
+            .tabs__btn.wow.bounceIn(data-wow-delay="0.75s") 
+              span Почему именно с нами
+          .tabs__content
+            .tabs__item
+              .tabs__img
+                img(src="images/who.png", alt="")
+              .tabs__info
+                .tabs__title Кто мы
+                .tabs__text 
+                  p iMedia.by – это веб-студия, которая гарантирует своим клиентам не просто создание сайта, но и яркого, стильного и модного продукта. Для этого мы используем самые передовые и современные технологии и методы работы. Наша команда обладает большим опытом в области разработки и продвижния сайтов, что позволяет нам создавать технически сложные сайты и решать практически любые задачи, возлагаемые на них клиентами.
+                  p Также мы занимаемся разработкой логотипов и созданием фирменного стиля компании, оригинальность, узнаваемость, яркость которых позволит партнерам и клиентам просто и быстро идентифицировать вашу компанию на рынке.
+            .tabs__item
+              .tabs__img
+                img(src="images/what.png", alt="")
+              .tabs__info
+                .tabs__title Что мы делаем
+                .tabs__text 
+                  p iMedia.by – это веб-студия, которая гарантирует своим клиентам не просто создание сайта, но и яркого, стильного и модного продукта. Для этого мы используем самые передовые и современные технологии и методы работы. Наша команда обладает большим опытом в области разработки и продвижения сайтов, что позволяет нам создавать технически сложные сайты и решать практически любые задачи, возлагаемые на них клиентами.
+                  p Также мы занимаемся разработкой логотипов и созданием фирменного стиля компании, оригинальность, узнаваемость, яркость которых позволит партнерам и клиентам просто и быстро идентифицировать вашу компанию на рынке.
+            .tabs__item
+              .tabs__img
+                img(src="images/how.png", alt="")
+              .tabs__info
+                .tabs__title Как мы работаем
+                .tabs__text 
+                  p iMedia.by – это веб-студия, которая гарантирует своим клиентам не просто создание сайта, но и яркого, стильного и модного продукта. Для этого мы используем самые передовые и современные технологии и методы работы. Наша команда обладает большим опытом в области разработки и продвижения сайтов, что позволяет нам создавать технически сложные сайты и решать практически любые задачи, возлагаемые на них клиентами.
+                  p Также мы занимаемся разработкой логотипов и созданием фирменного стиля компании, оригинальность, узнаваемость, яркость которых позволит партнерам и клиентам просто и быстро идентифицировать вашу компанию на рынке.
+            .tabs__item
+              .tabs__img
+                img(src="images/why.png", alt="")
+              .tabs__info
+                .tabs__title Почему именно с нами
+                .tabs__text 
+                  p iMedia.by – это веб-студия, которая гарантирует своим клиентам не просто создание сайта, но и яркого, стильного и модного продукта. Для этого мы используем самые передовые и современные технологии и методы работы. Наша команда обладает большим опытом в области разработки и продвижения сайтов, что позволяет нам создавать технически сложные сайты и решать практически любые задачи, возлагаемые на них клиентами.
+                  p Также мы занимаемся разработкой логотипов и созданием фирменного стиля компании, оригинальность, узнаваемость, яркость которых позволит партнерам и клиентам просто и быстро идентифицировать вашу компанию на рынке.
+
+    section.persona
+      .container
+        .section__pre Более 20+ профессионалов своего дела будут работать с Вашим проектом
+
+        .section__title  ЗНАКОМЬТЕСЬ С НАШЕЙ КОМАНДОЙ 
+        .slider.slider_persona
+          //- .slider__btn._prev
+          //- .slider__btn._next
+          .persona__wrap
+            -for (var i = 0; i < 2; i++) 
+              figure.persona__item
+                img(src="images/persona01.jpg", alt="")
+                figcaption.persona__info
+                  .persona__name АРТЕМ
+                  .persona__prof Менеджер по работе с клиентами.
+                  .persona__quality Ответственный. Надежный. Пунктуальный.
+              figure.persona__item
+                img(src="images/persona02.jpg", alt="")
+                figcaption.persona__info
+                  .persona__name Сергей
+                  .persona__prof Директор веб-студии.
+                  .persona__quality Ответственный. Надежный. Пунктуальный.
+              figure.persona__item
+                img(src="images/persona03.jpg", alt="")
+                figcaption.persona__info
+                  .persona__name Ирина
+                  .persona__prof Бизнес - аналитик.
+                  .persona__quality Ответственная. Надежная. Пунктуальная.
+
+    section.portfolio.portfolio_main.bg-grey
+      .container
+        .section__pre._left Проекты которые нам нравятся больше всех
+        .section__title._left Наши лучшие работы
+        .portfolio__more.wow.slideInRight 
+          a.btn.btn-primary(href="") все проекты
+
+      .portfolio__wrap.clearfix
+        figure.portfolio__item._main
+          img(src="images/concordia.jpg", alt="concordia")
+          figcaption.portfolio__info
+            .portfolio__name “CONCORDIA”
+            .portfolio__text сайт медицинского центра
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ
+        figure.portfolio__item  
+          img(src="images/stilville.jpg", alt="stilville")
+          figcaption.portfolio__info
+            .portfolio__name stilville
+            .portfolio__text сайт 
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ
+        figure.portfolio__item  
+          img(src="images/study.jpg", alt="")
+          figcaption.portfolio__info
+            .portfolio__name study
+            .portfolio__text сайт 
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ 
+        figure.portfolio__item  
+          img(src="images/foxstyle.jpg", alt="")
+          figcaption.portfolio__info
+            .portfolio__name foxstyle
+            .portfolio__text сайт 
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ
+        figure.portfolio__item  
+          img(src="images/krasa-volos.jpg", alt="krasa-volos")
+          figcaption.portfolio__info
+            .portfolio__name krasa-volos
+            .portfolio__text сайт 
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ                 
+
+    section.client.bg-grey
+      .container
+        .section__pre Вы тоже можете появиться здесь
+        .section__title  Наши клиенты
+        .client__wrap
+          - for (var i = 1; i < 22; i++) 
+            .client__item
+                .client__img.greyimg
+                  img(src="images/partner-"+i+".jpg", alt="")
+                .client__info
+                  .client__title "РУП Белмедпрепараты"
+                  .client__text Разработка корпоративного сайта компании   
+        .client__btn 
+                a.btn.btn-grey(href="") ВСЕ КЛИЕНТЫ 
+
+    section.review
+      .container
+        .section__pre._left Полезные статьи в сфере веб-разработки и новости студии
+        .section__title._left Последние новости
+        .review__btn.wow.slideInRight
+          a.btn.btn-primary(href="") Перейти к блогу 
+        .row
+          - for (var i = 0; i < 4; i++)
+            .three.columns
+              .review__item
+                .review__type 
+                  span Статья
+                a(href="").review__title 
+                  span Признаки успешного коммерческого сайта
+                .review__date 
+                  time(datetime="2016-04-13") 13 Апреля 2016
+                .review__text Информационная революция диктует свои условия ведения бизнеса. В данный момент времени, крупные компании или организации имеют сайты или интернет-порталы, рассказывающие об их деятельности.
+                .review__more
+                  a(href="") Подробнее      

@@ -1,0 +1,35 @@
+extends template2
+block content
+  main.news
+    +banner('НОВОСТИ','Интересные статьи и новости агенства','НОВОСТИ','yellow')
+    section.news__content
+      .container
+        .row
+          - for (var i = 0; i < 12; i++)
+            .three.columns
+              .review__item
+                .review__type 
+                  span Статья
+                a(href="").review__title 
+                  span Признаки успешного коммерческого сайта
+                .review__date 
+                  time(datetime="2016-04-13") 13 Апреля 2016
+                .review__text Информационная революция диктует свои условия ведения бизнеса. В данный момент времени, крупные компании или организации имеют сайты или интернет-порталы, рассказывающие об их деятельности.
+                .review__more 
+                  a(href="") Подробнее
+          - for (var i = 0; i < 12; i++)
+            .three.columns(style="display:none")
+              .review__item
+                .review__type 
+                  span Статья
+                a(href="").review__title 
+                  span Признаки успешного коммерческого сайта
+                .review__date 
+                  time(datetime="2016-04-13") 13 Апреля 2016
+                .review__text Информационная революция диктует свои условия ведения бизнеса. В данный момент времени, крупные компании или организации имеют сайты или интернет-порталы, рассказывающие об их деятельности.
+                .review__more 
+                  a(href="") Подробнее                  
+        .news__btn
+          .btn.btn-grey ПОКАЗАТЬ ЕЩЕ
+        .news__pagin
+          +pagin()

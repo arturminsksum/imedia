@@ -1,0 +1,247 @@
+/*=== begin footer style ===*/
+.footer {
+	position: relative;
+	z-index: 1;
+
+	&__title {
+		font-size: 16px;
+		color: rgb(255, 255, 255);
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 40px;
+	}
+	&__copyright {
+		border-top: 1px solid #f7f7f7;
+		background-color: #fff;
+		text-align: center;
+		font-size: 1.2rem;
+		padding: 3rem 0;
+	}	
+}
+
+.f-back-top {
+	display: none;
+	border-radius: 50%;
+	background-color: @yellow;
+	position: fixed;
+	right: 15px;
+	bottom: 15px;
+	z-index: 100;
+	width: 42px;
+	height: 42px;
+	cursor: pointer;
+	user-select: none;
+
+	&:after {
+		content: '';
+		display: block;
+		width: 8px;
+		height: 8px;
+		border-bottom: 2px solid #fff;
+		border-left: 2px solid #fff;
+		transform: rotate(135deg);
+		position: absolute;
+		top: 19px;
+		left: 18px;
+	}
+
+
+}
+
+.f-top {
+	font-size: 0;
+	margin-bottom: 40px;
+}
+
+.f-form {
+	float: left;
+	width: 500px;
+	height: 600px;
+	padding-top: 5rem;
+}
+
+.f-map {
+	padding-left: 500px;
+}
+
+.form {
+	margin: 0 auto;
+	max-width: 330px;
+
+	&._feed {
+	}
+
+	&._advice {
+	}
+
+	&__block {
+		position: relative;
+		padding-bottom: 1px;
+	}
+	&__services {
+		position: relative;
+		padding-bottom: 1px;
+	}
+
+}
+
+.input {
+	color: inherit;
+	font: inherit;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #e9e9e9;
+	border-radius: 0;
+	outline: none;
+	height: 3rem;
+	width: 100%;
+	font-size: 1.4rem;
+	margin: 0 0 3rem 0;
+	padding: 0;
+	box-shadow: none;
+	box-sizing: content-box;
+	transition: all 0.3s;
+
+	&.active {
+		border-bottom: 1px solid @yellow;
+		box-shadow: 0 1px 0 0 @yellow;
+
+		& + .label {
+			font-size: 1.2rem;
+			transform: translateY(-100%);
+			color: @yellow;
+		}
+
+	}
+
+	&.err {
+		border-bottom: 1px solid @red;
+		box-shadow: 0 1px 0 0 @red;
+	}
+
+}
+
+.err-text {
+	position: absolute;
+	bottom: 1rem;
+	left: 0;
+	font-size: 12px;
+	color: @red;
+}
+
+.label {
+	color: @grey;
+	position: absolute;
+	top: 0.5rem;
+	left: 0;
+	font-size: 1.4rem;
+	cursor: text;
+	transition: .2s ease-out;
+	text-align: left;
+
+	&:after {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 60px;
+		opacity: 0;
+		transition: .2s opacity ease-out, .2s color ease-out;
+	}
+
+}
+
+.select {
+	  color: inherit;
+  font: inherit;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #e9e9e9;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  outline: none;
+  height: 3rem;
+  width: 100%;
+  font-size: 1.4rem;
+  margin: 0 0 3rem 0;
+  padding: 0;
+  box-shadow: none;
+  box-sizing: content-box;
+  transition: all 0.3s;
+}
+
+
+.map {
+	height: 600px;
+
+	&__item {
+		margin: 1rem 0 0.5rem;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	&__img {
+		float: left;
+		width: 178px;
+		height: 178px;
+		img {
+			.img;
+		}
+
+	}
+	&__info {
+		margin-left: 200px;
+
+	}
+	&__title {
+		font-size: 1.4rem;
+		font-weight: bold;
+		margin-bottom: 1rem;
+	}
+
+	&__text {
+		font-size: 1.4rem;
+		margin-bottom: 1rem;	
+	}
+	&__metro {
+		font-size: 1.4rem;
+		margin-bottom: 1rem;		
+		position: relative;
+		padding-left: 25px;
+		i {
+			position: absolute;
+			width: 23px;
+			height: 23px;
+			top: 0;
+			left: 0;
+			background: url('../images/icon-metro.jpg') no-repeat;
+		}
+	}
+	&__number {
+		font-size: 1.4rem;
+    font-family: "Museo Sans Cyrl 900";		
+    margin-bottom: 1rem;
+	}
+
+	&__callback {
+		font-size: 1.4rem;
+		font-weight: bold;
+		margin-bottom: 1rem;
+		color: #333;
+		border-bottom: 1px dotted @grey;		
+	}
+
+}
+
+@media (max-width:767px) {
+
+	.form {
+		&__block {
+			&_wide {
+				.input {
+					margin-top: 15px;
+				}
+			}
+		}
+	}
+
+}

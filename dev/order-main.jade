@@ -1,0 +1,89 @@
+extends template2
+block content
+  main.order
+    section.banner.banner_yellow
+      .banner__img
+      .banner__info
+        h1.banner__title Заказ услуг
+        .banner__text а также запрос цены и консультации
+
+    section.order-main.bg-grey
+      .container
+        .order-main__form
+          form.form
+            .form__block
+              input.input#name_feed(type='text', name='form[]', placeholder='',autocomplete='name')
+              label.label(for="name_feed") Ваше имя или фамилия
+            .form__block
+              input.input.req.email#email_feed(type='email', name='form[]', placeholder='',autocomplete='email')
+              label.label(for="email_feed") Адрес электронной почты *
+            .form__block
+              input.input.req#phone_feed(type='text', name='form[]', placeholder='',autocomplete='tel')
+              label.label(for="phone_feed") Телефон *  
+            .form__block
+              input.input#region_feed(type='text', name='form[]', placeholder='',autocomplete="country")
+              label.label(for="region_feed") Страна и город
+            .form__block
+              input.input#company_feed(type='text', name='form[]', placeholder='',autocomplete='organization')
+              label.label(for="company_feed") Название компании
+            .form__services
+              .services.req
+                .services__title
+                  strong Выберите интересующие Вас услуги: *
+                - var listServices = ['Продвижение сайта','Веб-сервис','Разработка сайта','Разработка фирменного стиля','Мобильные приложения','Другое']
+                each item in listServices
+                  .services__item
+                    label.checkbox  
+                      input(type="checkbox").checkbox__hidden
+                      span.checkbox__showed
+                      span.checkbox__title= item
+                    span.checkbox__tool ?
+                    .checkbox__tips Все начинается с заказа проекта. Основное назначение этого этапа заключается в определении задач и постановке целей будущего сайта.
+            .form__block
+              select.select.req
+                option(value="", selected) Планируемый бюджет *
+                option 500$
+                option 1000$
+                option 5000$
+                option 10000$
+            .form__block
+              textarea.input#message_feed(name='form[]', rows='1', placeholder='')
+              label.label(for="message_feed") Расскажите нам о Вашем проекте
+            .form__doubt.bg-light-yellow
+              .doubt
+                .doubt__title Не можете определится что рассказать нам о проекте ? 
+                .doubt__text Тогда скачайте подготовленные нами вопросы , которые помогут нам ближе понять Ваш проект! 
+                .doubt__download
+                  .download
+                    .download__icon
+                    a(href="").download__name 
+                      span Скачать бриф-анкету на разработку сайта.doc      
+                    .download__size (50 Kb)                  
+            .form__progress
+              .progress
+                #list.progress__list
+                  //- .progress__item
+                  //-   .progress__icon
+                  //-   .progress__name Техническое задание.doc 
+                  //-   .progress__size 99999 Kb
+                  //-   .progress__indicator
+                  //-     .progress__bar
+                  //-   .progress__cancel
+                .progress__attach
+                  .progress__limit не более  35 Mb
+                  label.progress__btn
+                    input#files(type="file",multiple="multiple")
+                    .btn.btn-grey прикрепить файл
+            .form__btn
+              button.btn.btn-green(type='submit') отправить  заказ  
+
+
+
+
+
+
+
+
+
+
+

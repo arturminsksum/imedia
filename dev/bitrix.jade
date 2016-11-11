@@ -1,0 +1,293 @@
+extends template
+block content
+  main.bitrix
+    section.banner.banner_default
+      .banner__img.animated.fadeIn(style='background-image: url(images/bitrix.jpg)')
+      .banner__info
+        h1.banner__title Разработка сайтов на 1C Битрикс
+        .banner__text Заказать сайт на CMS 1с Битрикс в Минске может вся Европа
+      .breadcrumb
+        ol
+          li
+            a(href='#') Главная
+          li
+            a(href='#') Разработка сайтов  
+          li.active Разработка сайтов на 1C Битрикс
+    section.bitrix-why
+      .container
+        .section__pre самая популярная система управления в СНГ «1С-Битрикс».
+        .section__title почему наша студия выбирает CMS 1c битрикс
+        .text__block
+          p В настоящий момент система управления контентом «1C-Битрикс» занимает лидирующие позиции в среде CMS. Этот инструмент эффективен при решении самых сложных задач, начиная от примитивных сайтов-визиток и заканчивая созданием интернет-магазинов, крупных порталов и даже социальнымых сетей.
+          p «1C-Битрикс» выпускается одним из лидеров рынка систем управления веб-проектами - российской компанией «Битрикс». «Аймедиа Солюшнс» тесно сотрудничает с «1C-Битрикс», что позволяет нам достигать отличных результатов в работе.
+          p
+            strong Наша студия рада предложить Вам качественные комплексные услуги по созданию сайтов на системе управления «1C-Битрикс».
+
+          .bitrix-why--img.wow.zoomInUp
+            img(src="images/certificate.png", alt="")
+          .bitrix-why--btn    
+            .btn.btn-primary
+              | Возможности 1С-Битрикс
+              span : Управление сайтом     
+    section.bitrix-feature.bg-blue
+      .container
+        .section__img
+        .section__title почему наша студия выбирает CMS 1c битрикс  
+        .bitrix-feature__block
+          .number
+            span 1
+          .text__block.clearfix
+            h6 лидирующие позиции в сфере систем web-управления
+            p CMS «1C-Битрикс» занимает лидирующие позиции в сфере систем web-управления на всем постсоветском пространстве. На базе «1C-Битрикс» сегодня функционирует более 85 000 проектов, в том числе «Евросеть», «МТС», «Сбербанк» и многие другие.
+            p
+              img(src="images/epson.jpg", alt="", align="left")
+              img(src="images/mts.jpg", alt="", align="left")
+              img(src="images/panasonic.jpg", alt="", align="left")
+              img(src="images/evroset.jpg", alt="", align="left")
+              img(src="images/sb.jpg", alt="", align="left")
+        .bitrix-feature__block
+          .number
+            span 2
+          .text__block.clearfix
+            h6 Структурное ядро «1C-Битрикс» состоит из комплекса модулей
+            p Структурное ядро «1C-Битрикс» состоит из комплекса модулей, которые позволяют эффективно управлять общей структурой ресурса, работать с контентом, рассылками, рекламой, осуществлять обмен данными с социальными сетями, блогами и т.д.
+        .bitrix__clouds
+          .clouds
+           .clouds__title легкое управление
+           .clouds__wrap
+               
+              img.clouds__left.wow.fadeInLeft(src="images/bitrix-clouds-left.png", alt="")
+              img.clouds__right.wow.fadeInRight(src="images/bitrix-clouds-right.png", alt="")
+              img.clouds__center.wow.fadeInDown(src="images/bitrix-clouds-center.png", alt="")
+              .clouds__info
+                .clouds__img 
+                  img(src="images/bitrix-logo.png", alt="")
+                .clouds__text
+                  strong Управление сайтом не требует особых навыков – 
+                  | достаточным будет умение работать с любым текстовым редактором. Все остальные функции «1C-Битрикс» интуитивно понятны, либо выполняются самой системой.
+        .bitrix__edition
+          .edition
+            .edition__title Редакции продукта «1С-Битрикс: Управление сайтом»
+
+            .edition__text Узнать стоимость других редакций и продуктов 1С-Битрикс, а также цену продления текущих лицензий вы можете по данной ссылке, 
+
+            .edition__btn
+              .btn.btn-grey Как выбрать?
+              .btn.btn-grey Сравнить редакции
+            .edition__subtitle «1С-Битрикс: Управление сайтом» объединяет в себе шесть редакций. По функционалу выделяют следующие пакеты:
+          .edition__group
+            .row
+              - for (var i = 0; i < 6; i++)
+                .six.columns
+                  .item
+                    .item__img
+                      img(src="images/bitrix-edition.jpg", alt="")
+                    .item__info
+                      .item__title
+                        strong Первый сайт  
+                        span (В редакцию включено 4 модуля.)
+                      .item__text Начните свой бизнес в онлайне: создайте интернет-представительство, сайт-визитку или другой небольшой «легкий» сайт - с минимальной нагрузкой на хостинг.
+                      .item__price 1 200 000 бел. руб. 
+                    
+        .bitrix__order
+          .edition__title 
+            | Закажите бесплатную консультацию по выбору редакции битрикса
+            br
+            span Для вашего бизнеса в интернете у нашего специалиста!
+          .bitrix__order-btn
+            .btn.btn-green Заказать консультацию специалиста
+        .bitrix-feature__block
+          .number
+            span 3
+          .text__block.clearfix
+            h6 Созданный сайт на основе «1C-Битрикс» выдержит любую нагрузку!
+            p Используя принцип распределения ресурсов проекта, можно не только снижать нагрузку на сервер, но и получать выход на соответствующий задачам клиента уровень. Кроме того, CMS «1C-Битрикс» самостоятельно диагностирует собственную производительность и выдает определенные рекомендации по повышению эффективности проекта.
+        .bitrix-feature__block
+          .number
+            span 4
+          .text__block.clearfix
+            h6 легко интегрируеться с другими инструментами от «1С»
+            p Все сайты на «1C-Битрикс» могут интегрироваться с другими инструментами от «1С». Приобретая один из продуктов, например, «1С: Управление торговлей», вы автоматически получаете весь необходимый набор функциональных модулей для интеграции.
+    section.bitrix-approach
+      .container
+        .section__img
+        .section__pre Создание сайтов на платформе «1С-Битрикс» в Минске
+        .section__title подход к разработке <br> web-сайтов на 1с битрикс
+        .section__post Работая с нами вы получаете:
+        .approach__group
+          .row
+            .three.columns
+              .item
+                .item__img.wow.rollIn
+                .item__info
+                  .item__title Cайт под ключ
+                  .item__text Мы не просто создадим сайт на «1С-Битрикс», но и выполним наполнение и SEO оптимизацию страниц вашего сайта
+            .three.columns
+              .item
+                .item__img.wow.rollIn(data-wow-delay="0.25s") 
+                .item__info
+                  .item__title Оптимизация
+                  .item__text Мы окажем содействие в организации беспрерывной работы и оптимизации вашего сайта, делая его быстрым и удобным
+            .three.columns
+              .item
+                .item__img.wow.rollIn(data-wow-delay="0.5s") 
+                .item__info
+                  .item__title Персональный менеджер
+                  .item__text На всем этапе работы вас будет курировать личный менеджер, отвечающий перед вами за все звенья процесса разработки
+            .three.columns
+              .item
+                .item__img.wow.rollIn(data-wow-delay="0.75s") 
+                .item__info
+                  .item__title Техническая поддержка
+                  .item__text Наконец, вы получаете в нашем лице надежного партнера, который будет и в дальнейшем помогать вам развивать ресурс                  
+    section.bitrix-frame
+      .container
+        .frame
+          .section__title почему именно мы?
+          .frame__wrap
+            .frame__inner
+              .frame__pre Компания iMedia Solutions одна из немногих в Беларуси имеет высший статус золотого сертифицированного партнёра 1С-Битрикс. Этот высокий статус гарантирует, что наши сотрудники имеют опыт в разработке и поддержке сайтов на платформе Битрикс.
+              .frame__img.wow.swing
+                img(src="images/bitrix-certif.png", alt="")
+              .frame__text
+                strong
+                  | iMedia Solutions
+                  br
+                  | Золотой сертифицированный партнер
+                  br
+                  | 1с - битрикс
+
+              .frame__competence
+                .item
+                  .item__img
+                    img(src="images/integration.png", alt="")
+                  .item__info
+                    .item__title Компетенция <br> Интеграция с 1С
+                .item
+                  .item__img
+                    img(src="images/bitrix24.png", alt="")
+                  .item__info
+                    .item__title Компетенция <br> Битрикс24
+                .item
+                  .item__img
+                    img(src="images/composite.png", alt="")
+                  .item__info
+                    .item__title Компетенция <br> Композитный сайт
+                .item
+                  .item__img
+                    img(src="images/quality.png", alt="")
+                  .item__info
+                    .item__title Мы участники программы мониторинга качества внедрений
+
+              .frame__rating
+                .frame__num # 10
+                .frame__place место по рейтингу битрикса в беларуси
+                .frame__top На начало лета 2015 г. согласно рейтингу 1С-Битрикс мы входим в ТОП-10 разработчиков в Республике Беларусь. Для нас это заслуженное признание, для вас – гарантия качества и надежности.
+              .frame__certif
+                .certif__count
+                  span 20+
+                  br
+                  | сертификатов
+                .certif__img
+                  - for (var i = 0; i < 9; i++)
+                    a(href="")
+                      img(src="images/certif.jpg", alt="")
+              .frame__partner
+                .frame__partner--img
+                  img(src="images/bitrix-bank.png", alt="")
+                .frame__partner--block
+                  .text__block.clearfix
+                    h6 Мы являемся партнёрами Европейского банка реконструкции и развития
+                    p Наша компания имеет статус консультанта Европейского банка реконструкции и развития по программе BAS (Business Advisory Services – Программа деловых консультационных услуг). В рамках этой программы белорусская компания может получить грант на оплату наших услуг в размере 60-75% стоимости проекта!                  
+    section.bitrix-develope.manager-section
+      .container
+        .develope__wrap
+          .manager
+            .manager__wrap
+              .manager__left
+                span
+                  strong Чем раньше мы узнаем о задачах Вашего бизнеса,
+                br
+                span тем быстрее Вы получите нужный продукт!
+                .manager__btn
+                  .btn.btn-primary Заказать звонок специалиста
+              .manager__right
+                span
+                  strong Константин
+                br
+                span Специалист по продажам, <br>развитию бизнеса и менеджменту в интернете
+              .manager__img.wow.zoomInDown
+                img(src="images/manager.png", alt="")                
+          .develope__block
+            .develope__inner
+              .develope__title Стоимость и сроки разработки сайта на 1С-Битрикс
+              .text__block.clearfix
+                p Стоимость рассчитывается для каждого проекта индивидуально, она рассчитывается путем перемножения требуемых часов на проект на стандартную почасовую ставку специалистов. 
+                p Стоимость рассчитывается для каждого проекта индивидуально, она рассчитывается путем перемножения требуемых часов на проект на стандартную почасовую ставку специалистов. 
+                p 
+                  strong Минимальный срок разработки сайта в стандартной комплектации составляет 21 день.<br> Время необходимое на согласование выполненной работы не учитывается в общей длительности проекта. 
+
+              .develope__group
+                - for (var i = 0; i < 2; i++)
+                    .item
+                      .item__head
+                        span Минимальный бюджет разработки сайта на “1С-Битрикс”
+                      .item__img
+                        img(src="images/bitrix-logo.png", alt="")
+                      .item__info
+                        .item__title “СТАРТ”
+                        .item__price 7 200 000 бел. руб.                
+          .offer.offer_feature
+            .offer__title ДАЙТЕ СВОЕМУ САЙТУ ПРЕИМУЩЕСТВО ПЕРЕД КОНКУРЕНТАМИ!
+            .offer__text Любой сайт на платформе «1C-Битрикс» <br> может быть разработан по "Композитной технологии"
+            .offer__btn
+              .btn.btn-primary подробнее
+
+    section.portfolio
+      .container
+        .section__pre Примеры наших работ
+        .section__title САЙТЫ, КОТОРЫЕ работают на CMS 1с битрикс!
+      .portfolio__wrap.clearfix
+        figure.portfolio__item._main
+          img(src="images/concordia.jpg", alt="concordia")
+          figcaption.portfolio__info
+            .portfolio__name “CONCORDIA”
+            .portfolio__text сайт медицинского центра
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ
+        figure.portfolio__item  
+          img(src="images/stilville.jpg", alt="stilville")
+          figcaption.portfolio__info
+            .portfolio__name stilville
+            .portfolio__text сайт 
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ
+        figure.portfolio__item  
+          img(src="images/study.jpg", alt="")
+          figcaption.portfolio__info
+            .portfolio__name study
+            .portfolio__text сайт 
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ 
+        figure.portfolio__item  
+          img(src="images/foxstyle.jpg", alt="")
+          figcaption.portfolio__info
+            .portfolio__name foxstyle
+            .portfolio__text сайт 
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ
+        figure.portfolio__item  
+          img(src="images/krasa-volos.jpg", alt="krasa-volos")
+          figcaption.portfolio__info
+            .portfolio__name krasa-volos
+            .portfolio__text сайт 
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ
+      .container
+        .offer
+          .offer__title Хотите узнать сколько стоит заказать сайт на 1c битрикс в Минске?
+
+          .offer__text Закажите звонок эксперта и ПОЛУЧИТЕ выгодное предложение!
+
+          .offer__btn.wow.lightSpeedIn
+            .btn.btn-primary Получить Выгоду

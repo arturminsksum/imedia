@@ -1,0 +1,17 @@
+{
+  "name": "pinskdrev",
+  "description": "default folder structure",
+  "version": "0.1.0",
+  "author": "Artur",
+  "repository": "",
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-connect-multi": "*",
+    "gulp-cssnano": "*",
+    "gulp-error-notifier": "^1.1.0",
+    "gulp-jade": "*",
+    "gulp-less": "*",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}

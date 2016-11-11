@@ -1,0 +1,93 @@
+extends template2
+block content
+  main.order
+    section.banner.banner_yellow
+      .banner__img
+      .banner__info
+        h1.banner__title форма Расчета стоимости <br> продвижения сайта
+        .banner__text Стоимость продвижения сайта по Минску составляет от 5 млн бел руб в месяц.<br> Узнать точную стоимость вы можете заполнив форму ниже.
+
+    section.order-main.bg-grey
+      .container
+        .order-main__form
+          form.form
+            .form__block
+              input.input#name_feed(type='text', name='form[]', placeholder='',autocomplete='name')
+              label.label(for="name_feed") Ваше имя или фамилия
+            .form__block
+              input.input.req.email#email_feed(type='email', name='form[]', placeholder='',autocomplete='email')
+              label.label(for="email_feed") Адрес электронной почты *
+            .form__block
+              input.input.req#phone_feed(type='text', name='form[]', placeholder='',autocomplete='tel')
+              label.label(for="phone_feed") Телефон *
+            .form__block
+              input.input#region_feed(type='text', name='form[]', placeholder='',autocomplete="country")
+              label.label(for="region_feed") Страна и город
+            .form__block
+              input.input#company_feed(type='text', name='form[]', placeholder='',autocomplete='organization')
+              label.label(for="company_feed") Название компании
+            .form__block
+              select.select.select_site
+                option(value="", selected) Есть ли у вас сайт?
+                option Да
+                option Нет
+
+            .form__block.form__block_site
+              input.input#link_feed(type='text', name='form[]', placeholder='')
+              label.label(for="link_feed") Адрес сайта
+            .form__block.form__block_site
+              input.input#age_feed(type='text', name='form[]', placeholder='')
+              label.label(for="age_feed") Возраст сайта
+            .form__block.form__block_site
+              select.req.select
+                option(value="", selected) Продвигался ли сайт ранее *
+                option Да
+                option Нет
+                option Не знаю    
+
+            .form__block
+              select.req.select.select_country
+                option(value="", selected) Регион для продвижения *
+                option Беларусь
+                option Россия
+                option Украина
+                option Другая страна
+                option Не знаю, посоветуйте 
+
+            .form__block.form__block_country
+              input.input#country_feed(type='text', name='form[]', placeholder='')
+              label.label(for="country_feed") Укажите страну   
+
+            .form__block.form__block_wide
+              textarea.req.input#message1_feed(name='form[]', rows='1', placeholder='')
+              label.label(for="message1_feed") Напишите нам по каким словам вы бы хотели , чтобы вас находили клиенты? * 
+            .form__block.form__block_wide
+              textarea.input#message2_feed(name='form[]', rows='1', placeholder='')
+              label.label(for="message2_feed") Расскажите нам чем занимается ваша компания, и когда нам с вами лучше связаться?
+            .form__block
+              select.req.select.select_hear
+                option(value="", selected) Как вы узнали о нас? *
+                option Поисковые системы
+                option Контекстная реклама
+                option Рекомендации знакомых
+                option Ссылки на других сайтах
+                option Точно не помню
+                option Другое
+
+            .form__block.form__block_hear
+              input.input#source_feed(type='text', name='form[]', placeholder='')
+              label.label(for="source_feed") Укажите источник  
+
+            .form__btn
+              button.btn.btn-green.btn-seo(type='submit') заказать продвижение сайта  
+
+
+
+
+
+
+
+
+
+
+

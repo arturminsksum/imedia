@@ -1,0 +1,387 @@
+.brand {
+  &-why {
+    background-image: url(../images/brand-why-bg.png);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+  }
+
+  &-sales {
+    .item {
+      &__title {
+        text-transform: uppercase;
+      }
+
+    }
+
+    &__block {
+      .item {
+        min-height: 260px;
+        background-color: #ffbc1a;
+
+        &__img {
+          span {
+            display: block;
+            position: absolute;
+            top: 50%;
+            margin-top: -82px;
+            left: 50%;
+            margin-left: -82px;
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 12px;
+            border-color: rgb(225, 165, 21);
+            width: 164px;
+            height: 164px;
+            line-height: 140px;
+            text-align: center;
+            font-size: 120px;
+            font-family: 'BebasNeueBold';
+            color: rgb(225, 165, 21);
+          }
+
+        }
+
+        &__info {
+          z-index: 1;
+          text-align: center;
+        }
+
+        &__title {
+        }
+
+        &__text {
+        }
+
+      }
+
+    }
+
+  }
+
+  &-elems {
+    .section__img {
+      background-image: @snowflake;
+    }
+
+    .block__title {
+      text-align: center;
+    }
+
+    &__img {
+      position: relative;
+      text-align: center;
+
+      img {
+        .img;
+      }
+
+      &-roll {
+        margin-bottom: 9rem;
+      }
+
+      &-glasses {
+        .dibt;
+      }
+
+      &-iphone {
+        .dibt;
+
+        &-main {
+          .dibm;
+        }
+
+        &-slogan {
+          .dibm;
+        }
+
+      }
+
+      &-paper {
+        position: relative;
+        z-index: 1;
+
+        &-main {
+          position: absolute;
+          top: -130px;
+          left: 50%;
+          transform: translateX(-60%);
+        }
+
+        &-blank {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+      }
+
+      &-envelope {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+
+        &-main {
+        }
+
+        &-pencil {
+          position: absolute;
+          top: -80%;
+          left: 50%;
+          transform: translateX(-55%);
+        }
+
+        &-text {
+          position: absolute;
+          top: 55%;
+          left: 50%;
+          transform: translateX(-40%);
+        }
+
+      }
+
+      &-card {
+        position: absolute;
+        bottom: 8%;
+        left: 60%;
+        transform: translateX(-50%);
+        z-index: 3;
+      }
+
+      &-folder {
+        margin-top: 50px;
+        text-align: right;
+
+        &-main {
+          position: relative;
+          display: inline-block;
+        }
+
+        &-text {
+          position: absolute;
+          top: 140px;
+          right: 120px;
+        }
+
+      }
+
+    }
+
+    .bg-light-yellow {
+      padding: 5rem 3rem 3rem;
+      margin-bottom: 5rem;
+    }
+
+  }
+
+  &-manager {
+    .manager__left {
+      position: relative;
+      left: -60px;
+    }
+
+    .manager__img {
+      position: relative;
+      left: -55px;
+    }
+
+  }
+
+  &-portfolio {
+    .section__img {
+      background-image: @bag;
+    }
+
+  }
+
+}
+
+@media (max-width:1199px) {
+  .brand {
+    &-elems {
+      &__img {
+        &-roll {
+          margin-bottom: 5rem;
+        }
+
+        &-glasses {
+          width: 370px;
+        }
+
+        &-card {
+          left: 52%;
+        }
+
+        &-folder {
+          margin-top: 0;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+@media (max-width:767px) {
+  .brand {
+    &-why {
+      background-image: inherit;
+    }
+
+    &-sales {
+      .item {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+
+        &__img {
+          span {
+            margin-right: 0;
+            margin-bottom: 2rem;
+          }
+
+        }
+
+      }
+
+      &__block {
+        .item {
+          &__img {
+            span {
+              margin: 0;
+              position: static;
+              font-size: 60px;
+              width: 110px;
+              height: 110px;
+              line-height: 90px;
+              margin-bottom: 2rem;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    &-elems {
+      .bg-light-yellow {
+        padding: 3rem 2rem 2rem;
+        margin-bottom: 3rem;
+      }
+
+      &__img {
+        position: relative;
+        text-align: center;
+
+        img {
+          .img;
+        }
+
+        &-roll {
+          margin-bottom: 2rem;
+        }
+
+        &-glasses {
+          width: 100%;
+          text-align: left;
+
+          img {
+            width: 60%;
+          }
+
+        }
+
+        &-iphone {
+          display: block;
+          font-size: 0;
+          margin-top: -15%;
+
+          &-main {
+            width: 30%;
+            margin-left: -20%;
+          }
+
+          &-slogan {
+            position: relative;
+            width: 90%;
+            z-index: 1;
+          }
+
+        }
+
+        &-paper {
+          &-main {
+            top: -50px;
+            left: 40%;
+          }
+
+          &-blank {
+            top: 30%;
+          }
+
+        }
+
+        &-envelope {
+          &-main {
+            width: 50%;
+            position: relative;
+          }
+
+          &-pencil {
+            width: 30%;
+            left: 35%;
+          }
+
+          &-text {
+            top: 47%;
+            left: 46%;
+          }
+
+        }
+
+        &-card {
+          width: 35%;
+          left: 45%;
+        }
+
+        &-folder {
+          text-align: right;
+          margin-top: 3rem;
+
+          &-main {
+            width: 60%;
+          }
+
+          &-text {
+            top: 28%;
+            right: 35%;
+            width: 25%;
+          }
+
+        }
+
+      }
+
+    }
+
+    &-manager {
+      .manager__left {
+        left: 0;
+      }
+
+      .manager__img {
+        left: 0;
+      }
+
+    }
+
+    &-portfolio {
+    }
+
+  }
+
+}

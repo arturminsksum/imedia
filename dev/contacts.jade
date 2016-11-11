@@ -1,0 +1,109 @@
+extends template2
+block content
+  main.contacts
+    section.banner.banner_default
+      .banner__img(style='background-image: url(images/minsk.jpg)')
+      .banner__info
+        h1.banner__title КОНТАКТЫ
+
+        .banner__text контактная информация, Минск
+      .breadcrumb
+        ol
+          li
+            a(href='#') Главная
+          li.active Контакты
+
+    section.about.contacts__about
+      .tabs__block
+        .tabs__pagin
+          .tabs__btn(data-img="background-image: url(images/minsk.jpg)", data-text="контактная информация, Минск")
+            span Минск
+          .tabs__btn(data-img="background-image: url(images/moskow.jpg)", data-text="контактная информация, Москва")
+            span Москва
+          .tabs__btn(data-img="background-image: url(images/riga.jpg)", data-text="контактная информация, Рига") 
+            span Рига
+        .tabs__content
+          - for (var i=1; i<4; i++)
+            .tabs__item
+              .contacts__info
+                .item
+                  .item__title Адрес:
+
+                  .item__text 
+                    span ЧП “АЙМЕДИА СОЛЮШНС”
+                    br
+                    span Беларусь, г. Минск, ул. Сурганова 43, офис 804
+
+                .item
+                  .item__title график работы:
+
+                  .item__text 
+                    span Понедельник-пятница с 9:00 до 19:00
+                    br
+                    span Суббота, воскресенье — выходные
+                .item
+                  .item__title контактные Телефоны:
+
+                  .item__text
+                    a(href="tel:+375 (17) 292-14-94") +375 (17) 292-14-94
+                    
+                    span.item__text_grey (городской телефон / факс)                   
+                .item
+                  .item__sub-title Заказ услуг и консультация:
+                  .item__text
+                    a(href="tel:+375 (29) 699-44-35") +375 (29) 699-44-35                   
+                    span.item__text_grey (мобильный оператор Velcom)   
+                  .item__text
+                    a(href="tel:+375 (33) 654-44-35") +375 (33) 654-44-35                  
+                    span.item__text_grey (мобильный оператор MTC)
+
+                .item
+                  .item__title Партнерство и сотрудничество:
+                  .item__text
+                    a(href="tel:+375 (29) 633-44-35") +375 (29) 633-44-35                
+                    span.item__text_grey (мобильный оператор MTC) 
+                 .item
+                  span.item__name E-mail:
+                  a.item__mail(href="mailto:info@imedia.by") info@imedia.by                    
+                .item
+                  span.item__name Skype:                  
+                  a.item__skype(href="skype:artsiomimedia?call") artsiomimedia     
+
+              .contacts__form.bg-grey
+                form(action="").form._feed
+                  .section__pre Вы готовы начать работу или получить консультацию?
+                  .section__title Напишите нам
+                  .form__block
+                    input.input.req#name_feed(type='text', name='form[]', placeholder='')
+                    label.label(for="name_feed") Имя
+                  .form__block
+                    input.input.req#company_feed(type='text', name='form[]', placeholder='')
+                    label.label(for="company_feed") Компания
+                  .form__block
+                    input.input.email.req#email_feed(type='email', name='form[]', placeholder='')
+                    label.label(for="email_feed") E-mail
+                  .form__block
+                    input.input.req#phone_feed(type='text', name='form[]', placeholder='')
+                    label.label(for="phone_feed") Телефон
+                  .form__block
+                    textarea.input.req#message_feed(name='form[]', rows='1', placeholder='')
+                    label.label(for="message_feed") Сообщение
+                  .form__btn
+                    button.btn.btn-green(type='submit') Отправить  
+      #mapContacts.contacts__map
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
