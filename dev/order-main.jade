@@ -13,50 +13,91 @@ block content
           form.form
             .form__block
               input.input#name_feed(type='text', name='form[]', placeholder='',autocomplete='name')
-              label.label(for="name_feed") Ваше имя или фамилия
+              label.label(for="name_feed") Ваше имя и фамилия
             .form__block
-              input.input.req.email#email_feed(type='email', name='form[]', placeholder='',autocomplete='email')
+              input.input.email#email_feed(data-valid="email" type='email', name='form[]', placeholder='',autocomplete='email')
               label.label(for="email_feed") Адрес электронной почты *
             .form__block
-              input.input.req#phone_feed(type='text', name='form[]', placeholder='',autocomplete='tel')
+              input.input#phone_feed(data-valid="phone" type='text', name='form[]', placeholder='',autocomplete='tel')
               label.label(for="phone_feed") Телефон *  
-            .form__block
-              input.input#region_feed(type='text', name='form[]', placeholder='',autocomplete="country")
-              label.label(for="region_feed") Страна и город
+            //- .form__block
+            //-   input.input#region_feed(type='text', name='form[]', placeholder='',autocomplete="country")
+            //-   label.label(for="region_feed") Страна и город
             .form__block
               input.input#company_feed(type='text', name='form[]', placeholder='',autocomplete='organization')
               label.label(for="company_feed") Название компании
             .form__services
-              .services.req
+              .services(data-valid="services")
                 .services__title
-                  strong Выберите интересующие Вас услуги: *
-                - var listServices = ['Продвижение сайта','Веб-сервис','Разработка сайта','Разработка фирменного стиля','Мобильные приложения','Другое']
-                each item in listServices
-                  .services__item
-                    label.checkbox  
-                      input(type="checkbox").checkbox__hidden
-                      span.checkbox__showed
-                      span.checkbox__title= item
-                    span.checkbox__tool ?
-                    .checkbox__tips Все начинается с заказа проекта. Основное назначение этого этапа заключается в определении задач и постановке целей будущего сайта.
+
+                .services__item
+                  label.checkbox  
+                    input(type="checkbox", data-prior="5").checkbox__hidden
+                    span.checkbox__showed
+                    span.checkbox__title Разработка сайта
+                  span.checkbox__tool ?
+                  .checkbox__tips Создание корпоративных сайтов, интернет-магазинов, порталов, продающих страниц (landing page)
+
+                .services__item
+                  label.checkbox  
+                    input(type="checkbox", data-prior="4").checkbox__hidden
+                    span.checkbox__showed
+                    span.checkbox__title Битрикс24
+                  span.checkbox__tool ?
+                  .checkbox__tips Внедрение корпоративного портала, автоматизация бизнес-процессов
+
+                .services__item
+                  label.checkbox  
+                    input(type="checkbox", data-prior="1").checkbox__hidden
+                    span.checkbox__showed
+                    span.checkbox__title Продвижение сайта
+                  span.checkbox__tool ?
+                  .checkbox__tips Поисковое продвижение сайтов, контекстно-медийная реклама, реклама в социальных сетях, баннерная реклама
+                     
+                .services__item
+                  label.checkbox  
+                    input(type="checkbox", data-prior="2").checkbox__hidden
+                    span.checkbox__showed
+                    span.checkbox__title Разработка фирменного стиля
+                  span.checkbox__tool ?
+                  .checkbox__tips Создание логотипа и фирменного стиля, нейминг, разработка брендбука                    
+
+                .services__item
+                  label.checkbox  
+                    input(type="checkbox", data-prior="6").checkbox__hidden
+                    span.checkbox__showed
+                    span.checkbox__title Мобильное приложение
+                  span.checkbox__tool ?
+                  .checkbox__tips Разработка мобильных приложений для телефонов и планшетов на платформах iOS и Android
+
+                .services__item
+                  label.checkbox  
+                    input(type="checkbox", data-prior="3").checkbox__hidden
+                    span.checkbox__showed
+                    span.checkbox__title Другое
+                  span.checkbox__tool ?
+                  .checkbox__tips Разработка различных веб-сервисов и приложений, копирайтинг, создание баннеров и другие услуги
+
+
             .form__block
-              select.select.req
+              select.select.select-budget(data-valid="select")
                 option(value="", selected) Планируемый бюджет *
-                option 500$
-                option 1000$
-                option 5000$
-                option 10000$
+                option до $500
+                option $500 - $1000
+                option $1000 - $3000
+                option более $3000
+                option Не знаю, посоветуйте               
             .form__block
               textarea.input#message_feed(name='form[]', rows='1', placeholder='')
               label.label(for="message_feed") Расскажите нам о Вашем проекте
             .form__doubt.bg-light-yellow
               .doubt
-                .doubt__title Не можете определится что рассказать нам о проекте ? 
-                .doubt__text Тогда скачайте подготовленные нами вопросы , которые помогут нам ближе понять Ваш проект! 
+                .doubt__title Не знаете, что рассказать нам о проекте?
+                .doubt__text Тогда скачайте подготовленные нами вопросы, которые помогут нам лучше узнать Ваши требования к проекту. 
                 .doubt__download
                   .download
                     .download__icon
-                    a(href="").download__name 
+                    a(href="files/brif-na-razrabotky-saita-imedia-solutions.docx").download__name 
                       span Скачать бриф-анкету на разработку сайта.doc      
                     .download__size (50 Kb)                  
             .form__progress
@@ -70,12 +111,12 @@ block content
                   //-     .progress__bar
                   //-   .progress__cancel
                 .progress__attach
-                  .progress__limit не более  35 Mb
                   label.progress__btn
                     input#files(type="file",multiple="multiple")
                     .btn.btn-grey прикрепить файл
+                  .progress__limit не более  35 Mb                    
             .form__btn
-              button.btn.btn-green(type='submit') отправить  заказ  
+              button.btn.btn-green(type='submit') Отправить запрос  
 
 
 

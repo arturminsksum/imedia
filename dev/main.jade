@@ -1,4 +1,4 @@
-extends template
+extends template-main
 block content
   main.main
 
@@ -16,7 +16,7 @@ block content
             .slider__title.wow.pulse ЭФФЕКТИВНО УПАКУЕМ <br> ЛЮБОЙ БИЗНЕС
             .slider__text САЙТЫ. МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ. РЕКЛАМА В ИНТЕРНЕТЕ
             .slider__link
-              a.btn.btn-primary(href="") ЗАКАЗАТЬ УСЛУГУ 
+              a.btn.btn-green(href="") ЗАКАЗАТЬ УСЛУГУ 
         .slider__item
           //- .slider__img
             img(src="images/slide02.jpg", alt="")
@@ -24,7 +24,7 @@ block content
             .slider__title.wow.pulse ЭФФЕКТИВНО УПАКУЕМ <br> ЛЮБОЙ БИЗНЕС
             .slider__text САЙТЫ. МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ. РЕКЛАМА В ИНТЕРНЕТЕ
             .slider__link
-              a.btn.btn-primary(href="") ЗАКАЗАТЬ УСЛУГУ 
+              a.btn.btn-green(href="") ЗАКАЗАТЬ УСЛУГУ 
     section.working
       .container
         .section__pre Наши главные направления оказываемых услуг
@@ -157,13 +157,14 @@ block content
         .section__pre Вы тоже можете появиться здесь
         .section__title  Наши клиенты
         .client__wrap
-          - for (var i = 1; i < 22; i++) 
+          - for (var i = 1; i < 11; i++) 
             .client__item
+              .client__item-wrap
                 .client__img.greyimg
                   img(src="images/partner-"+i+".jpg", alt="")
                 .client__info
-                  .client__title "РУП Белмедпрепараты"
-                  .client__text Разработка корпоративного сайта компании   
+                  .client__title БЕЛКНИГА
+                  .client__text Немецкая компания GIRA является признанным мировым лидером в области производства современных электроустановочных изделий.    
         .client__btn 
                 a.btn.btn-grey(href="") ВСЕ КЛИЕНТЫ 
 

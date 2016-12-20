@@ -39,6 +39,15 @@ $(document).ready(function() {
         }
     };
 
+    function hideNotTarget(event, targetElems, hideElems, slideElems, removeClassElems) {
+        if (!$(event.target).is(targetElems)) {
+            $(hideElems).hide();
+            slideElems ? $(slideElems).slideUp() : false;
+            removeClassElems ? $(removeClassElems).removeClass('active') : false;
+        };
+    };
+
+
 
     // main slider
 
@@ -93,13 +102,6 @@ $(document).ready(function() {
             $('.overlay_advice').toggle();
         });
 
-        $(document).click(function(e) {
-            if (!$(e.target).is(".h-advice__icon") && !$(e.target).is("#advice *")) {
-                $('#advice').slideUp();
-                $('.overlay_advice').hide();
-            };
-        });
-
         // phone btn
 
         $('.h-phone__icon').on('click', function() {
@@ -107,12 +109,14 @@ $(document).ready(function() {
             $('.overlay_phone').toggle();
         });
 
-        $(document).click(function(e) {
-            if (!$(e.target).is(".h-phone__icon") && !$(e.target).is(".h-phone__list *")) {
-                $('.h-phone__list').slideUp();
-                $('.overlay_phone').hide();
-            };
+        $(document).on('click touchstart', function(e) {
+
+            hideNotTarget(e, '.h-phone__icon, .h-phone__list *', '.overlay_phone', '.h-phone__list');
+
+            hideNotTarget(e, '.h-advice__icon, #advice *', '.overlay_advice', '#advice');
+
         });
+
 
         if (isMobile.any()) {
 
@@ -148,29 +152,19 @@ $(document).ready(function() {
         $('.overlay_menu').toggle();
     });
 
-    $(document).click(function(e) {
-        if (!$(e.target).is(".toggle *") && !$(e.target).is(".sidebar *")) {
-            $('.sidebar,.toggle').removeClass('active');
-            $('.overlay_menu').hide();
-        };
+    $(document).on('click touchstart', function(e) {
+        hideNotTarget(e, '.toggle *, .sidebar *', '.overlay_menu', null, '.sidebar,.toggle');
     });
-
-
-
-
-
-
-
 
     // back-top
 
 
-    $('#back-top').click(function() {
-        $('body,html').animate({
-            scrollTop: 0
-        }, 500);
-        return false;
-    });
+    // $('#back-top').click(function() {
+    //     $('body,html').animate({
+    //         scrollTop: 0
+    //     }, 500);
+    //     return false;
+    // });
 
     // tabs
 
@@ -218,19 +212,22 @@ $(document).ready(function() {
 
     function choiseVisibility($scrollToTop) {
         $(document).scrollTop() > 600 ? $scrollToTop.show(100) : $scrollToTop.hide(100);
+        // &&  $(document).scrollTop() < document.body.clientHeight -window.innerHeight -50
+        if ($('.f-map').length) {
+            $(document).scrollTop() >= $(document).height() - $(window).height() - 130 ? $scrollToTop.addClass('bottom') : $scrollToTop.removeClass('bottom');
+        }
     }
 
     function scroll_position() {
         var $scrollToTop = $('#back-top');
-        if ($scrollToTop.length) {
+
+        choiseVisibility($scrollToTop);
+        $(window).on('scroll', function() {
             choiseVisibility($scrollToTop);
-            $(window).on('scroll', function() {
-                choiseVisibility($scrollToTop);
-            });
-            $scrollToTop.on('click', function() {
-                $('html, body').animate({ scrollTop: 0 }, 500);
-            });
-        }
+        });
+        $scrollToTop.on('click', function() {
+            $('html, body').animate({ scrollTop: 0 }, 500);
+        });
     }
     scroll_position();
 
@@ -243,7 +240,7 @@ $(document).ready(function() {
             $('.header').removeClass('fix');
         }
 
-        if ($('.aboutus-indicators').length) {
+        if ($('.aboutus-indicators').length || $('.bas-area').length) {
 
             $('.item__img i').each(function() {
                 var that = $(this);
@@ -291,8 +288,13 @@ $(document).ready(function() {
         var er = 0;
         var form = $(this).parents('form');
         $(".err-text").remove();
-        $.each(form.find('.req'), function(index, val) {
-            if ($(this).attr('type') == 'email' || $(this).hasClass('email')) {
+        $.each(form.find('[data-valid]'), function(index, val) {
+
+            var validType = $(this).data('valid');
+
+            switch (validType) {
+
+              case "email":
                 if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test($(this).val()))) {
                     er++;
                     $(this).addClass('err');
@@ -301,40 +303,53 @@ $(document).ready(function() {
                     $(this).removeClass('err');
                     $(this).parent().children(".err-text").remove();
                 }
-            } else {
+                break;
 
-                if ($(this).hasClass('services')) {
-                    if ($('.services').find('.checkbox__hidden:checked').length) {
+              case "phone":
+                if (!/[0-9()-\s+]{3,20}/.test($(this).val())) {
+                    er++;
+                    $(this).addClass('err');
+                    $(this).parent().append('<span class="err-text">введите правильно номер!</span>');
+                } else {
+                    $(this).removeClass('err');
+                    $(this).parent().children(".err-text").remove();
+                }
+                break;
+
+              case "services":
+                if ($(this).find('.checkbox__hidden:checked').length) {
+                    $(this).removeClass('err');
+                    $(this).parent().children(".err-text").remove();
+                } else {
+                    er++;
+                    $(this).addClass('err');
+                    $(this).parent().append('<span class="err-text">выберите услугу!</span>');
+                }
+                break;
+
+              case "select":
+                if ($(this).val() == '') {
+                    er++;
+                    $(this).parents('.dropdown').addClass('err');
+                    $(this).parents('.form__block').append('<span class="err-text">выберите пункт!</span>');
+                  } else {
+                        $(this).parents('.dropdown').removeClass('err');
+                        $(this).parents('.form__block').children(".err-text").remove();
+                 }
+                break;
+
+              default:
+                if ($(this).val() == '') {
+                    er++;
+                        $(this).addClass('err');
+                        $(this).parent().append('<span class="err-text">заполните поле!</span>');
+                } else {
                         $(this).removeClass('err');
                         $(this).parent().children(".err-text").remove();
-                    } else {
-                        $(this).addClass('err');
-                        $(this).parent().append('<span class="err-text">выберите пункт!</span>');
-                    }
-                } else {
-                    if ($(this).val() == '') {
-                        er++;
-                        if ($(this).hasClass('select')) {
-                            $(this).parents('.dropdown').addClass('err');
-                            $(this).parents('.form__block').append('<span class="err-text">выберите пункт!</span>');
-                        } else {
-                            $(this).addClass('err');
-                            $(this).parent().append('<span class="err-text">заполните поле!</span>');
-                        }
-                    } else {
-                        if ($(this).hasClass('select')) {
-                            $(this).parents('.dropdown').removeClass('err');
-                            $(this).parents('.form__block').children(".err-text").remove();
-                        } else {
-                            
-                            $(this).removeClass('err');
-                            $(this).parent().children(".err-text").remove();
-                        }
-
-                    }                    
-                }                
+                }
 
             }
+
         });
         if (er == 0) {
 
@@ -343,16 +358,64 @@ $(document).ready(function() {
         }
     });
 
+    $('.services__item .checkbox__hidden').on('change', function() {
+
+        var priority = 0;
+
+        $('.services__item .checkbox__hidden:checked').each(function(index, val){
+            if ($(this).data('prior')>priority) {
+                priority = $(this).data('prior');
+            }
+        })
+
+        var arr;
+
+        switch(priority) {
+            case 6:
+                arr = ['$2000 - $5000','$5000 - $10000','более $10000','Не знаю, посоветуйте'];
+                break;
+            case 5:
+                arr = ['$500 - $1500','$1500 - $3000','$3000 - $6000','более $6000','Не знаю, посоветуйте'];
+                break;
+            case 4:
+                arr = ['до $1000','$1000 - $2500','$2500 - $5000','более $5000','Не знаю, посоветуйте'];
+                break;
+            case 3:
+                arr = ['до $500','$500 - $1000','$1000 - $3000','более $3000','Не знаю, посоветуйте'];
+                break;
+            case 2:
+                arr = ['до $300','$300 - $500','$500 - $1000','более $1000','Не знаю, посоветуйте']; 
+                break;
+            case 1:
+                arr = ['$250 - $500','$500 - $1000','более $1000','Не знаю, посоветуйте'];   
+                break; 
+            case 0:
+                arr = ['до $500','$500 - $1000','$1000 - $3000','более $3000','Не знаю, посоветуйте'];
+                break;                               
+        }
+
+        var selected = '<option value="" selected="">Планируемый бюджет *</option>';
+        var noSelected = '';
+
+        for (var i = 0; i < arr.length; i++) {
+            noSelected+='<option>'+arr[i]+'</option>'
+        }
+
+        $('.select-budget').html('').append(selected).append(noSelected).easyDropDown('destroy').easyDropDown();
+
+    })
+
+
     $('form input, form textarea').focus(function() {
         $(this).removeClass('err');
         $(this).parent().children(".err-text").remove();
         $(this).addClass('active');
     });
-    $('.select').on('change', function () {
+    $('.select').on('change', function() {
         $(this).parents('.dropdown').removeClass('err');
         $(this).parents('.form__block').children(".err-text").remove();
     })
-    $('.checkbox').on('click', function () {
+    $('.checkbox').on('click', function() {
         $(this).parents('.services').removeClass('err');
         $(this).parents('.services').next(".err-text").remove();
     })
@@ -634,16 +697,22 @@ $(document).ready(function() {
     $(".select_site").on('change', function() {
         if ($(this).find('option:selected').text() === "Да") {
             $('.form__block_site').slideDown();
+            $('.select_req').attr("data-valid", "select");
+
         } else {
             $('.form__block_site').slideUp();
+            $('.select_req').removeAttr("data-valid");  
+        
         }
     });
 
     $(".select_country").on('change', function() {
         if ($(this).find('option:selected').text() === "Другая страна") {
             $('.form__block_country').slideDown();
+
         } else {
             $('.form__block_country').slideUp();
+
         }
     });
 
@@ -657,52 +726,87 @@ $(document).ready(function() {
 
     $('.select').easyDropDown();
 
+    function animateSVG(id, type, duration) {
+
+        new Vivus(id, {
+            type: type || 'oneByOne',
+            duration: duration || 150,
+            animTimingFunction: Vivus.EASE,
+            pathTimingFunction: Vivus.EASE
+        }, function() {
+            this.el.setAttribute("class", "filled");
+        });
+
+    }
+
+    $('.svg-animate').each(function(index, elem) {
+        var id = $(this).children('svg').attr('id');
+        animateSVG(id);
+    })
+
+
+    function onHover(arr) {
+
+        $.each(arr, function (index, value) {
+            $(value).hover(
+                function() {
+                    $(this).addClass('onHover')
+                },
+                function() {
+                    $(this).removeClass('onHover')
+            });     
+        })
+   
+    }
+
+    onHover(['.client__item', '.portfolio__item', '.projects__item']);
+
 });
 
 $(window).load(function() {
 
-    // Fade in images so there isn't a color "pop" document load and then on window load
-    $(".greyimg img").fadeIn(500);
 
-    // clone image
-    $('.greyimg img').each(function() {
-        var el = $(this);
-        el.css({ "top": "0", "left": "0", "position": "absolute" }).wrap("<div class='img_wrapper' style='display: inline-block'>").clone().addClass('img_grayscale').css({ "top": "0", "left": "0", "position": "absolute", "z-index": "998", "opacity": "0" }).insertBefore(el).queue(function() {
-            var el = $(this);
-            el.parent().css({ "width": this.width, "height": this.height, "position": "relative" });
-            el.dequeue();
-        });
-        this.src = grayscale(this.src);
-    });
-    // Fade image
-    $('.greyimg').mouseover(function() {
-        $(this).find('img:first').stop().animate({ opacity: 1 }, 200);
-    })
-    $('.greyimg').mouseout(function() {
-        $(this).find('.img_grayscale').stop().animate({ opacity: 0 }, 200);
-    });
-    // Grayscale w canvas method
-    function grayscale(src) {
-        var canvas = document.createElement('canvas');
-        var ctx = canvas.getContext('2d');
-        var imgObj = new Image();
-        imgObj.src = src;
-        canvas.width = imgObj.width;
-        canvas.height = imgObj.height;
-        ctx.drawImage(imgObj, 0, 0);
-        var imgPixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
-        for (var y = 0; y < imgPixels.height; y++) {
-            for (var x = 0; x < imgPixels.width; x++) {
-                var i = (y * 4) * imgPixels.width + x * 4;
-                var avg = (imgPixels.data[i] + imgPixels.data[i + 1] + imgPixels.data[i + 2]) / 3;
-                imgPixels.data[i] = avg;
-                imgPixels.data[i + 1] = avg;
-                imgPixels.data[i + 2] = avg;
-            }
-        }
-        ctx.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
-        return canvas.toDataURL();
-    }
+    // $(".greyimg img").fadeIn(500);
+
+
+    // $('.greyimg img').each(function() {
+    //     var el = $(this);
+    //     el.css({ "top": "0", "left": "0", "position": "absolute" }).wrap("<div class='img_wrapper' style='display: inline-block'>").clone().addClass('img_grayscale').css({ "top": "0", "left": "0", "position": "absolute", "z-index": "998", "opacity": "0" }).insertBefore(el).queue(function() {
+    //         var el = $(this);
+    //         el.parent().css({ "width": this.width, "height": this.height, "position": "relative" });
+    //         el.dequeue();
+    //     });
+    //     this.src = grayscale(this.src);
+    // });
+
+    // $('.greyimg').mouseover(function() {
+    //     $(this).find('img:first').stop().animate({ opacity: 1 }, 200);
+    // })
+    // $('.greyimg').mouseout(function() {
+    //     $(this).find('.img_grayscale').stop().animate({ opacity: 0 }, 200);
+    // });
+
+    // function grayscale(src) {
+    //     var canvas = document.createElement('canvas');
+    //     var ctx = canvas.getContext('2d');
+    //     var imgObj = new Image();
+    //     imgObj.src = src;
+    //     canvas.width = imgObj.width;
+    //     canvas.height = imgObj.height;
+    //     ctx.drawImage(imgObj, 0, 0);
+    //     var imgPixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    //     for (var y = 0; y < imgPixels.height; y++) {
+    //         for (var x = 0; x < imgPixels.width; x++) {
+    //             var i = (y * 4) * imgPixels.width + x * 4;
+    //             var avg = (imgPixels.data[i] + imgPixels.data[i + 1] + imgPixels.data[i + 2]) / 3;
+    //             imgPixels.data[i] = avg;
+    //             imgPixels.data[i + 1] = avg;
+    //             imgPixels.data[i + 2] = avg;
+    //         }
+    //     }
+    //     ctx.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
+    //     return canvas.toDataURL();
+    // }
 
 
 
@@ -731,7 +835,5 @@ $(window).load(function() {
 
         // sameHeight($('.working__info'));
     }
-
-
 
 });

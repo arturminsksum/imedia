@@ -1,0 +1,274 @@
+extends template
+block content
+
+  main.bitrix24
+    section.banner.banner_default
+      .banner__img.animated.fadeIn(style='background-image: url(images/bitrix24.jpg)')
+      .banner__info
+        h1.banner__title Битрикс24-Корпоративный портал
+        .banner__text Полный комплект инструментов для организации работы вашей компании. 
+      .breadcrumb
+        ol
+          li
+            a(href='#') Главная
+          li.active Битрикс 24 корпоративный портал
+
+
+    section.bitrix24-about
+      .container
+        .section__img
+        .section__title Битрикс 24    
+        .section__text
+          p
+            strong «Битрикс24» – это полный комплект инструментов для организации работы вашей компании.  
+          p Этот сервис предназначается не только для крупных компаний с налаженными бизнес-процессами, но и для среднего и малого бизнеса, представители которого в полной мере используют этот действительно удобный виртуальный офис. Его возможности обеспечат комфортную работу всех сотрудников вашей компании. 
+
+        .bitrix24-about__wrap
+          .bitrix24-about__circle
+            .bitrix24-about__img.wow.fadeInDown
+              img(src="images/bitrix24-about.png", alt="")
+            .bitrix24-about__block.bitrix24-about__block_left
+              .bitrix24-about__btn
+                a(href="").btn.btn-primary Презентация
+              .bitrix24-about__text 
+                | Посмотрите презентацию 
+                br
+                | корпоративного сервиса 
+                br
+                strong 1с-Битрикс 24
+              .bitrix24-about__line
+            .bitrix24-about__block.bitrix24-about__block_right
+              .bitrix24-about__btn
+                a(href="").btn.btn-primary Видео битрикс 24
+              .bitrix24-about__text 
+                | Посмотрите видео о работе
+                br
+                | корпоративного сервиса 
+              .bitrix24-about__line     
+            .bitrix24-about__cloud-one.wow.fadeInLeft
+              img(src="images/bitrix24-cloud-01.png", alt="")
+            .bitrix24-about__cloud-two.wow.fadeInLeft(data-wow-delay="0.25s")
+              img(src="images/bitrix24-cloud-02.png", alt="")
+            .bitrix24-about__cloud-three.wow.fadeInRight(data-wow-delay="0.25s")
+              img(src="images/bitrix24-cloud-03.png", alt="") 
+            .bitrix24-about__cloud-four.wow.fadeInRight
+              img(src="images/bitrix24-cloud-04.png", alt="")    
+
+        .offer
+          .offer__block
+            p.text_up Хотите  создать корпаративный портал?
+            p.text_up 
+              strong Закажите обратный звонок менеджера iMedia!
+          .offer__btn.wow.lightSpeedIn
+            .btn.btn-green ЗАказать обратный звонок
+
+        .section__image.wow.zoomInDown
+          img(src="images/bitrix24-device.png", alt="")
+        .bitrix24-about__feature
+          .section__image
+            img(src="images/bitrix24-label.png", alt="")   
+          .section__title СПИСОК ОСНОВНЫХ <br> ВОЗМОЖНОСТЕЙ СЕРВИСА!    
+          .section__text
+            p
+              span и это только 
+              strong список основных возможностей:
+          .section-approach__list
+            ul 
+              li давать задания сотрудникам и принимать готовую работу;
+              li создавать не только общую рассылку, но также рассылку для отдельных лиц, отделов, групп;
+              li настраивать уровень доступа к документам и заданиям;
+              li решать корпоративные вопросы, не используя сторонние способы связи: электронную почту, Skype и т.д.;
+            ul 
+              li создавать документы, папки, фотогалереи и другие необходимые для работы файлы;
+              li управлять контактными данными своих клиентов и партнёров;
+              li вести переписку, осуществлять звонки;
+              li интегрировать "Битрикс24" в социальные сети.
+
+          .offer
+            .offer__block
+              p 
+                span Чем раньше мы узнаем о Ваших бизнесс процессах 
+                br
+                span.text_up 
+                  strong тем быстрее Вы ускорите и автоматизируете свой бизнес!
+            .offer__btn
+              .btn.btn-green ЗАКАЗАТЬ звонок специалиста
+
+
+    section.section-why.bitrix24-why
+      .container
+        .section__img
+        .section__title Почему именно <br> "Битрикс 24" ?
+        .bitrix24-why__image.wow.tada
+          img.hide-mobile(src="images/bitrix24-group.png", alt="")
+          img.show-mobile(src="images/bitrix24-group-mobile.png", alt="") 
+        .section-approach__list.show-mobile
+          ul 
+            li Задачи и проекты
+            li Учет и другие инструменты
+            li Мобильность
+            li HR: Управление персоналом
+            li Телефония
+            li CRM
+            li Почта
+            li Календари
+            li Битрикс 24 Диск
+            li Документы online
+            li Соцсеть компании
+            li Чат и видеозвонки
+
+
+
+        .section-why__group
+          .row
+            .three.columns
+              .item
+                .item__img.wow.bounceIn
+                  +number(1)
+                .item__info
+                  .item__title Это удобно!
+                  .item__text 
+                    span "Битрикс24" позволяет всем сотрудникам компании общаться, решать корпоративные задачи в едином пространстве, не переключаясь на различные сервисы. 
+                    br
+                    span Кроме того, сервис можно использовать не только на ПК, но и на мобильных устройствах.
+
+            .three.columns
+              .item
+                .item__img.wow.bounceIn(data-wow-delay="0.25s")
+                  +number(2)
+                .item__info
+                  .item__title ЭТО БЫСТРО!
+                  .item__text Чтобы подключиться к "Битрикс24", понадобится всего несколько секунд. Регистрация также займёт немного времени, причём установка ПО на ПК не нужна.
+
+            .three.columns
+              .item
+                .item__img.wow.bounceIn(data-wow-delay="0.5s")
+                  +number(3)
+                .item__info
+                  .item__title Результативно!
+                  .item__text "Битрикс24" для руководителей компании, отделов, групп обеспечивает прозрачность всех рабочих процессов. Для сотрудников сервис представляет собой удобный и эффективый инструмент для повышения качества работы.
+
+            .three.columns
+              .item
+                .item__img.wow.bounceIn(data-wow-delay="0.75s")
+                  +number(4)
+                .item__info
+                  .item__title Надёжно и безопасно!
+                  .item__text "Битрикс24" работает 24 часа сутки и 7 дней в неделю! Бесперебойность его работы обеспечивается двумя DATA-центрами в США и Европе, где используется шифрованны обмен данными: вы можете спокойно открывать "Битрикс24", подключаясь к незащищённому соединению в аэропорту, торговом центре, интернет-кафе и не переживать о риске несанкционированного доступа к корпоративным данным.
+
+    section.manager-section.bitrix24-manager
+      .container            
+        .manager
+          .manager__wrap
+            .manager__left
+              span
+                strong Чем раньше мы узнаем о задачах Вашего бизнеса,
+              br
+              span тем быстрее Вы получите нужный продукт!
+              .manager__btn
+                .btn.btn-green Заказать звонок специалиста
+            .manager__right
+              span
+                strong Константин
+              br
+              span Специалист по продажам, <br>развитию бизнеса и менеджменту в интернете
+            .manager__img.wow.zoomInDown
+              img(src="images/manager.png", alt="")
+
+
+
+    section.bitrix24-develope
+      .container   
+        .develope__block
+          .develope__title стоимость Битрикс 24 - Облачная версия
+          .develope__btn
+            a(href="").btn Сравнить редакции
+            a(href="").btn возможности продукта
+          .row.develope__list
+              .three.columns
+                .item
+                  .item__img
+                    img(src="images/bitrix24-about.png", alt="")
+                  .item__info
+                    .item__title ПРОЕКТ 
+                    .item__price 0 бел. руб.
+                    .item__text 
+                      span Бесплатный облачный сервис для небольшой компаниидо 12 сотрудников
+                    .item__btn
+                      a(href="").btn.btn-green Начать бесплатно!
+
+              .three.columns
+                .item
+                  .item__img
+                    img(src="images/bitrix24-about.png", alt="")
+                  .item__info
+                    .item__title ПРОЕКТ+ 
+                    .item__price 25 бел. руб.
+                      small в месяц
+                    .item__text 
+                      span «Облачный» сервис для компании до 24 сотрудников
+
+              .three.columns
+                .item
+                  .item__img
+                    img(src="images/bitrix24-about.png", alt="")
+                  .item__info
+                    .item__title КОМАНДА 
+                    .item__price 110,1 бел. руб.
+                      small в месяц
+                    .item__text 
+                      span «Облачный» сервис для компании с неограниченным числом сотрудников.
+
+              .three.columns
+                .item
+                  .item__img
+                    img(src="images/bitrix24-about.png", alt="")
+                  .item__info
+                    .item__title компания 
+                    .item__price 220,2 бел. руб.
+                      small в месяц
+                    .item__text 
+                      span «Облачный» сервис для большой компании. Автоматизация бизнес-процессов.
+
+          .develope__title Битрикс24 - Коробочная версия продукта
+          .develope__rows
+            .item
+              .item__img
+                img(src="images/bitrix24-about.png", alt="")
+              .item__info
+                .item__title КОРПОРАТИВНЫЙ ПОРТАЛ
+                .item__price 4 500 бел. руб.
+                .item__text 
+                  span Коробочная версия "Битрикс24", которая работает на вашем собственном сервере.
+
+            .item
+              .item__img
+                img(src="images/bitrix24-about.png", alt="")
+              .item__info
+                .item__title ХОЛДИНГ
+                .item__price 110 000  бел. руб.
+                .item__text 
+                  span Полная коробочная версия "Битрикс24", содержащая весь функционал продукта.
+          .offer
+            .offer__block
+              p 
+                span Уточнить цену других решений компании 1С-Битрикс, 
+                br
+                span а также стоимость продления или перехода лицензий с одной на другую 
+                br
+                span вы можете  связавшись с нашими специалистами
+            .offer__btn
+              .btn.btn-green ЗАКАЗАТЬ звонок специалиста
+ 
+
+        .offer
+          p 
+            span.text_f18.text_up 
+              strong Хотите узнать сколько стоит интеграция 1с в Минске?
+            br
+            span.text_up 
+              strong Закажите звонок эксперта и ПОЛУЧИТЕ выгодное предложение!
+
+          .offer__btn
+            .btn.btn-green.wow.lightSpeedIn Получить Выгоду          
+      

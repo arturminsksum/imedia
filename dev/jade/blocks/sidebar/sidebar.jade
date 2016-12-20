@@ -1,82 +1,76 @@
-mixin sidebar(o)
+mixin sidebar(main)
     aside.sidebar
-      //.s-lang
-        span.Ru
-        a.Eng(href="")
-        a.Lv(href="")
       .s-block._top
         .s-logo
-          a(href="/").s-logo__link.wow.slideInDown
-            //- img(src="images/logo.png", alt="logo")           
+          if main!== 'main'
+            a(href="/").s-logo__link.wow.slideInDown
+          else
+            h1.s-logo__link.wow.slideInDown Разработка сайтов в Минске
         .menu
           ul.menu__main
             li
               a(href="") О компании
             li
-              a.drop(href="/") наши проекты  
+              a(href="") Клиенты              
+            li
+              a.drop(href="/") Услуги
               .menu__arrow
               ul.menu__sub
                 li
-                  a(href="/") Создание сайта
-                li
-                  a(href="") Мобильные приложения
-                li
-                  a(href="") Создание логотипа
-                li
-                  a(href="") Разработка фирменного стиля
-                li
-                  a(href="") Техническая поддержка
-            li
-              a.drop(href="/") УСЛУГИ
-              .menu__arrow
-              ul.menu__sub
-                li
-                  a.nested(href="/") Создание сайта
+                  a.nested(href="/") Разработка сайтов
                   .submenu__arrow
                   ul.menu__sub.menu__sub_nested
                     li
-                      a(href="") Интернет-магазин
+                      a(href="") Корпоративные сайты
                     li
-                      a(href="") Корпоративный сайт 
+                      a(href="") Интернет-магазины 
                     li 
-                      a(href="") Промо-сайт
+                      a(href="") Одностраничные сайты
                     li 
-                      a(href="") Сайт-визитка  
+                      a(href="") Сайты на 1С-Битрикс
+                    li 
+                      a(href="") Интеграция с продуктами 1С                        
+               
                 li
-                  a.nested(href="") Мобильные приложения
-                  .submenu__arrow
-                  ul.menu__sub.menu__sub_nested
-                    li
-                      a(href="") Интернет-магазин
-                    li
-                      a(href="") Корпоративный сайт 
-                    li 
-                      a(href="") Промо-сайт
-                    li 
-                      a(href="") Сайт-визитка                  
-                li
-                  a(href="") Создание логотипа
+                  a(href="") Продвижение сайтов
                 li
                   a(href="") Разработка фирменного стиля
                 li
-                  a(href="") Техническая поддержка
+                  a(href="") Создание логотипа
                 li
-                  a(href="") Графический дизайн
+                  a(href="") Разработка мобильных приложений
                 li
-                  a(href="") Создание баннеров
+                  a(href="") Битрикс24 - Корпоративный портал
                 li
-                  a(href="") Тестирование
+                  a(href="") Разработка веб-сервисов
                 li
-                  a(href="") Копирайтинг
+                  a(href="") Разработка баннеров
                 li
-                  a(href="") Продвижение в Instagram
-                li
-                  a(href="") Разработка программ на заказ
+                  a(href="") Грант Европейского Банка 
             li
-              a(href="") КОНТАКТЫ      
+              a(href="") Проекты                   
+            li
+              a(href="") Контакты      
+      .s-discover
+        .s-discover__wrap
+          .s-discover__logo
+            .s-discover__circle
+              .s-discover__border
+              .svg-animate  
+                svg#wallet(xmlns='http://www.w3.org/2000/svg', width='44', height='44', viewbox='0 0 44 44')
+                  path(d='M31.069,23.915c-2.376,0-4.302,1.927-4.302,4.305c0,2.378,1.926,4.305,4.302,4.305h12.905v-8.609H31.069z M31.069,29.654\
+                  c-0.792,0-1.434-0.642-1.434-1.435s0.642-1.435,1.434-1.435c0.792,0,1.434,0.642,1.434,1.435S31.861,29.654,31.069,29.654z')
+                  path(d='M31.069,21.045h7.17V16.74c0-2.374-1.93-4.304-4.302-4.304H1.434C0.642,12.436,0,13.078,0,13.87v28.698\
+                  c0,0.792,0.642,1.435,1.434,1.435h32.503c2.372,0,4.302-1.931,4.302-4.305v-4.305h-7.17c-3.954,0-7.17-3.218-7.17-7.174\
+                  C23.899,24.263,27.115,21.045,31.069,21.045z')
+                  path(d='M39.673,12.436h-0.014c0.904,1.201,1.448,2.688,1.448,4.304v4.305h2.868V16.74C43.974,14.366,42.045,12.436,39.673,12.436z')
+                  path(d='M41.107,35.394v4.305c0,1.616-0.543,3.104-1.448,4.305h0.014c2.372,0,4.302-1.931,4.302-4.305v-4.305H41.107z')
+                  path(d='M23.479,0.42c-0.56-0.561-1.468-0.561-2.028,0l-1.26,1.261l7.879,7.884h4.548L23.479,0.42z')
+                  path(d='M14.875,0.42c-0.56-0.561-1.467-0.561-2.028,0l-9.14,9.146h20.307L14.875,0.42z')            
+          p.s-discover__text Отправить заявку<br>на расчет проекта
+          .s-discover__btn
+            a.btn.btn-primary(href="")  Узнать стоимость              
       .s-block._bottom
-        .s-discover
-          a.btn.btn-primary(href="")  Узнать стоимость
         .s-social
           a.s-social__g(href="")
           a.s-social__i(href="")

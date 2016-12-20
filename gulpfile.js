@@ -1,12 +1,37 @@
 var gulp = require('gulp');
-gulp.fs = require("fs");
+// gulp.fs = require("fs");
 gulp.autoprefixer = require('gulp-autoprefixer');
-gulp.cssnano = require('gulp-cssnano');
+// gulp.cssnano = require('gulp-cssnano');
 gulp.connect = require('gulp-connect-multi')();
 gulp.jade = require('gulp-jade');
 var less = require('gulp-less');
 var sourcemaps = require('gulp-sourcemaps');
 var errorNotifier = require('gulp-error-notifier');
+
+var path = require('path');
+// var svgmin = require('gulp-svgmin');
+var svgstore = require('gulp-svgstore');
+var rename = require('gulp-rename');
+
+gulp.task('svgstore', function () {
+    return gulp
+        .src('dev/svg/*.svg')
+        // .pipe(svgmin(function (file) {
+        //     var prefix = path.basename(file.relative, path.extname(file.relative));
+        //     return {
+        //         plugins: [{
+        //             cleanupIDs: {
+        //                 prefix: prefix + '-',
+        //                 minify: true
+        //             }
+        //         }]
+        //     }
+        // }))
+        .pipe(svgstore())
+        .pipe(gulp.dest('dev/svg-ready'));
+});
+
+
 
 /* watch document change */
 gulp.paths = {
@@ -22,7 +47,7 @@ gulp.task('server', gulp.connect.server({
   root: ['dev/assets'],
   port: 9000,
   open: {
-    file: 'shop.html'
+    file: 'index.html'
     // browser: 'chrome'
   },  
   livereload: true

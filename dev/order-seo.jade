@@ -15,10 +15,10 @@ block content
               input.input#name_feed(type='text', name='form[]', placeholder='',autocomplete='name')
               label.label(for="name_feed") Ваше имя или фамилия
             .form__block
-              input.input.req.email#email_feed(type='email', name='form[]', placeholder='',autocomplete='email')
+              input.input.email#email_feed(data-valid="email" type='email', name='form[]', placeholder='',autocomplete='email')
               label.label(for="email_feed") Адрес электронной почты *
             .form__block
-              input.input.req#phone_feed(type='text', name='form[]', placeholder='',autocomplete='tel')
+              input.input#phone_feed(data-valid="phone" type='text', name='form[]', placeholder='',autocomplete='tel')
               label.label(for="phone_feed") Телефон *
             .form__block
               input.input#region_feed(type='text', name='form[]', placeholder='',autocomplete="country")
@@ -39,14 +39,14 @@ block content
               input.input#age_feed(type='text', name='form[]', placeholder='')
               label.label(for="age_feed") Возраст сайта
             .form__block.form__block_site
-              select.req.select
+              select.select.select_req(data-valid="select")
                 option(value="", selected) Продвигался ли сайт ранее *
                 option Да
                 option Нет
                 option Не знаю    
 
             .form__block
-              select.req.select.select_country
+              select.select.select_country(data-valid="select")
                 option(value="", selected) Регион для продвижения *
                 option Беларусь
                 option Россия
@@ -59,13 +59,13 @@ block content
               label.label(for="country_feed") Укажите страну   
 
             .form__block.form__block_wide
-              textarea.req.input#message1_feed(name='form[]', rows='1', placeholder='')
+              textarea.input#message1_feed(data-valid="text" name='form[]', rows='1', placeholder='')
               label.label(for="message1_feed") Напишите нам по каким словам вы бы хотели , чтобы вас находили клиенты? * 
             .form__block.form__block_wide
               textarea.input#message2_feed(name='form[]', rows='1', placeholder='')
               label.label(for="message2_feed") Расскажите нам чем занимается ваша компания, и когда нам с вами лучше связаться?
             .form__block
-              select.req.select.select_hear
+              select.select.select_hear(data-valid="select")
                 option(value="", selected) Как вы узнали о нас? *
                 option Поисковые системы
                 option Контекстная реклама

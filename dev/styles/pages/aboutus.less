@@ -1,4 +1,10 @@
 .aboutus {
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+
   &-mission {
     .section__img {
       background-image: @target;
@@ -8,6 +14,7 @@
   }
 
   &-indicators {
+
     &:before {
       content: '';
       display: block;
@@ -18,7 +25,7 @@
       right: 0;
       background-color: #e2f2ff;
       transform: rotateZ(7deg);
-      z-index: -1;
+      // z-index: -1;
     }
 
     &:after {
@@ -31,7 +38,7 @@
       right: -100px;
       background-color: #e2f2ff;
       transform: rotateZ(-7deg);
-      z-index: -1;
+      // z-index: -1;
     }
 
     .section__img {
@@ -159,7 +166,7 @@
       right: 0;
       background-color: #fff;
       transform: rotateZ(7deg);
-      z-index: -1;
+      // z-index: -1;
     }
 
     &:after {
@@ -172,7 +179,7 @@
       right: -100px;
       background-color: #fff;
       transform: rotateZ(-7deg);
-      z-index: -1;
+      // z-index: -1;
     }
 
     .section__img {
@@ -194,7 +201,7 @@
       right: 0;
       background-color: @light-yellow;
       transform: rotateZ(7deg);
-      z-index: -1;
+      // z-index: -1;
     }
 
     &:after {
@@ -207,7 +214,7 @@
       right: -100px;
       background-color: @light-yellow;
       transform: rotateZ(-7deg);
-      z-index: -1;
+      // z-index: -1;
     }
 
     .section__img {
@@ -218,6 +225,7 @@
     &__map {
       position: relative;
       margin-top: 3rem;
+      z-index: 1;
 
       &-inner {
         height: 600px;
@@ -289,7 +297,7 @@
       right: 0;
       background-color: #fff;
       transform: rotateZ(7deg);
-      z-index: -1;
+      // z-index: -1;
     }
 
     &:after {
@@ -302,7 +310,7 @@
       right: -100px;
       background-color: #fff;
       transform: rotateZ(-7deg);
-      z-index: -1;
+      // z-index: -1;
     }
 
     .section__img {
@@ -369,7 +377,7 @@
       right: 0;
       background-color: #f9f9f9;
       transform: rotateZ(7deg);
-      z-index: -1;
+      // z-index: -1;
     }
 
     &:after {
@@ -382,7 +390,7 @@
       right: -100px;
       background-color: #f9f9f9;
       transform: rotateZ(-7deg);
-      z-index: -1;
+      // z-index: -1;
     }
 
     .persona__info {
@@ -402,7 +410,7 @@
       right: 0;
       background-color: #fff;
       transform: rotateZ(7deg);
-      z-index: -1;
+      // z-index: -1;
     }
 
     &:after {
@@ -415,7 +423,7 @@
       right: -100px;
       background-color: #fff;
       transform: rotateZ(-7deg);
-      z-index: -1;
+      // z-index: -1;
     }
 
     .section__img {
@@ -424,7 +432,7 @@
 
   }
   &-clients {
-    padding-bottom: 0;
+
   }
 
 }

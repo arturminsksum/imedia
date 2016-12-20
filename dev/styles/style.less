@@ -374,6 +374,10 @@ a {
 .portfolio {
 	position: relative;
 
+	.section__img {
+		background-image: @bag;
+	}
+
 	&__wrap {
 		font-size: 0;
 	}
@@ -413,7 +417,7 @@ a {
 			width: 100%;
 		}
 
-		&:hover {
+		&.onHover {
 			&:before {
 				transform: translateY(0);
 				opacity: 1;
@@ -478,39 +482,86 @@ a {
 }
 
 .client {
-	padding: 0;
+	padding-top: 0;
 
 	&__wrap {
 		text-align: center;
-		background-color: #fff;
-		padding: 3rem;
+		font-size: 0;
 	}
 
+   &__item-wrap {
+
+			background-color: #fff;
+   }	
+
 	&__item {
+		.bg-grey;
+		padding: 1px;
+		position: relative;
 		.dibt;
-		width: 180px;
+		width: 222px;
+		height: 222px;
 		text-align: center;
-		margin: 1rem;
+		// margin: 0 1px 1px 0;
+		cursor: pointer;
+		transform-style: preserve-3d;
+		transition: all 0.3s ease-out;
+		// transform: translatez(-33px);
+		overflow: hidden;
+
+
+		&.onHover {
+			.client__img {
+				transform: rotatex(90deg) translatez(100px);
+			}
+			.client__info {
+				transform: rotatex(0deg) translatez(100px);
+  			// background-color: @yellow;
+			}
+		}
 	}
 
 	&__img {
-		height: 80px;
-		line-height: 80px;
+		height: 220px;
+		line-height: 220px;
+  	pointer-events: none;
+  	transform-style: preserve-3d;
+  	transform: rotatex(0deg) translatez(100px); 
+  	 transition-duration: 0.3s;
 		img {
 			.img;
+			vertical-align: middle;
 		}
 
 	}
 
 	&__info {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		right: 10px;
+		bottom: 10px;
+		padding: 1.5rem;
+		transition-duration: 0.3s;
+  	pointer-events: none;
+  	transform-style: preserve-3d;
+  	transform: rotatex(-90deg) translatez(100px);
+  	background-color: @yellow;
+  	text-align: left;
 	}
 
 	&__title {
+		width: 100%;
 		font-size: 1.4rem;
 		font-weight: bold;
+		margin-bottom: 1rem;
 	}
 
 	&__text {
+		width: 100%;
 		font-size: 1.2rem;
 	}
 
@@ -518,7 +569,7 @@ a {
 		text-align: center;
 
 		.btn {
-			margin: 3rem 0px 5rem;
+			margin-top: 3rem;
 		}
 
 	}
@@ -607,6 +658,31 @@ a {
 
 }
 
+.svg-animate {
+
+	svg {
+		.dibm;
+		path {
+			// fill: #000;	
+			fill-opacity: 0;
+			stroke: currentColor;
+			stroke-width: 1;
+			stroke-miterlimit: 10;
+		}
+
+		&.filled {
+			path {
+				fill-opacity: 1;
+				transition: all 1s ease-out;
+				// stroke: inherit;
+			}
+
+		}	
+	}
+
+}
+
+
 /*=== end main style ===*/
 @import "tablet.less";
 @import "mobile.less";
@@ -626,3 +702,6 @@ a {
 @import "pages/aboutus.less";
 @import "pages/contacts.less";
 @import "pages/order-main.less";
+@import "pages/integration.less";
+@import "pages/bas.less";
+@import "pages/landing.less";
