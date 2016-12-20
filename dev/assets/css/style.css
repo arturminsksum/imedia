@@ -7010,6 +7010,7 @@ section {
   margin: 0;
   width: 25%;
   overflow: hidden;
+  font-size: 0;
 }
 .projects__item._big {
   width: 50%;

@@ -1,3 +1,12 @@
+mixin portfolio(name,filter,type)
+  figure.projects__item._big(class=filter)
+    img(src="images/portfolio/"+name+".jpg", alt=name)
+    figcaption.projects__info
+      .projects__name=name
+      .projects__text #{type} #{name}
+      .projects__btn 
+        a.btn.btn-primary(href="") ПОДРОБНЕЕ 
+
 extends template2
 block content
   main.projects
@@ -8,197 +17,63 @@ block content
           .sort__pagin
             .sort__btn.wow.bounceIn.active(data-filter=".projects__item")
               span Все работы
-            .sort__btn.wow.bounceIn(data-wow-delay="0s",data-filter=".shop") 
-              span Интернет-магазины
-            .sort__btn.wow.bounceIn(data-wow-delay="0.25s",data-filter=".landing") 
-              span Лендинги
-            .sort__btn.wow.bounceIn(data-wow-delay="0.5s",data-filter=".service") 
-              span Веб-сервисы
-            .sort__btn.wow.bounceIn(data-wow-delay="0.75s",data-filter=".app") 
-              span Мобильные приложения
-            .sort__btn.wow.bounceIn(data-wow-delay="1s",data-filter=".style") 
+            .sort__btn.wow.bounceIn(data-wow-delay="0s",data-filter=".js-site") 
+              span Сайты
+            .sort__btn.wow.bounceIn(data-wow-delay="0.25s",data-filter=".js-style") 
               span Фирменный стиль
+            .sort__btn.wow.bounceIn(data-wow-delay="0.5s",data-filter=".js-app") 
+              span Мобильные приложения
+            .sort__btn.wow.bounceIn(data-wow-delay="0.75s",data-filter=".js-other") 
+              span Другое
+             
         .projects__wrap.clearfix
           .projects__sizer
-          figure.projects__item._big.landing
-            img(src="images/project01.jpg", alt="project01")
-            figcaption.projects__info
-              .projects__name “MEDICENTER”
-              .projects__text сайт медицинского центра
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ        
-          figure.projects__item.shop
-            img(src="images/project02.jpg", alt="project02")
-            figcaption.projects__info
-              .projects__name project02
-              .projects__text сайт project02
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item.shop
-            img(src="images/project03.jpg", alt="project03")
-            figcaption.projects__info
-              .projects__name project03
-              .projects__text сайт project03
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item.landing
-            img(src="images/project04.jpg", alt="project04")
-            figcaption.projects__info
-              .projects__name project04
-              .projects__text сайт project04
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item.service
-            img(src="images/project05.jpg", alt="project05")
-            figcaption.projects__info
-              .projects__name project05
-              .projects__text сайт project05
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item._big.shop
-            img(src="images/project06.jpg", alt="project06")
-            figcaption.projects__info
-              .projects__name project06
-              .projects__text сайт project06
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item._big.shop
-            img(src="images/project07.jpg", alt="project07")
-            figcaption.projects__info
-              .projects__name project07
-              .projects__text сайт project07
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item.landing.app
-            img(src="images/project05.jpg", alt="project05")
-            figcaption.projects__info
-              .projects__name project05
-              .projects__text сайт project05
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item.service
-            img(src="images/project03.jpg", alt="project03")
-            figcaption.projects__info
-              .projects__name project03
-              .projects__text сайт project03
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item.service.app
-            img(src="images/project08.jpg", alt="project08")
-            figcaption.projects__info
-              .projects__name project08
-              .projects__text сайт project08
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item.style
-            img(src="images/project09.jpg", alt="project09")
-            figcaption.projects__info
-              .projects__name project09
-              .projects__text сайт project09
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item._big.style.app
-            img(src="images/project10.jpg", alt="project10")
-            figcaption.projects__info
-              .projects__name project10
-              .projects__text сайт project10
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item._big.service
-            img(src="images/project11.jpg", alt="project11")
-            figcaption.projects__info
-              .projects__name project11
-              .projects__text сайт project11
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
+
+          +portfolio('concordia','js-site','Сайт')
+          +portfolio('trest','js-site','Сайт')
+          +portfolio('stiville','js-site','Сайт')
+          +portfolio('study','js-site','Сайт')
+          +portfolio('krasa-volos','js-site','Сайт')
+          +portfolio('svariok','js-site','Сайт')
+          +portfolio('glavprokat','js-site','Сайт')
+          +portfolio('medinterplast','js-site','Сайт')
+          +portfolio('belatmit','js-site','Сайт')
+          +portfolio('manidoro','js-site','Сайт')
+          +portfolio('matem','js-site','Сайт')
+          +portfolio('project17','js-site','Сайт')
+          +portfolio('foxstyle','js-site','Сайт')
+          +portfolio('badura','js-site','Сайт')
+          +portfolio('concordia-lv','js-site','Сайт')
+          +portfolio('4metri','js-site','Сайт')
+          +portfolio('protege','js-site','Сайт')
+          +portfolio('bartek','js-site','Сайт')
+          +portfolio('happy-toys','js-site','Сайт')
+          +portfolio('woodbood','js-site','Сайт')
+          +portfolio('ecoboo','js-site','Сайт')
+
+          +portfolio('osa','js-style','Фирменный стиль')
+          +portfolio('montana','js-style','Фирменный стиль')
+          +portfolio('fermer','js-style','Фирменный стиль')
+          +portfolio('alter','js-style','Фирменный стиль')
+          +portfolio('tomografia','js-style','Фирменный стиль')
+          +portfolio('baramia','js-style','Фирменный стиль')
+          +portfolio('sharkutier','js-style','Фирменный стиль')
+          +portfolio('forma','js-style','Фирменный стиль')
+
+          +portfolio('mele','js-app','Мобильное приложение')
+          +portfolio('easygift','js-app','Мобильное приложение')
+          +portfolio('fitnes','js-app','Мобильное приложение')
+          +portfolio('taxi','js-app','Мобильное приложение')
+          +portfolio('krum','js-app','Мобильное приложение')
+          +portfolio('minsk','js-app','Мобильное приложение')
+          +portfolio('gulbe','js-app','Мобильное приложение')
 
 
 
-          figure.projects__item._big.landing(style="display:none")
-            img(src="images/project01.jpg", alt="project01")
-            figcaption.projects__info
-              .projects__name “MEDICENTER”
-              .projects__text сайт медицинского центра
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ        
-          figure.projects__item.shop(style="display:none")
-            img(src="images/project02.jpg", alt="project02")
-            figcaption.projects__info
-              .projects__name project02
-              .projects__text сайт project02
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item.shop(style="display:none")
-            img(src="images/project03.jpg", alt="project03")
-            figcaption.projects__info
-              .projects__name project03
-              .projects__text сайт project03
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item.landing(style="display:none")
-            img(src="images/project04.jpg", alt="project04")
-            figcaption.projects__info
-              .projects__name project04
-              .projects__text сайт project04
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item.service(style="display:none")
-            img(src="images/project05.jpg", alt="project05")
-            figcaption.projects__info
-              .projects__name project05
-              .projects__text сайт project05
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item._big.shop(style="display:none")
-            img(src="images/project06.jpg", alt="project06")
-            figcaption.projects__info
-              .projects__name project06
-              .projects__text сайт project06
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item._big.shop(style="display:none")
-            img(src="images/project07.jpg", alt="project07")
-            figcaption.projects__info
-              .projects__name project07
-              .projects__text сайт project07
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item.landing.app(style="display:none")
-            img(src="images/project05.jpg", alt="project05")
-            figcaption.projects__info
-              .projects__name project05
-              .projects__text сайт project05
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item.service(style="display:none")
-            img(src="images/project03.jpg", alt="project03")
-            figcaption.projects__info
-              .projects__name project03
-              .projects__text сайт project03
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item.service.app(style="display:none")
-            img(src="images/project08.jpg", alt="project08")
-            figcaption.projects__info
-              .projects__name project08
-              .projects__text сайт project08
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item.style(style="display:none")
-            img(src="images/project09.jpg", alt="project09")
-            figcaption.projects__info
-              .projects__name project09
-              .projects__text сайт project09
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item._big.style.app(style="display:none")
-            img(src="images/project10.jpg", alt="project10")
-            figcaption.projects__info
-              .projects__name project10
-              .projects__text сайт project10
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
-          figure.projects__item._big.service(style="display:none")
+
+
+
+          figure.projects__item._big.js-app(style="display:none")
             img(src="images/project11.jpg", alt="project11")
             figcaption.projects__info
               .projects__name project11
