@@ -99,35 +99,36 @@
                     </div>
                   </div>
                 </div>
-                <div class="h-mail"> 
-                  <div class="h-mail__icon"></div><a href="mailto:info@imedia.by" class="h-mail__link"> <span>info@imedia.by</span></a>
-                </div>
               </div>
               <div class="header__block _logo">
                 <div class="h-logo"><a href="/" class="h-logo__link"></a></div>
               </div>
-              <div class="header__block _advice"><a href="#advice" class="h-advice">
+              <div class="header__block _advice">
+                <div class="h-mail"> 
+                  <div class="h-mail__icon"></div><a href="mailto:info@imedia.by" class="h-mail__link"> <span>info@imedia.by            </span></a>
+                </div><a href="#advice" class="h-advice">
                   <div class="h-advice__icon"></div>
-                  <div class="h-advice__link"><span>Получить консультацию</span></div></a></div>
+                  <div class="h-advice__link"><span>Получить консультацию</span></div></a>
+              </div>
             </div>
           </div>
         </header>
         <div id="advice" class="popup _advice">
           <div class="popup__form">
             <div class="section__title">Напишите нам</div>
-            <div class="section__pre">Оставьте свои контактные данные  и мы позвоним Вам в течении 1 часа и прокунсультируем Вас по вашему вопросу        </div>
+            <div class="section__pre">Оставьте свои контактные данные  и мы позвоним Вам в течении 1 часа и проконсультируем Вас по вашему вопросу        </div>
             <form action="" class="form">         
               <div class="form__block">
                 <input id="name_advice" type="text" name="form[]" placeholder="" class="input"/>
                 <label for="name_advice" class="label">Имя</label>
               </div>
               <div class="form__block">
-                <input id="email_advice" type="email" name="form[]" placeholder="" class="input email"/>
-                <label for="email_advice" class="label">E-mail</label>
+                <input id="email_advice" data-valid="email" type="email" name="form[]" placeholder="" class="input"/>
+                <label for="email_advice" class="label">E-mail*</label>
               </div>
               <div class="form__block">
-                <input id="phone_advice" type="text" name="form[]" placeholder="" class="input req"/>
-                <label for="phone_advice" class="label">Телефон</label>
+                <input id="phone_advice" data-valid="phone" type="text" name="form[]" placeholder="" class="input"/>
+                <label for="phone_advice" class="label">Телефон*</label>
               </div>
               <div class="form__block">
                 <textarea id="message_advice" name="form[]" rows="1" placeholder="" class="input"></textarea>
@@ -137,6 +138,17 @@
                 <button type="submit" class="btn btn-green">Отправить            </button>
               </div>
             </form>
+          </div>
+        </div>
+        <div id="success" class="popup _advice">
+          <div class="popup__form">
+            <div class="section__title">Запрос отправлен</div>
+            <div class="section__pre">Наши менеджеры свяжутся с Вами в течении 1 часа и проконсультируют Вас по вашему вопросу        </div>
+            <div class="form">         
+              <div class="form__btn">
+                <button type="button" class="btn btn-green js-close-popup">Закрыть             </button>
+              </div>
+            </div>
           </div>
         </div>
         <main class="projects">
@@ -166,227 +178,80 @@
               </div>
               <div class="projects__wrap clearfix">
                 <div class="projects__sizer"></div>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/concordia.jpg" alt="concordia"/>
+                <figure class="projects__item _big js-site js-other"><img src="images/portfolio/concordia.jpg" alt="concordia"/>
                   <figcaption class="projects__info">
                     <div class="projects__name">concordia</div>
                     <div class="projects__text">Сайт concordia</div>
                     <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
                   </figcaption>
                 </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/trest.jpg" alt="trest"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">trest</div>
-                    <div class="projects__text">Сайт trest</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/stiville.jpg" alt="stiville"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">stiville</div>
-                    <div class="projects__text">Сайт stiville</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/study.jpg" alt="study"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">study</div>
-                    <div class="projects__text">Сайт study</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/krasa-volos.jpg" alt="krasa-volos"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">krasa-volos</div>
-                    <div class="projects__text">Сайт krasa-volos</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/svariok.jpg" alt="svariok"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">svariok</div>
-                    <div class="projects__text">Сайт svariok</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/glavprokat.jpg" alt="glavprokat"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">glavprokat</div>
-                    <div class="projects__text">Сайт glavprokat</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/medinterplast.jpg" alt="medinterplast"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">medinterplast</div>
-                    <div class="projects__text">Сайт medinterplast</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/belatmit.jpg" alt="belatmit"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">belatmit</div>
-                    <div class="projects__text">Сайт belatmit</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/manidoro.jpg" alt="manidoro"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">manidoro</div>
-                    <div class="projects__text">Сайт manidoro</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/matem.jpg" alt="matem"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">matem</div>
-                    <div class="projects__text">Сайт matem</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/project17.jpg" alt="project17"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">project17</div>
-                    <div class="projects__text">Сайт project17</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/foxstyle.jpg" alt="foxstyle"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">foxstyle</div>
-                    <div class="projects__text">Сайт foxstyle</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/badura.jpg" alt="badura"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">badura</div>
-                    <div class="projects__text">Сайт badura</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/concordia-lv.jpg" alt="concordia-lv"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">concordia-lv</div>
-                    <div class="projects__text">Сайт concordia-lv</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/4metri.jpg" alt="4metri"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">4metri</div>
-                    <div class="projects__text">Сайт 4metri</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/protege.jpg" alt="protege"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">protege</div>
-                    <div class="projects__text">Сайт protege</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/bartek.jpg" alt="bartek"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">bartek</div>
-                    <div class="projects__text">Сайт bartek</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/happy-toys.jpg" alt="happy-toys"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">happy-toys</div>
-                    <div class="projects__text">Сайт happy-toys</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/woodbood.jpg" alt="woodbood"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">woodbood</div>
-                    <div class="projects__text">Сайт woodbood</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-site"><img src="images/portfolio/ecoboo.jpg" alt="ecoboo"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">ecoboo</div>
-                    <div class="projects__text">Сайт ecoboo</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-style"><img src="images/portfolio/osa.jpg" alt="osa"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">osa</div>
-                    <div class="projects__text">Фирменный стиль osa</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-style"><img src="images/portfolio/montana.jpg" alt="montana"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">montana</div>
-                    <div class="projects__text">Фирменный стиль montana</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-style"><img src="images/portfolio/fermer.jpg" alt="fermer"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">fermer</div>
-                    <div class="projects__text">Фирменный стиль fermer</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-style"><img src="images/portfolio/alter.jpg" alt="alter"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">alter</div>
-                    <div class="projects__text">Фирменный стиль alter</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-style"><img src="images/portfolio/tomografia.jpg" alt="tomografia"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">tomografia</div>
-                    <div class="projects__text">Фирменный стиль tomografia</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-style"><img src="images/portfolio/baramia.jpg" alt="baramia"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">baramia</div>
-                    <div class="projects__text">Фирменный стиль baramia</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-style"><img src="images/portfolio/sharkutier.jpg" alt="sharkutier"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">sharkutier</div>
-                    <div class="projects__text">Фирменный стиль sharkutier</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-style"><img src="images/portfolio/forma.jpg" alt="forma"/>
-                  <figcaption class="projects__info">
-                    <div class="projects__name">forma</div>
-                    <div class="projects__text">Фирменный стиль forma</div>
-                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
-                  </figcaption>
-                </figure>
-                <figure class="projects__item _big js-app"><img src="images/portfolio/mele.jpg" alt="mele"/>
+                <figure class="projects__item js-app"><img src="images/portfolio/mele.jpg" alt="mele"/>
                   <figcaption class="projects__info">
                     <div class="projects__name">mele</div>
                     <div class="projects__text">Мобильное приложение mele</div>
                     <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
                   </figcaption>
                 </figure>
-                <figure class="projects__item _big js-app"><img src="images/portfolio/easygift.jpg" alt="easygift"/>
+                <figure class="projects__item js-site"><img src="images/portfolio/trest.jpg" alt="trest"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">trest</div>
+                    <div class="projects__text">Сайт trest</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure class="projects__item js-site"><img src="images/portfolio/ecoboo.jpg" alt="ecoboo"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">ecoboo</div>
+                    <div class="projects__text">Сайт ecoboo</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure class="projects__item js-site js-other"><img src="images/portfolio/stiville.jpg" alt="stiville"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">stiville</div>
+                    <div class="projects__text">Сайт stiville</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure class="projects__item js-app"><img src="images/portfolio/easygift.jpg" alt="easygift"/>
                   <figcaption class="projects__info">
                     <div class="projects__name">easygift</div>
                     <div class="projects__text">Мобильное приложение easygift</div>
                     <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
                   </figcaption>
                 </figure>
-                <figure class="projects__item _big js-app"><img src="images/portfolio/fitnes.jpg" alt="fitnes"/>
+                <figure class="projects__item js-site"><img src="images/portfolio/study.jpg" alt="study"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">study</div>
+                    <div class="projects__text">Сайт study</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure class="projects__item js-style"><img src="images/portfolio/osa.jpg" alt="osa"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">osa</div>
+                    <div class="projects__text">Фирменный стиль osa</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure class="projects__item js-site js-other"><img src="images/portfolio/krasa-volos.jpg" alt="krasa-volos"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">krasa-volos</div>
+                    <div class="projects__text">Сайт krasa-volos</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure class="projects__item js-app"><img src="images/portfolio/fitnes.jpg" alt="fitnes"/>
                   <figcaption class="projects__info">
                     <div class="projects__name">fitnes</div>
                     <div class="projects__text">Мобильное приложение fitnes</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure class="projects__item js-site"><img src="images/portfolio/svariok.jpg" alt="svariok"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">svariok</div>
+                    <div class="projects__text">Сайт svariok</div>
                     <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
                   </figcaption>
                 </figure>
@@ -397,31 +262,171 @@
                     <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
                   </figcaption>
                 </figure>
-                <figure class="projects__item _big js-app"><img src="images/portfolio/krum.jpg" alt="krum"/>
+                <figure class="projects__item js-style"><img src="images/portfolio/montana.jpg" alt="montana"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">montana</div>
+                    <div class="projects__text">Фирменный стиль montana</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure class="projects__item js-site js-other"><img src="images/portfolio/glavprokat.jpg" alt="glavprokat"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">glavprokat</div>
+                    <div class="projects__text">Сайт glavprokat</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure class="projects__item js-site"><img src="images/portfolio/medinterplast.jpg" alt="medinterplast"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">medinterplast</div>
+                    <div class="projects__text">Сайт medinterplast</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure class="projects__item js-style js-other"><img src="images/portfolio/fermer.jpg" alt="fermer"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">fermer</div>
+                    <div class="projects__text">Фирменный стиль fermer</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure class="projects__item js-site"><img src="images/portfolio/belatmit.jpg" alt="belatmit"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">belatmit</div>
+                    <div class="projects__text">Сайт belatmit</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure class="projects__item js-app"><img src="images/portfolio/krum.jpg" alt="krum"/>
                   <figcaption class="projects__info">
                     <div class="projects__name">krum</div>
                     <div class="projects__text">Мобильное приложение krum</div>
                     <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
                   </figcaption>
                 </figure>
-                <figure class="projects__item _big js-app"><img src="images/portfolio/minsk.jpg" alt="minsk"/>
+                <figure style="display:none" class="projects__item _big js-site"><img src="images/portfolio/manidoro.jpg" alt="manidoro"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">manidoro</div>
+                    <div class="projects__text">Сайт manidoro</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure style="display:none" class="projects__item js-style"><img src="images/portfolio/alter.jpg" alt="alter"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">alter</div>
+                    <div class="projects__text">Фирменный стиль alter</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure style="display:none" class="projects__item js-site"><img src="images/portfolio/matem.jpg" alt="matem"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">matem</div>
+                    <div class="projects__text">Сайт matem</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure style="display:none" class="projects__item js-app js-other"><img src="images/portfolio/minsk.jpg" alt="minsk"/>
                   <figcaption class="projects__info">
                     <div class="projects__name">minsk</div>
                     <div class="projects__text">Мобильное приложение minsk</div>
                     <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
                   </figcaption>
                 </figure>
-                <figure class="projects__item _big js-app"><img src="images/portfolio/gulbe.jpg" alt="gulbe"/>
+                <figure style="display:none" class="projects__item js-site"><img src="images/portfolio/project17.jpg" alt="project17"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">project17</div>
+                    <div class="projects__text">Сайт project17</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure style="display:none" class="projects__item js-style"><img src="images/portfolio/tomografia.jpg" alt="tomografia"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">tomografia</div>
+                    <div class="projects__text">Фирменный стиль tomografia</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure style="display:none" class="projects__item js-site"><img src="images/portfolio/foxstyle.jpg" alt="foxstyle"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">foxstyle</div>
+                    <div class="projects__text">Сайт foxstyle</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure style="display:none" class="projects__item js-app js-other"><img src="images/portfolio/gulbe.jpg" alt="gulbe"/>
                   <figcaption class="projects__info">
                     <div class="projects__name">gulbe</div>
                     <div class="projects__text">Мобильное приложение gulbe</div>
                     <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
                   </figcaption>
                 </figure>
-                <figure style="display:none" class="projects__item _big js-app"><img src="images/project11.jpg" alt="project11">
+                <figure style="display:none" class="projects__item js-site"><img src="images/portfolio/badura.jpg" alt="badura"/>
                   <figcaption class="projects__info">
-                    <div class="projects__name">project11</div>
-                    <div class="projects__text">сайт project11</div>
+                    <div class="projects__name">badura</div>
+                    <div class="projects__text">Сайт badura</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure style="display:none" class="projects__item js-style"><img src="images/portfolio/baramia.jpg" alt="baramia"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">baramia</div>
+                    <div class="projects__text">Фирменный стиль baramia</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure style="display:none" class="projects__item js-site"><img src="images/portfolio/concordia-lv.jpg" alt="concordia-lv"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">concordia-lv</div>
+                    <div class="projects__text">Сайт concordia-lv</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure style="display:none" class="projects__item _big js-site"><img src="images/portfolio/protege.jpg" alt="protege"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">protege</div>
+                    <div class="projects__text">Сайт protege</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure style="display:none" class="projects__item js-site"><img src="images/portfolio/4metri.jpg" alt="4metri"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">4metri</div>
+                    <div class="projects__text">Сайт 4metri</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure style="display:none" class="projects__item js-style"><img src="images/portfolio/sharkutier.jpg" alt="sharkutier"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">sharkutier</div>
+                    <div class="projects__text">Фирменный стиль sharkutier</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure style="display:none" class="projects__item js-site"><img src="images/portfolio/bartek.jpg" alt="bartek"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">bartek</div>
+                    <div class="projects__text">Сайт bartek</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure style="display:none" class="projects__item js-style"><img src="images/portfolio/forma.jpg" alt="forma"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">forma</div>
+                    <div class="projects__text">Фирменный стиль forma</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure style="display:none" class="projects__item js-site"><img src="images/portfolio/happy-toys.jpg" alt="happy-toys"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">happy-toys</div>
+                    <div class="projects__text">Сайт happy-toys</div>
+                    <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
+                  </figcaption>
+                </figure>
+                <figure style="display:none" class="projects__item js-site"><img src="images/portfolio/woodbood.jpg" alt="woodbood"/>
+                  <figcaption class="projects__info">
+                    <div class="projects__name">woodbood</div>
+                    <div class="projects__text">Сайт woodbood</div>
                     <div class="projects__btn"> <a href="" class="btn btn-primary">ПОДРОБНЕЕ </a></div>
                   </figcaption>
                 </figure>

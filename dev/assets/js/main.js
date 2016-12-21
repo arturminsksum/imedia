@@ -352,11 +352,20 @@ $(document).ready(function() {
 
         });
         if (er == 0) {
-
+            $.fancybox.open({
+              href: '#success'
+            });
+            return false;
         } else {
             return false;
         }
     });
+
+    $('.js-close-popup').on('click', function() {
+        $.fancybox.close();
+    })
+
+
 
     $('.services__item .checkbox__hidden').on('change', function() {
 

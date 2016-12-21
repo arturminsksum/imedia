@@ -99,35 +99,36 @@
                     </div>
                   </div>
                 </div>
-                <div class="h-mail"> 
-                  <div class="h-mail__icon"></div><a href="mailto:info@imedia.by" class="h-mail__link"> <span>info@imedia.by</span></a>
-                </div>
               </div>
               <div class="header__block _logo">
                 <div class="h-logo"><a href="/" class="h-logo__link"></a></div>
               </div>
-              <div class="header__block _advice"><a href="#advice" class="h-advice">
+              <div class="header__block _advice">
+                <div class="h-mail"> 
+                  <div class="h-mail__icon"></div><a href="mailto:info@imedia.by" class="h-mail__link"> <span>info@imedia.by            </span></a>
+                </div><a href="#advice" class="h-advice">
                   <div class="h-advice__icon"></div>
-                  <div class="h-advice__link"><span>Получить консультацию</span></div></a></div>
+                  <div class="h-advice__link"><span>Получить консультацию</span></div></a>
+              </div>
             </div>
           </div>
         </header>
         <div id="advice" class="popup _advice">
           <div class="popup__form">
             <div class="section__title">Напишите нам</div>
-            <div class="section__pre">Оставьте свои контактные данные  и мы позвоним Вам в течении 1 часа и прокунсультируем Вас по вашему вопросу        </div>
+            <div class="section__pre">Оставьте свои контактные данные  и мы позвоним Вам в течении 1 часа и проконсультируем Вас по вашему вопросу        </div>
             <form action="" class="form">         
               <div class="form__block">
                 <input id="name_advice" type="text" name="form[]" placeholder="" class="input"/>
                 <label for="name_advice" class="label">Имя</label>
               </div>
               <div class="form__block">
-                <input id="email_advice" type="email" name="form[]" placeholder="" class="input email"/>
-                <label for="email_advice" class="label">E-mail</label>
+                <input id="email_advice" data-valid="email" type="email" name="form[]" placeholder="" class="input"/>
+                <label for="email_advice" class="label">E-mail*</label>
               </div>
               <div class="form__block">
-                <input id="phone_advice" type="text" name="form[]" placeholder="" class="input req"/>
-                <label for="phone_advice" class="label">Телефон</label>
+                <input id="phone_advice" data-valid="phone" type="text" name="form[]" placeholder="" class="input"/>
+                <label for="phone_advice" class="label">Телефон*</label>
               </div>
               <div class="form__block">
                 <textarea id="message_advice" name="form[]" rows="1" placeholder="" class="input"></textarea>
@@ -137,6 +138,17 @@
                 <button type="submit" class="btn btn-green">Отправить            </button>
               </div>
             </form>
+          </div>
+        </div>
+        <div id="success" class="popup _advice">
+          <div class="popup__form">
+            <div class="section__title">Запрос отправлен</div>
+            <div class="section__pre">Наши менеджеры свяжутся с Вами в течении 1 часа и проконсультируют Вас по вашему вопросу        </div>
+            <div class="form">         
+              <div class="form__btn">
+                <button type="button" class="btn btn-green js-close-popup">Закрыть             </button>
+              </div>
+            </div>
           </div>
         </div>
         <main class="shop">
@@ -765,12 +777,12 @@
                 <label for="company_feed" class="label">Компания</label>
               </div>
               <div class="form__block">
-                <input id="email_feed" type="email" name="form[]" placeholder="" autocomplete="email" class="input req email"/>
-                <label for="email_feed" class="label">E-mail</label>
+                <input id="email_feed" data-valid="email" type="email" name="form[]" placeholder="" autocomplete="email" class="input"/>
+                <label for="email_feed" class="label">E-mail*</label>
               </div>
               <div class="form__block">
-                <input id="phone_feed" type="text" name="form[]" placeholder="" autocomplete="tel" class="input req"/>
-                <label for="phone_feed" class="label">Телефон</label>
+                <input id="phone_feed" data-valid="phone" type="text" name="form[]" placeholder="" autocomplete="tel" class="input"/>
+                <label for="phone_feed" class="label">Телефон*</label>
               </div>
               <div class="form__block">
                 <textarea id="message_feed" name="form[]" rows="1" placeholder="" class="input"></textarea>

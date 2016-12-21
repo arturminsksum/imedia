@@ -1,11 +1,21 @@
 mixin portfolio(name,filter,type)
-  figure.projects__item._big(class=filter)
+  figure.projects__item(class=filter)
     img(src="images/portfolio/"+name+".jpg", alt=name)
     figcaption.projects__info
       .projects__name=name
       .projects__text #{type} #{name}
       .projects__btn 
         a.btn.btn-primary(href="") ПОДРОБНЕЕ 
+
+mixin portfolio-hide(name,filter,type)
+  figure.projects__item(class=filter, style="display:none")
+    img(src="images/portfolio/"+name+".jpg", alt=name)
+    figcaption.projects__info
+      .projects__name=name
+      .projects__text #{type} #{name}
+      .projects__btn 
+        a.btn.btn-primary(href="") ПОДРОБНЕЕ 
+
 
 extends template2
 block content
@@ -29,57 +39,61 @@ block content
         .projects__wrap.clearfix
           .projects__sizer
 
-          +portfolio('concordia','js-site','Сайт')
-          +portfolio('trest','js-site','Сайт')
-          +portfolio('stiville','js-site','Сайт')
-          +portfolio('study','js-site','Сайт')
-          +portfolio('krasa-volos','js-site','Сайт')
-          +portfolio('svariok','js-site','Сайт')
-          +portfolio('glavprokat','js-site','Сайт')
-          +portfolio('medinterplast','js-site','Сайт')
-          +portfolio('belatmit','js-site','Сайт')
-          +portfolio('manidoro','js-site','Сайт')
-          +portfolio('matem','js-site','Сайт')
-          +portfolio('project17','js-site','Сайт')
-          +portfolio('foxstyle','js-site','Сайт')
-          +portfolio('badura','js-site','Сайт')
-          +portfolio('concordia-lv','js-site','Сайт')
-          +portfolio('4metri','js-site','Сайт')
-          +portfolio('protege','js-site','Сайт')
-          +portfolio('bartek','js-site','Сайт')
-          +portfolio('happy-toys','js-site','Сайт')
-          +portfolio('woodbood','js-site','Сайт')
-          +portfolio('ecoboo','js-site','Сайт')
-
-          +portfolio('osa','js-style','Фирменный стиль')
-          +portfolio('montana','js-style','Фирменный стиль')
-          +portfolio('fermer','js-style','Фирменный стиль')
-          +portfolio('alter','js-style','Фирменный стиль')
-          +portfolio('tomografia','js-style','Фирменный стиль')
-          +portfolio('baramia','js-style','Фирменный стиль')
-          +portfolio('sharkutier','js-style','Фирменный стиль')
-          +portfolio('forma','js-style','Фирменный стиль')
+          +portfolio('concordia','_big js-site js-other','Сайт')
 
           +portfolio('mele','js-app','Мобильное приложение')
+          +portfolio('trest','js-site','Сайт')
+          +portfolio('ecoboo','js-site','Сайт') 
+          +portfolio('stiville','js-site js-other','Сайт')
+
           +portfolio('easygift','js-app','Мобильное приложение')
-          +portfolio('fitnes','js-app','Мобильное приложение')
-          +portfolio('taxi','js-app','Мобильное приложение')
+          +portfolio('study','js-site','Сайт')
+          +portfolio('osa','js-style','Фирменный стиль')
+          +portfolio('krasa-volos','js-site js-other','Сайт')  
+
+          +portfolio('fitnes','js-app','Мобильное приложение')       
+          +portfolio('svariok','js-site','Сайт')
+
+          +portfolio('taxi','_big js-app','Мобильное приложение')
+
+          +portfolio('montana','js-style','Фирменный стиль')
+          +portfolio('glavprokat','js-site js-other','Сайт')
+
+
+          +portfolio('medinterplast','js-site','Сайт')
+          +portfolio('fermer','js-style js-other','Фирменный стиль')
+          +portfolio('belatmit','js-site','Сайт')
           +portfolio('krum','js-app','Мобильное приложение')
-          +portfolio('minsk','js-app','Мобильное приложение')
-          +portfolio('gulbe','js-app','Мобильное приложение')
 
 
+          +portfolio-hide('manidoro','_big js-site','Сайт')
 
+          +portfolio-hide('alter','js-style','Фирменный стиль')
+          +portfolio-hide('matem','js-site','Сайт')
+          +portfolio-hide('minsk','js-app js-other','Мобильное приложение')
+          +portfolio-hide('project17','js-site','Сайт')
 
+          +portfolio-hide('tomografia','js-style','Фирменный стиль')
+          +portfolio-hide('foxstyle','js-site','Сайт')
+          +portfolio-hide('gulbe','js-app js-other','Мобильное приложение')
+          +portfolio-hide('badura','js-site','Сайт')
 
+          +portfolio-hide('baramia','js-style','Фирменный стиль')
+          +portfolio-hide('concordia-lv','js-site','Сайт')
 
-          figure.projects__item._big.js-app(style="display:none")
-            img(src="images/project11.jpg", alt="project11")
-            figcaption.projects__info
-              .projects__name project11
-              .projects__text сайт project11
-              .projects__btn 
-                a.btn.btn-primary(href="") ПОДРОБНЕЕ 
+          +portfolio-hide('protege','_big js-site','Сайт') 
+
+          +portfolio-hide('4metri','js-site','Сайт')
+          +portfolio-hide('sharkutier','js-style','Фирменный стиль')
+
+  
+
+          +portfolio-hide('bartek','js-site','Сайт')
+          +portfolio-hide('forma','js-style','Фирменный стиль')
+          +portfolio-hide('happy-toys','js-site','Сайт')
+          +portfolio-hide('woodbood','js-site','Сайт')
+     
+
 
         .projects__btn 
           .btn.btn-primary(href="") ПОКАЗАТЬ ЕЩЕ... 

@@ -27,14 +27,15 @@ mixin header(main)
                   .h-phone__operator VELCOME:               
                   a.h-phone__link(href="tel:+375296544435") 
                     span +375 (33) 654-44-35
-            .h-mail 
-              .h-mail__icon
-              a.h-mail__link(href="mailto:info@imedia.by") 
-                span info@imedia.by
+
           .header__block._logo
             .h-logo
               a(href="/").h-logo__link
           .header__block._advice
+            .h-mail 
+              .h-mail__icon
+              a.h-mail__link(href="mailto:info@imedia.by") 
+                span info@imedia.by            
             a.h-advice(href="#advice")
               .h-advice__icon
               .h-advice__link
@@ -43,19 +44,27 @@ mixin header(main)
     .popup._advice#advice
       .popup__form
         .section__title Напишите нам
-        .section__pre Оставьте свои контактные данные  и мы позвоним Вам в течении 1 часа и прокунсультируем Вас по вашему вопросу        
+        .section__pre Оставьте свои контактные данные  и мы позвоним Вам в течении 1 часа и проконсультируем Вас по вашему вопросу        
         form(action="").form          
           .form__block
             input.input#name_advice(type='text', name='form[]', placeholder='')
             label.label(for="name_advice") Имя
           .form__block
-            input.input.email#email_advice(type='email', name='form[]', placeholder='')
-            label.label(for="email_advice") E-mail
+            input.input#email_advice(data-valid="email" type='email', name='form[]', placeholder='')
+            label.label(for="email_advice") E-mail*
           .form__block
-            input.input.req#phone_advice(type='text', name='form[]', placeholder='')
-            label.label(for="phone_advice") Телефон
+            input.input#phone_advice(data-valid="phone" type='text', name='form[]', placeholder='')
+            label.label(for="phone_advice") Телефон*
           .form__block
             textarea.input#message_advice(name='form[]', rows='1', placeholder='')
             label.label(for="message_advice") Сообщение
           .form__btn
             button.btn.btn-green(type='submit') Отправить            
+
+    .popup._advice#success
+      .popup__form
+        .section__title Запрос отправлен
+        .section__pre Наши менеджеры свяжутся с Вами в течении 1 часа и проконсультируют Вас по вашему вопросу        
+        .form          
+          .form__btn
+            button.btn.btn-green.js-close-popup(type='button') Закрыть             
