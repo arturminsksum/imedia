@@ -1,11 +1,17 @@
 extends template2
 block content
   main.order
-    section.banner.banner_yellow
-      .banner__img
+
+    section.banner.banner_default
+      .banner__img.animated.fadeIn(style='background-image: url(images/seo-order.jpg)')
       .banner__info
         h1.banner__title форма Расчета стоимости <br> продвижения сайта
         .banner__text Стоимость продвижения сайта по Минску составляет от 5 млн бел руб в месяц.<br> Узнать точную стоимость вы можете заполнив форму ниже.
+      .breadcrumb
+        ol
+          li
+            a(href='#') Главная
+          li.active Продвижение веб-сайтов
 
     section.order-main.bg-grey
       .container

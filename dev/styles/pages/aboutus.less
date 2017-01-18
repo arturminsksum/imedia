@@ -1,9 +1,8 @@
 .aboutus {
-
-    .container {
-      position: relative;
-      z-index: 1;
-    }
+  .container {
+    position: relative;
+    z-index: 1;
+  }
 
   &-mission {
     .section__img {
@@ -14,7 +13,6 @@
   }
 
   &-indicators {
-
     &:before {
       content: '';
       display: block;
@@ -189,7 +187,7 @@
   }
 
   &-geo {
-    padding-bottom: 100px;
+    padding-bottom: 0;
 
     &:before {
       content: '';
@@ -285,34 +283,6 @@
   }
 
   &-achieve {
-    padding-bottom: 15rem;
-
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: -5px;
-      bottom: 0;
-      left: -100px;
-      right: 0;
-      background-color: #fff;
-      transform: rotateZ(7deg);
-      // z-index: -1;
-    }
-
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: -5px;
-      bottom: 0;
-      left: 0;
-      right: -100px;
-      background-color: #fff;
-      transform: rotateZ(-7deg);
-      // z-index: -1;
-    }
-
     .section__img {
       background-image: @cup;
     }
@@ -347,6 +317,7 @@
       }
 
       .item__text {
+        width: 100%;
         margin-bottom: 3rem;
       }
 
@@ -365,65 +336,22 @@
   }
 
   &-persona {
-    padding-bottom: 15rem;
-
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: -5px;
-      bottom: 0;
-      left: -100px;
-      right: 0;
-      background-color: #f9f9f9;
-      transform: rotateZ(7deg);
-      // z-index: -1;
-    }
-
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: -5px;
-      bottom: 0;
-      left: 0;
-      right: -100px;
-      background-color: #f9f9f9;
-      transform: rotateZ(-7deg);
-      // z-index: -1;
-    }
-
-    .persona__info {
-      background: #f9f9f9;
-    }
-
+    padding-bottom: 10rem;
   }
 
   &-clients {
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: -5px;
-      bottom: 0;
-      left: -100px;
-      right: 0;
-      background-color: #fff;
-      transform: rotateZ(7deg);
-      // z-index: -1;
-    }
+    padding-bottom: 10rem;
 
     &:after {
       content: '';
       display: block;
       position: absolute;
       top: -5px;
-      bottom: 0;
-      left: 0;
-      right: -100px;
-      background-color: #fff;
-      transform: rotateZ(-7deg);
-      // z-index: -1;
+      bottom: 50px;
+      left: -50px;
+      right: -50px;
+      background-color: #f9f9f9;
+      transform: rotateZ(-3deg);
     }
 
     .section__img {
@@ -431,7 +359,101 @@
     }
 
   }
-  &-clients {
+
+  &-opinion {
+    .section__img {
+      background-image: @aboutus-opinion;
+    }
+
+    &__group {
+      margin: 0 -10px;
+
+      .item {
+        &__wrap {
+          margin: 0 10px;
+          padding: 2rem;
+          border-style: solid;
+          border-width: 1px;
+          border-color: rgb(250, 250, 250);
+          transition: border-color 0.3s;
+          &:hover {
+            border-color: @yellow;
+          }
+        }
+
+        &__name {
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        &__post {
+          font-size: 12px;
+          color: #6d6d6d;
+          margin-bottom: 2rem;
+        }
+
+        &__text {
+          font-size: 14px;
+          margin-bottom: 2rem;
+        }
+
+        &__view {
+          a {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 2px;
+            background-color: rgb(253, 243, 205);
+          }
+
+        }
+
+      }
+
+      .slick-dots {
+        margin: 3rem 0;
+        text-align: center;
+
+        li {
+          position: relative;
+          display: inline-block;
+          width: 17px;
+          height: 17px;
+          margin: 0 5px;
+          padding: 0;
+          cursor: pointer;
+          &.slick-active {
+            button {
+              background-color: @yellow;
+              border-color: #fff;
+            }
+          }
+
+          button {
+            font-size: 0;
+            line-height: 0;
+            display: block;
+            width: 17px;
+            height: 17px;
+            padding: 0;
+            cursor: pointer;
+            color: transparent;
+            outline: none;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(226, 226, 226);
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+          }
+
+        }
+
+      }
+
+    }
+    &__btn {
+      text-align: center;
+    }
 
   }
 
@@ -446,9 +468,10 @@
     &-achieve {
       padding-bottom: 10rem;
     }
-      &-persona {
-    padding-bottom: 10rem;
-  }
+
+    &-persona {
+      padding-bottom: 10rem;
+    }
 
   }
 
@@ -498,7 +521,6 @@
     }
 
     &-geo {
-      padding-bottom: 60px;
 
       &__map {
         position: relative;

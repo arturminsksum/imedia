@@ -80,6 +80,13 @@ section {
 	padding-top: 5rem;
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
+	&_wide {
+		padding-left: 0;
+		padding-right: 0;	
+		.btn {
+			padding: 1.5rem 2rem;
+		}	
+	}
 
 	&__block {
 		margin-bottom: 2rem;
@@ -182,6 +189,7 @@ section {
 	p {
 		color: #222;
 		text-align: center;
+		margin-bottom: 2.5rem;
 	}
 
 	a {
@@ -213,14 +221,14 @@ section {
 			right: 100px;
 			height: 1px;
 			background-color: rgb(254, 245, 213);
-			z-index: 1;
+			// z-index: 1;
 		}
 
 	}
 
 	.item {
 		position: relative;
-		z-index: 2;
+		// z-index: 1;
 		margin: 2rem 0;
 		width: 100%;
 
@@ -823,7 +831,7 @@ section {
 				right: 100px;
 				width: 1px;
 				background-color: rgb(254, 245, 213);
-				z-index: 1;
+				// z-index: 1;
 			}
 
 			.item {

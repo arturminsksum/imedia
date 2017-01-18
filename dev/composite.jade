@@ -1,0 +1,162 @@
+extends template
+block content
+
+  -var why1='<svg xmlns="http://www.w3.org/2000/svg" width="43" height="48" viewBox="0 0 43 48">  <path d="M630.1,3640.68a3.827,3.827,0,1,1-3.946,3.83A3.887,3.887,0,0,1,630.1,3640.68Zm22.826,1.28a0.289,0.289,0,0,0-.305-0.07l-2.5,1.02a19.283,19.283,0,0,0-6.928-13.15l1.414-2.07a2.593,2.593,0,0,0-.765-3.66,2.777,2.777,0,0,0-3.776.74l-1.442,2.11a20.433,20.433,0,0,0-5.8-1.66v-2.18h0.341a3.522,3.522,0,1,0,0-7.04h-6.13a3.522,3.522,0,1,0,0,7.04h0.341v2.18A19.712,19.712,0,0,0,610,3644.51c0,10.75,9.017,19.49,20.1,19.49a20.247,20.247,0,0,0,16.754-8.75,2.762,2.762,0,0,1-2.036-1.46l-1.564-3.06a14.7,14.7,0,0,1-13.154,7.99,14.216,14.216,0,1,1,14.555-15.79l-2.557-1.04a0.29,0.29,0,0,0-.306.07,0.257,0.257,0,0,0-.046.3c1.9,3.74,1.765,3.46,5.329,10.45h0a0.321,0.321,0,0,0,.567,0c4.307-8.45,3.2-6.27,5.328-10.45A0.261,0.261,0,0,0,652.927,3641.96Z" transform="translate(-610 -3616)"/></svg>'; 
+  -var why2='<svg xmlns="http://www.w3.org/2000/svg" width="44.031" height="44" viewBox="0 0 44.031 44">  <path d="M651.775,3165.47a17.854,17.854,0,1,0-25.248-25.25,17.511,17.511,0,0,0-2.686,21.55,0.743,0.743,0,0,1-.1.89c-2.277,2.28-9.109,9.11-9.109,9.11-1.813,1.81-2.245,4.35-.637,5.96l0.277,0.27c1.608,1.61,4.143,1.18,5.956-.63,0,0,6.817-6.82,9.089-9.09a0.766,0.766,0,0,1,.914-0.13A17.5,17.5,0,0,0,651.775,3165.47Zm-21.952-3.3a13.19,13.19,0,1,1,18.656,0A13.2,13.2,0,0,1,629.823,3162.17Zm1.139-10.39a1.817,1.817,0,0,1-.717-0.14,1.848,1.848,0,0,1-.979-2.42,11.615,11.615,0,0,1,15.2-6.16,1.845,1.845,0,0,1-1.436,3.4,7.913,7.913,0,0,0-10.373,4.2A1.843,1.843,0,0,1,630.962,3151.78Z" transform="translate(-613 -3135)"/></svg>';    
+  -var why3='<svg xmlns="http://www.w3.org/2000/svg" width="48" height="42.97" viewBox="0 0 48 42.97">  <path d="M1286.36,3639.52l-6.79-7.2-16.34,16.93-2.25-2.25,18.61-19.29,6.87,7.27,11.8-11.52-3.38-3.45h8.82v9l-3.21-3.28Zm-17.56,23.46h10.64v-15.26H1268.8v15.26Zm14.77,0h10.64V3642.9h-10.64v20.08Zm14.77-30.12v30.12h10.64v-30.12h-10.64Z" transform="translate(-1260.97 -3620)"/></svg>'; 
+
+  main.composite
+    section.banner.banner_default
+      .banner__img.animated.fadeIn(style='background-image: url(images/composite.jpg)')
+      .banner__info
+        h1.banner__title Технология Композитный <br>сайт от 1С-Битрикс
+        .banner__text Уникальная технология производства сайтов 
+      .breadcrumb
+        ol
+          li
+            a(href='#') Главная
+          li.active Композитный сайт
+
+    section.composite-what
+      .container
+        .section__img
+        .section__title Большая скорость <br>Большие возможности
+   
+        .section__text
+
+          p Уникальная технология производства сайтов объединяет в себе высокую скорость загрузки статического сайта и все возможности динамического сайта. 
+          p
+            strong Пользователь мгновенно получает контент страницы!         
+
+          .section__image.wow.lightSpeedIn
+            img(src="images/composite-what.jpg", alt="")
+            a(href="").play-button
+
+          div.text_f14 Посмотрите видео о возможностях битрикс<br> технология композитный сайт          
+        .offer
+          .offer__block
+            p
+              span.text_up Хотите точно знать, сколько будет стоить разработка композитного сайта?
+              br
+              span.text_up 
+                strong Закажите обратный звонок менеджера iMedia!
+          .offer__btn.wow.lightSpeedIn
+            .btn.btn-green ЗАказать обратный звонок
+
+                  
+    section.composite-how.bg-grey
+      .container   
+        .section__img
+        .section__pre Быстрее всех конкурентов
+        .section__title Как работает <br>композитный сайт
+        .section__text
+          p Вы не заметите технических сложностей, вы просто будете знать, что ваш сайт быстрее других!
+   
+        .section__rows
+          .item
+            .item__img
+              img(src="images/composite-how-01.jpg", alt="")
+            .item__info
+              .item__title Страница разделяется на 2 соcтавляющие: статическую и динамическую
+              .item__text 
+                span Совершенно новый цикл загрузки страниц
+
+          .item
+            .item__img
+              img(src="images/composite-how-02.jpg", alt="")
+            .item__info
+              .item__title Статическая часть кешируется и отображается мгновенно
+              .item__text 
+                span Пользователь сразу видит содержимое и может работать с ним
+
+          .item
+            .item__img
+              img(src="images/composite-how-03.jpg", alt="")
+            .item__info
+              .item__title Динамическая часть подгружается в фоновом режиме
+              .item__text 
+                span Страница кешируется в браузере посетителя
+
+        .offer.offer_wide
+          .offer__block
+            p
+              span.text_up Хотите получить консультацию, 
+
+              br
+              span.text_up 
+                strong насколько быстрее и эффективнее будет работать ваш сайт?
+
+
+          .offer__btn
+            .btn.btn-green ЗАКАЗАТЬ консультацию специалиста
+
+    section.section-why.composite-why
+      .container
+        .section__img
+        .section__title Ключевое преимущество lp - <br> это высокая конверсия при работе!
+
+        .section__text
+          p Landing page - это просто только на первый взгляд. На самом деле это задача, которую способны решить только опытные специалисты, ведь в его основе лежит продуманность дизайна, объединенная с эффективностью продающего текста.
+
+          .landing-why__group          
+            .row
+              .four.columns
+                .item
+                  .item__img.wow.bounceIn
+                    div
+                      !=why1
+                  .item__info
+                    .item__title
+                      span Отклик сайта <br>в 100 раз быстрее
+     
+              .four.columns
+                .item
+                  .item__img.wow.bounceIn(data-wow-delay="0.25s")
+                    div
+                      !=why2
+                  .item__info
+                    .item__title
+                      span Лучшее ранжирование <br>сайтов в Google и Яндекс
+
+
+              .four.columns
+                .item
+                  .item__img.wow.bounceIn(data-wow-delay="0.5s")
+                    div
+                      !=why3
+                  .item__info
+                    .item__title
+                      span Значительный рост <br>конверсии <br>интернет-магазина  
+
+
+    section.manager-section
+      .container            
+        .manager
+          .manager__wrap
+            .manager__left
+              span
+                strong Чем раньше мы узнаем о задачах Вашего бизнеса,
+              br
+              span тем быстрее Вы получите нужный продукт!
+              .manager__btn
+                .btn.btn-green Заказать звонок специалиста
+            .manager__right
+              span
+                strong Константин
+              br
+              span Специалист по продажам, <br>развитию бизнеса и менеджменту в интернете
+            .manager__img.wow.zoomInDown
+              img(src="images/manager.png", alt="") 
+
+    section.bas-offer
+      .container
+        .offer
+          .offer__text
+            span.text_f18.text_up
+              strong Хотите узнать сколько стоит заказать композитный сайт на 1с битрикс в Минске?
+            br
+            span.text_up 
+              strong Закажите звонок эксперта и ПОЛУЧИТЕ выгодное предложение!
+
+          .offer__btn.wow.lightSpeedIn
+            .btn.btn-green Получить Выгоду

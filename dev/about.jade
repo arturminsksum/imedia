@@ -199,7 +199,7 @@ block content
                 .item__btn
                   a.btn.btn-grey(href="") смотреть сертификаты  
 
-    section.persona.aboutus-persona.bg-grey
+    section.persona.aboutus-persona
       .container
         .section__pre Более 20+ профессионалов своего дела будут работать с Вашим проектом
         .section__title ЗНАКОМЬТЕСЬ С НАШЕЙ КОМАНДОЙ
@@ -247,3 +247,25 @@ block content
         .client__btn.wow.lightSpeedIn
                 a.btn.btn-green(href="") СТАТЬ  нашим КЛИЕНТОМ 
  
+    section.aboutus-opinion
+      .container
+        .section__img.wow.bounceIn
+        .section__pre Нам доверяют и благодарят 
+        .section__title Отзывы клиентов
+
+        .aboutus-opinion__group
+          - for (var i = 0; i < 6; i++)
+            .item
+              .item__wrap
+                .item__name СЫСУН В.И.
+             
+                .item__post Директор ООО “Завод отопительного оборудования "Виктори”
+
+                .item__text Нам нравятся подходы в работе Вашей команды - любой вопрос решается специалистом в течение короткого периода времени...
+                .item__view
+                  a(href="") 
+                    span Смотреть - 
+                    strong Отзыв.PDF   
+
+        .aboutus-opinion__btn
+          a.btn.btn-grey(href="") Смотреть все                  

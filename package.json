@@ -10,11 +10,15 @@
     "gulp-connect-multi": "*",
     "gulp-cssnano": "*",
     "gulp-error-notifier": "^1.1.0",
+    "gulp-group-css-media-queries": "^1.2.0",
+    "gulp-imagemin": "^3.1.1",
     "gulp-jade": "*",
     "gulp-less": "*",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-strip-css-comments": "^1.2.0",
     "gulp-svgmin": "^1.2.3",
-    "gulp-svgstore": "^6.1.0"
+    "gulp-svgstore": "^6.1.0",
+    "gulp-uglify": "^2.0.0"
   }
 }

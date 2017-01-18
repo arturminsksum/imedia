@@ -1,0 +1,236 @@
+.corporate-why {
+	.section__img {
+		background-image: @bag;
+	}
+
+	.section__image {
+		margin-bottom: 3rem;
+	}
+
+}
+
+.corporate-plus-minus {
+	.section__img {
+		background-image: @sales;
+	}
+
+}
+
+.corporate-sequence {
+	padding-bottom: 5rem;
+}
+
+.ban-about {
+	.section__img {
+		background-image: @mouthpiece;
+	}
+
+	&__wrap {
+		text-align: center;
+	}
+
+	&__circle {
+		display: inline-block;
+		width: 440px;
+		height: 440px;
+		line-height: 340px;
+		background-color: @light-yellow;
+		border-style: solid;
+		border-width: 50px;
+		border-color: @yellow;
+		border-radius: 50%;
+	}
+
+	&__img {
+		img {
+			vertical-align: middle;
+			.img;
+		}
+
+	}
+
+}
+
+.ban-sales {
+	.section__img {
+		background-image: @mouthpiece2;
+	}
+
+}
+
+.composite-what {
+	.section__img {
+		background-image: @scale;
+		background-position: 50% 30%;
+	}
+
+	.section__image {
+		display: inline-block;
+		position: relative;
+		margin-left: -165px;
+
+		.play-button {
+			display: block;
+			border-radius: 50%;
+			background-color: @yellow;
+			width: 62px;
+			height: 62px;
+			background-position: 55% 50%;
+			background-repeat: no-repeat;
+			background-image: @play;
+			position: absolute;
+			top: 120px;
+			right: 220px;
+
+			&:hover {
+				background-color: #e0b415;
+			}
+
+		}
+
+	}
+
+}
+
+.composite-how {
+	.section__img {
+		background-image: @1c-gear;
+	}
+
+	.section__rows {
+		.item {
+			width: 100%;
+			padding: 3rem;
+			box-shadow: 0px 0px 40px 0px rgba(216, 216, 216, 0.18);
+			background-color: #fff;
+			margin-bottom: 2rem;
+			display: flex;
+			align-items: center;
+			text-align: left;
+
+			&__img {
+
+				flex-shrink: 0;
+				margin-right: 3rem;
+
+				img {
+					.img;
+				}
+
+			}
+
+			&__title {
+			}
+
+			&__text {
+			}
+
+		}
+
+	}
+
+}
+
+.composite-why {
+	.section__img {
+		background-image: @star;
+	}
+
+}
+
+@media (max-width:1199px) {
+}
+
+@media (max-width:767px) {
+	.corporate-plus-minus {
+		.offer {
+			padding-left: 0;
+			padding-right: 0;
+
+			.btn {
+				padding: 1.5rem 2rem;
+			}
+
+		}
+
+	}
+
+	.ban-about {
+		&__wrap {
+		}
+
+		&__circle {
+			width: 285px;
+			height: 285px;
+			line-height: 160px;
+			border-width: 25px;
+			padding: 40px;
+		}
+
+		&__img {
+			img {
+			}
+
+		}
+
+	}
+
+	.ban-sales {
+		.item {
+			flex-wrap: wrap;
+			justify-content: center;
+			text-align: center;
+
+			&__img {
+				span {
+					margin-right: 0;
+					margin-bottom: 2rem;
+				}
+
+			}
+
+		}
+
+	}
+
+	.composite-what {
+		.section__image {
+			margin-left: 0;
+			width: 285px;
+
+			.play-button {
+				width: 50px;
+				height: 50px;
+				top: 35px;
+				right: 80px;
+			}
+
+		}
+
+	}
+
+	.composite-how {
+
+
+		.section__rows {
+			.item {
+				flex-wrap: wrap;
+				text-align: center;
+				justify-content: center;
+				padding: 2rem;
+
+				&__img {
+					width: 100%;					
+					margin-right: 0;
+					margin-bottom: 2rem;
+				}
+
+			}
+
+		}
+
+	}
+
+
+
+}

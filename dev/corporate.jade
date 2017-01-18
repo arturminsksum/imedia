@@ -1,0 +1,234 @@
+extends template
+block content
+
+  main.corporate
+    section.banner.banner_default
+      .banner__img.animated.fadeIn(style='background-image: url(images/corporate.jpg)')
+      .banner__info
+        h1.banner__title Корпоративные сайты
+        .banner__text Бизнес и корпоративный сайт – в чем сила? 
+      .breadcrumb
+        ol
+          li
+            a(href='#') Главная
+          li.active Корпоративные сайты
+
+    section.section-why.corporate-why
+      .container
+        .section__img
+        .section__title Разработка корпоративного <br> интернет сайта 
+   
+        .section__image.wow.tada
+          img(src="images/corporate-why.jpg", alt="")
+
+        .section__text
+          p Насколько продуктивным станет создание ресурса и имеет ли смысл заказать корпоративный сайт в Минске? Если оценить возможности – это лучшее решение, позволяющее своими силами уведомлять заинтересованных лиц об проведенных изменениях, готовящихся акциях, появлении новинок. При этом ресурс будет получать отклик, заниматься мониторингом деятельности и распространением продукции. 
+
+          p 
+            strong Разработка корпоративного интернет сайта преследует ряд целей, достижение которых призвано сделать работу наиболее эффективной. В список основных направлений входят:
+
+          .section-why__group
+            .row
+              .three.columns
+                .item
+                  .item__img.wow.bounceIn
+                    +number(1)
+                  .item__info
+                    .item__text Предоставление информации о достижениях заинтересованным лицам        
+              .three.columns
+                .item
+                  .item__img.wow.bounceIn(data-wow-delay="0.25s")
+                    +number(2)
+                  .item__info
+                    .item__text Организация визуального восприятия продукции и услуг посредством каталогов
+              .three.columns
+                .item
+                  .item__img.wow.bounceIn(data-wow-delay="0.5s")
+                    +number(3)
+                  .item__info
+                    .item__text Исследовательская деятельность для последующего расширения базы клиентов, географии продаж, интернет-продвижения
+              .three.columns
+                .item
+                  .item__img.wow.bounceIn(data-wow-delay="0.75s")
+                    +number(4)
+                  .item__info
+                    .item__text Быстрое и четкое оформление заказов с последующей продажей
+
+          p Корпоративный сайт компании можно воспринимать как интернет ресурс, использующий все возможности сети для реализации задач информационного и коммерческого характера. Относиться к корпоративному сайту как к обычному рекламному продукту в корне неверно – при грамотной разработке он превращается в универсальный ключ интернет - маркетинга.
+
+
+        .offer
+          .offer__block
+            p
+              span.text_up Хотите точно знать, сколько будет стоить разработка корпоративного сайта?
+              br
+              span.text_up 
+                strong Закажите обратный звонок менеджера iMedia!
+
+          .offer__btn.wow.lightSpeedIn
+            .btn.btn-green Заказать обратный звонок
+
+
+    section.plus-minus.bg-grey.corporate-plus-minus
+      .container
+        .section__img
+        .section__pre Наши отличия от большинства конкурентов
+        .section__title ПОЧЕМУ РАБОТАТЬ С НАМИ <br> УДОБНО И ВЫГОДНО?
+        .section__text
+          p Наша компания готова разработать и создать качественный интернет ресурс для вашего бизнеса. Мы окажем поддержку вашему проекту на любой стадии существования, от разработки фирменного стиля до seo продвижения и создания приложений.
+
+        .plus-minus__wrap
+          .plus-minus__block.minus
+            .plus-minus__title ТАК РАБОТАЕТ "БОЛЬШИНСТВО"
+            ul.plus-minus__list
+              - var listItem = ['Сомнительные шаблонные решения.','Создание сайтов не пригодных для дальнейшего продвижения.','Недостаток квалифицированных специалистов.','Размытые сроки реализации проекта.']
+              each item in listItem
+                li.plus-minus__item= item 
+
+          .plus-minus__block.plus
+            .plus-minus__title НАШ ПОДХОД К РАБОТЕ!
+            ul.plus-minus__list
+              - var listItem = ['Высокое качество и отсутствие шаблонов!','Создание фирменного легко узнаваемого и запоминающегося стиля.','Использование передовых технологий и современных методик.','Создание сайта для бизнеса, ориентированного на принесение прибыли.','Реальная цена и реальные сроки.", "Гарантия на разработанную продукцию, ее обслуживание.']
+              each item in listItem
+                li.plus-minus__item= item 
+        .offer
+          .offer__text
+            span Вы можете заказать корпоративный сайт у "Большинства" или в IMEDIA.
+            br
+            strong Мы сделаем сайт за тот же период времени, но наш сайт действительно будет продавать!
+
+          .offer__btn
+            .btn.btn-green ЗАКАЗАТЬ консультацию специалиста
+
+    section.section-approach.bas-approach.bas-approach_how
+      .container
+        .section__img
+        .section__title Сколько стоит создать <br> корпоративный сайт?
+        .section__text
+          p Заказать корпоративный сайт компании вы можете у нас уже сегодня, и через 30 дней у вас в руках будет действующий уникальный ресурс в интернете!
+          p
+            strong Стоимость создания промо-сайта начинается с 15 млн бел. руб. и включает в себя:
+
+        .section-approach__list
+          .section__text.clearfix
+            ul 
+              li Помощь в выборе хостинга и доменного имени;
+              li Разработка структуры сайта;
+              li Разработку индивидуального дизайна;
+            ul 
+              li Техническое консультирование;
+              li Систему управления контентом (CMS).
+
+        .offer
+          .offer__text 
+            span Заключите договор на консультационные услуги с iMedia Solutions
+            br
+            span.text_up 
+              strong и получите персональную скидку на разработку сайта!
+
+          .offer__btn
+            .btn.btn-green Узнать размер скидки!
+
+    section.section-sequence.corporate-sequence
+      .container
+        .section__pre Наши методы создания эффективного сайта
+        .section__title Как создается <br> продаваемый ресурс
+        .section__text
+          p Получение прибыли – главный интерес любой компании. Наша команда в силах создать корпоративный портал, который будет работать на развитие и расширение компании. 
+          p
+            strong Наша стратегия создания основана на простых, но действенных методах:
+
+        .section-sequence__group
+          .item_right
+            .item.wow.fadeInRight
+              .item__img
+                +number(1)
+              .item__info
+                .item__title Мы становимся частью вашего бизнеса
+                .item__text Определяя ключевые моменты деятельности компании, ее лучшие стороны. Все вопросы нацелены на понимание процесса работы. Результатом становится создание прототипа, технического задания и маркетинг-плана.           
+          .item_left
+            .item.wow.fadeInLeft
+              .item__img
+                +number-white(2)
+              .item__info
+                .item__title Мы создаем маркетинговый ресурс
+                .item__text Способный задержать внимание посетителя, мотивирующий к конверсионным действиям. Для достижения цели визуализация, структура и контент прорабатываются до мелочей
+          .item_right
+            .item.wow.fadeInRight
+              .item__img
+                +number(3)
+              .item__info
+                .item__title Мы предлагаем работу профессионалов 
+                .item__text Каждый из которых является экспертом в конкретной области. Совокупность индивидуальных умений членов команды обеспечивает желаемый результат.
+
+    section.manager-section
+      .container
+          .manager
+            .manager__wrap
+              .manager__left
+                span
+                  strong Чем раньше мы узнаем о задачах Вашего бизнеса,
+                br
+                span тем быстрее Вы получите нужный продукт!
+                .manager__btn
+                  .btn.btn-green Назначить встречу
+              .manager__right
+                span
+                  strong Сергей
+                br
+                span Специализация: маркетинг, бизнес-аналитика, стратегическое планирование, продажи
+              .manager__img.wow.zoomInDown
+                img(src="images/companySergey.png", alt="")      
+      
+
+    section.portfolio
+      .container
+        .section__img 
+        .section__pre Примеры наших работ
+        .section__title САЙТЫ, КОТОРЫЕ УЖЕ ПРОДАЮТ!
+      .portfolio__wrap.clearfix
+        figure.portfolio__item._main
+          img(src="images/concordia.jpg", alt="concordia")
+          figcaption.portfolio__info
+            .portfolio__name “CONCORDIA”
+            .portfolio__text сайт медицинского центра
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ
+        figure.portfolio__item  
+          img(src="images/stilville.jpg", alt="stilville")
+          figcaption.portfolio__info
+            .portfolio__name stilville
+            .portfolio__text сайт 
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ
+        figure.portfolio__item  
+          img(src="images/study.jpg", alt="")
+          figcaption.portfolio__info
+            .portfolio__name study
+            .portfolio__text сайт 
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ 
+        figure.portfolio__item  
+          img(src="images/foxstyle.jpg", alt="")
+          figcaption.portfolio__info
+            .portfolio__name foxstyle
+            .portfolio__text сайт 
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ
+        figure.portfolio__item  
+          img(src="images/krasa-volos.jpg", alt="krasa-volos")
+          figcaption.portfolio__info
+            .portfolio__name krasa-volos
+            .portfolio__text сайт 
+            .portfolio__btn 
+              a.btn.btn-primary(href="") ПОДРОБНЕЕ
+      .container
+        .offer
+          .offer__text
+            span.text_f18.text_up
+              strong Хотите узнать сколько стоит заказать сайт в Минске?
+            br
+            span.text_up 
+              strong Закажите звонок эксперта и ПОЛУЧИТЕ выгодное предложение!
+          .offer__btn.wow.lightSpeedIn
+            .btn.btn-green Получить Выгоду
