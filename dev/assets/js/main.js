@@ -267,66 +267,66 @@ $(document).ready(function() {
 
             switch (validType) {
 
-              case "email":
-                if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test($(this).val()))) {
-                    er++;
-                    $(this).addClass('err');
-                    $(this).parent().append('<span class="err-text">введите правильно e-mail!</span>');
-                } else {
-                    $(this).removeClass('err');
-                    $(this).parent().children(".err-text").remove();
-                }
-                break;
-
-              case "phone":
-                if (!/[0-9()-\s+]{3,20}/.test($(this).val())) {
-                    er++;
-                    $(this).addClass('err');
-                    $(this).parent().append('<span class="err-text">введите правильно номер!</span>');
-                } else {
-                    $(this).removeClass('err');
-                    $(this).parent().children(".err-text").remove();
-                }
-                break;
-
-              case "services":
-                if ($(this).find('.checkbox__hidden:checked').length) {
-                    $(this).removeClass('err');
-                    $(this).parent().children(".err-text").remove();
-                } else {
-                    er++;
-                    $(this).addClass('err');
-                    $(this).parent().append('<span class="err-text">выберите услугу!</span>');
-                }
-                break;
-
-              case "select":
-                if ($(this).val() == '') {
-                    er++;
-                    $(this).parents('.dropdown').addClass('err');
-                    $(this).parents('.form__block').append('<span class="err-text">выберите пункт!</span>');
-                  } else {
-                        $(this).parents('.dropdown').removeClass('err');
-                        $(this).parents('.form__block').children(".err-text").remove();
-                 }
-                break;
-
-              default:
-                if ($(this).val() == '') {
-                    er++;
+                case "email":
+                    if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test($(this).val()))) {
+                        er++;
                         $(this).addClass('err');
-                        $(this).parent().append('<span class="err-text">заполните поле!</span>');
-                } else {
+                        $(this).parent().append('<span class="err-text">введите правильно e-mail!</span>');
+                    } else {
                         $(this).removeClass('err');
                         $(this).parent().children(".err-text").remove();
-                }
+                    }
+                    break;
+
+                case "phone":
+                    if (!/[0-9()-\s+]{3,20}/.test($(this).val())) {
+                        er++;
+                        $(this).addClass('err');
+                        $(this).parent().append('<span class="err-text">введите правильно номер!</span>');
+                    } else {
+                        $(this).removeClass('err');
+                        $(this).parent().children(".err-text").remove();
+                    }
+                    break;
+
+                case "services":
+                    if ($(this).find('.checkbox__hidden:checked').length) {
+                        $(this).removeClass('err');
+                        $(this).parent().children(".err-text").remove();
+                    } else {
+                        er++;
+                        $(this).addClass('err');
+                        $(this).parent().append('<span class="err-text">выберите услугу!</span>');
+                    }
+                    break;
+
+                case "select":
+                    if ($(this).val() == '') {
+                        er++;
+                        $(this).parents('.dropdown').addClass('err');
+                        $(this).parents('.form__block').append('<span class="err-text">выберите пункт!</span>');
+                    } else {
+                        $(this).parents('.dropdown').removeClass('err');
+                        $(this).parents('.form__block').children(".err-text").remove();
+                    }
+                    break;
+
+                default:
+                    if ($(this).val() == '') {
+                        er++;
+                        $(this).addClass('err');
+                        $(this).parent().append('<span class="err-text">заполните поле!</span>');
+                    } else {
+                        $(this).removeClass('err');
+                        $(this).parent().children(".err-text").remove();
+                    }
 
             }
 
         });
         if (er == 0) {
             $.fancybox.open({
-              href: '#success'
+                href: '#success'
             });
             return false;
         } else {
@@ -337,50 +337,100 @@ $(document).ready(function() {
     $('.js-close-popup').on('click', function() {
         $.fancybox.close();
     })
+    $('.js-certificate').on('click', function() {
+        var type = $(this).data('type');
 
+        switch (type) {
+          case "gold":
+            $.fancybox.open([
+                'images/certificates/sertificate_gold_001.jpg',
+                'images/certificates/lider-prodaz-2015_001.jpg',                
+                'images/certificates/partner_competence_quality_001.jpg',
+                'images/certificates/partner_competence_bitrix24_new_001.jpg',
+                'images/certificates/partner_competence_composite_001.jpg',
+                'images/certificates/partner_competence_1c_001.jpg',
+                'images/certificates/partner_competence_bitrix24_portal_001.jpg',
+            ]);
+            break;
+          case "dir":
+            $.fancybox.open([
+                'images/certificates/partner_competence_bitrix24_new_001.jpg',
+                'images/certificates/partner_competence_composite_001.jpg',
+                'images/certificates/partner_competence_1c_001.jpg',
+                'images/certificates/partner_competence_bitrix24_portal_001.jpg',
+                'images/certificates/sertificate_gold_001.jpg',                
+                'images/certificates/lider-prodaz-2015_001.jpg',
+                'images/certificates/partner_competence_quality_001.jpg',                
+            ]);
+            break;
+          case "leader":
+            $.fancybox.open([
+                'images/certificates/lider-prodaz-2015_001.jpg',
+                'images/certificates/sertificate_gold_001.jpg',
+                'images/certificates/partner_competence_quality_001.jpg',
+                'images/certificates/partner_competence_bitrix24_new_001.jpg',
+                'images/certificates/partner_competence_composite_001.jpg',
+                'images/certificates/partner_competence_1c_001.jpg',
+                'images/certificates/partner_competence_bitrix24_portal_001.jpg',                
+            ]);
+            break;
+          case "default":
+            $.fancybox.open([
+                'images/certificates/partner_competence_quality_001.jpg',
+                'images/certificates/sertificate_gold_001.jpg',
+                'images/certificates/lider-prodaz-2015_001.jpg',                
+                'images/certificates/partner_competence_bitrix24_new_001.jpg',
+                'images/certificates/partner_competence_composite_001.jpg',
+                'images/certificates/partner_competence_1c_001.jpg',
+                'images/certificates/partner_competence_bitrix24_portal_001.jpg',
+            ]);
+            break;                                    
+        }
+        return false;        
+    })
 
 
     $('.services__item .checkbox__hidden').on('change', function() {
 
         var priority = 0;
 
-        $('.services__item .checkbox__hidden:checked').each(function(index, val){
-            if ($(this).data('prior')>priority) {
+        $('.services__item .checkbox__hidden:checked').each(function(index, val) {
+            if ($(this).data('prior') > priority) {
                 priority = $(this).data('prior');
             }
         })
 
         var arr;
 
-        switch(priority) {
+        switch (priority) {
             case 6:
-                arr = ['$2000 - $5000','$5000 - $10000','более $10000','Не знаю, посоветуйте'];
+                arr = ['$2000 - $5000', '$5000 - $10000', 'более $10000', 'Не знаю, посоветуйте'];
                 break;
             case 5:
-                arr = ['$500 - $1500','$1500 - $3000','$3000 - $6000','более $6000','Не знаю, посоветуйте'];
+                arr = ['$500 - $1500', '$1500 - $3000', '$3000 - $6000', 'более $6000', 'Не знаю, посоветуйте'];
                 break;
             case 4:
-                arr = ['до $1000','$1000 - $2500','$2500 - $5000','более $5000','Не знаю, посоветуйте'];
+                arr = ['до $1000', '$1000 - $2500', '$2500 - $5000', 'более $5000', 'Не знаю, посоветуйте'];
                 break;
             case 3:
-                arr = ['до $500','$500 - $1000','$1000 - $3000','более $3000','Не знаю, посоветуйте'];
+                arr = ['до $500', '$500 - $1000', '$1000 - $3000', 'более $3000', 'Не знаю, посоветуйте'];
                 break;
             case 2:
-                arr = ['до $300','$300 - $500','$500 - $1000','более $1000','Не знаю, посоветуйте']; 
+                arr = ['до $300', '$300 - $500', '$500 - $1000', 'более $1000', 'Не знаю, посоветуйте'];
                 break;
             case 1:
-                arr = ['$250 - $500','$500 - $1000','более $1000','Не знаю, посоветуйте'];   
-                break; 
+                arr = ['$250 - $500', '$500 - $1000', 'более $1000', 'Не знаю, посоветуйте'];
+                break;
             case 0:
-                arr = ['до $500','$500 - $1000','$1000 - $3000','более $3000','Не знаю, посоветуйте'];
-                break;                               
+                arr = ['до $500', '$500 - $1000', '$1000 - $3000', 'более $3000', 'Не знаю, посоветуйте'];
+                break;
         }
 
         var selected = '<option value="" selected="">Планируемый бюджет *</option>';
         var noSelected = '';
 
         for (var i = 0; i < arr.length; i++) {
-            noSelected+='<option>'+arr[i]+'</option>'
+            noSelected += '<option>' + arr[i] + '</option>'
         }
 
         $('.select-budget').html('').append(selected).append(noSelected).easyDropDown('destroy').easyDropDown();
@@ -674,8 +724,8 @@ $(document).ready(function() {
 
         } else {
             $('.form__block_site').slideUp();
-            $('.select_req').removeAttr("data-valid");  
-        
+            $('.select_req').removeAttr("data-valid");
+
         }
     });
 
@@ -720,16 +770,16 @@ $(document).ready(function() {
 
     function onHover(arr) {
 
-        $.each(arr, function (index, value) {
+        $.each(arr, function(index, value) {
             $(value).hover(
                 function() {
                     $(this).addClass('onHover')
                 },
                 function() {
                     $(this).removeClass('onHover')
-            });     
+                });
         })
-   
+
     }
 
     onHover(['.client__item', '.portfolio__item', '.projects__item']);
